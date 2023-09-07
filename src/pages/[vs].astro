@@ -1,0 +1,49 @@
+---
+import Layout from '@layouts/Layout.astro'
+// import CardVS from '@components/CardVS'
+import { fetchAPI } from '@utils/fetchAPI'
+import { URL_API_ENDPOINT_2023 } from '../const/index'
+import { log } from '@utils/console'
+
+const partidos = await fetchAPI(URL_API_ENDPOINT_2023)
+log(partidos)
+
+const { vs: VS } = Astro.params
+
+const versusPartido = partidos.find(({ vs }) => vs.replace(' ', '-') === VS)
+if (!versusPartido) {
+	return Astro.redirect('/404')
+}
+---
+
+<Layout title={`Cuando juega EDLP - `}>
+	<main class='grid place-content-center h-screen'>
+		<div>Trabando en esta feature</div>
+	</main>
+	<!--
+	<main
+		class='flex flex-col items-center justify-center w-full gap-4 pt-16 mt-16 md:flex-row md:flex-wrap md:justify-center md:pt-24'
+	>
+
+
+		<div class='grid gap-4 place-content-center h-full grid-rows-2 md:grid-cols-2'>
+			<div class='rows-span-1 md:cols-span1'>
+				<div class='flex flex-col gap-4 text-center items-center justify-center my-24'>
+					<picture>
+						<img
+							class='object-containe w-48 h-48'
+							src={versusPartido.img}
+							alt={`Escudo del equipo ${versusPartido.vs}`}
+						/>
+					</picture>
+					<h2 class='mx-0 my-2'>{versusPartido.vs}</h2>
+					<p class='text-sm'>{versusPartido.copa}</p>
+				</div>
+			</div>
+			<div class='rows-span-1 md:cols-span1'>
+				<CardVS client:load timestamp={versusPartido.timestamp} />
+			</div>
+		</div>
+	</main>
+-->
+</Layout>

@@ -1,4 +1,20 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+	"recommendations": [
+		"astro-build.astro-vscode",
+		"pflannery.vscode-versionlens",
+		"usernamehw.errorlens",
+		"wallabyjs.console-ninja",
+		"editorconfig.editorconfig",
+		"wix.vscode-import-cost",
+		"kisstkondoros.vscode-gutter-preview",
+		"ms-vscode.vscode-typescript-next",
+		"oliversturm.fix-json",
+		"unifiedjs.vscode-mdx",
+		"christian-kohler.npm-intellisense",
+		"christian-kohler.path-intellisense",
+		"dbaeumer.vscode-eslint",
+		"yoavbls.pretty-ts-errors",
+		"heybourn.headwind"
+	],
   "unwantedRecommendations": []
 }

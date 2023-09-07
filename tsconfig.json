@@ -1,3 +1,22 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "isolatedModules": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "types": [ "astro/client", "react" ],
+    "paths": {
+      "@components/*": [ "src/components/*" ],
+      "@layouts/*": [ "src/layouts/*" ],
+      "@utils/*": [ "src/utils/*" ],
+      "@pages/*": [ "src/pages/*" ],
+      "@hooks/*": [ "src/hooks/*" ]
+    }
+  }
 }
