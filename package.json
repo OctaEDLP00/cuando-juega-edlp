@@ -8,15 +8,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "pnpm build && pnpx vercel deply --prebuilt",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^4.0.5",
     "canvas-confetti": "1.6.0",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
   "devDependencies": {
+    "@astrojs/vercel": "4.0.5",
     "@astrojs/react": "3.0.0",
     "@astrojs/tailwind": "5.0.0",
     "@types/canvas-confetti": "1.6.1",
