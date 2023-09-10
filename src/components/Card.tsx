@@ -6,7 +6,7 @@ export default function Card({ timestamp, copa, vs, img }: IPartidos) {
   const { days, hours, minutes, seconds } = useRemaningTime(new Date(timestamp))
 
   return (
-    <div className='bg-[#8b0000] text-white flex flex-col dark:bg-white dark:text-[#8b0000] rounded-lg shadow-md dark:shadow-red-400 dark:shadow-md overflow-hidden items-center gap-4 text-center p-4 max-w-xs md:max-w-xs md:my-0 md:mx-auto'>
+    <div className='bg-[#8b0000] text-white flex flex-col dark:bg-white dark:text-[#8b0000] rounded-lg shadow-lg shadow-neutral-600 dark:shadow-red-600 dark:shadow-lg overflow-hidden items-center gap-4 text-center p-4 max-w-xs md:max-w-xs md:my-0 md:mx-auto'>
       <picture>
         <img
           loading='lazy'
@@ -16,7 +16,7 @@ export default function Card({ timestamp, copa, vs, img }: IPartidos) {
         />
       </picture>
       <h2 className='mx-0 my-2'>
-        <a href={`/${vs.replace(' ', '-')}`}>{vs}</a>
+        <a className='transition-color hover:text-[#f00]' href={`/${vs.replace(' ', '-')}`}>{vs}</a>
       </h2>
       <p className='text-sm'>{copa}</p>
       {
