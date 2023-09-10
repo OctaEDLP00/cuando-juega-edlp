@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: Clonar el repositorio
         uses: actions/checkout@v3
+        
+      - name: Install Deno
+        uses: maximousblk/setup-deno@v2.0.0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.4.0
 
       - name: Instalar las dependencias
         run: pnpm i
