@@ -7,8 +7,7 @@
     "dev:host": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "deploy": "pnpm build && pnpx vercel deply --prebuilt",
+    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "astro": "astro"
   },
   "dependencies": {
@@ -17,7 +16,7 @@
     "react-dom": "18.0.0"
   },
   "devDependencies": {
-    "@astrojs/vercel": "4.0.5",
+    "@astrojs/deno": "5.0.0",
     "@astrojs/react": "3.0.0",
     "@astrojs/tailwind": "5.0.0",
     "@types/canvas-confetti": "1.6.1",
