@@ -3,10 +3,8 @@ import Layout from '@layouts/Layout.astro'
 // import CardVS from '@components/CardVS'
 import { fetchAPI } from '@utils/fetchAPI'
 import { URL_API_ENDPOINT_2023 } from '../const/index'
-import { log } from '@utils/console'
 
 const partidos = await fetchAPI(URL_API_ENDPOINT_2023)
-log(partidos)
 
 const { vs: VS } = Astro.params
 

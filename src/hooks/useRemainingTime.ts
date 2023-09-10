@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getRemainingTime } from '@utils/getRemainingTime'
 import { fillZeros } from '@utils/fillZeros'
-import { log } from '@utils/console'
 
 export const useRemaningTime = (targetDate: Date | null) => {
   if (targetDate === null) return
@@ -16,8 +15,6 @@ export const useRemaningTime = (targetDate: Date | null) => {
       setInterval(() => {
         setRemainingDate(getRemainingTime(targetDate!))
       }, 1000)
-
-    log(timer)
 
     if (continueCountdown) clearInterval(timer)
 
