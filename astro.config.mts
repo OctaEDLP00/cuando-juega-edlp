@@ -8,6 +8,8 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   output: 'server',
   adapter: netlify({
-    functionPerRoute: true
+    functionPerRoute: true,
+    edgeMiddleware: true,
+    dist: new URL('./dist/', import.meta.url)
   })
 })
