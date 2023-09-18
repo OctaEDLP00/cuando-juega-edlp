@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "isolatedModules": false,
+    "isolatedModules": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "module": "ESNext",
@@ -10,7 +10,10 @@
     "outDir": "./dist",
     "resolveJsonModule": true,
     "target": "ESNext",
-    "types": [ "astro/client", "react" ],
+    "types": [
+      "vite/client",
+      "react"
+    ],
     "paths": {
       "@components/*": [ "src/components/*" ],
       "@layouts/*": [ "src/layouts/*" ],

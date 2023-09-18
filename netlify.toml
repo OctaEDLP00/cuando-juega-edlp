@@ -1,2 +1,8 @@
-[functions]
-directory = "dist/functions"
+[build]
+command = "npm run build"
+publish = "dist/"
+
+[[edge_functions]]
+path = "/"
+funciton = "geolocation"
+

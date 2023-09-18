@@ -10,7 +10,6 @@ export default defineConfig({
   output: 'server',
   adapter: netlify({
     functionPerRoute: true,
-    edgeMiddleware: true,
-    dist: new URL('./dist/', import.meta.url)
+    edgeMiddleware: true
   })
 })
