@@ -5,6 +5,7 @@ import netlify from '@astrojs/netlify/functions'
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://cuando-juega-edlp.netlify.app',
   integrations: [react(), tailwind()],
   output: 'server',
   adapter: netlify({

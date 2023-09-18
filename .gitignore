@@ -27,3 +27,6 @@ yarn.lock
 
 css
 .trash
+
+# Local Netlify folder
+.netlify
