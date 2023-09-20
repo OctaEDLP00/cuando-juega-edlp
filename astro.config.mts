@@ -1,16 +1,30 @@
 import { defineConfig } from 'astro/config'
+// Integrations
 import react from '@astrojs/react'
 import tailwind from '@astrojs/tailwind'
-import netlify from '@astrojs/netlify/functions'
+import mdx from '@astrojs/mdx'
+//Plguins
+import remarkRehypePL from 'remark-rehype'
+// Adapter
+import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://cuando-juega-edlp.netlify.app',
-  integrations: [react(), tailwind()],
+  integrations: [
+    react(),
+    tailwind(),
+    mdx()
+  ],
   output: 'server',
-  adapter: netlify({
-    functionPerRoute: true,
-    edgeMiddleware: true,
-    dist: new URL('./dist/', import.meta.url)
+  adapter: vercel({
+    speedInsights: {
+      enabled: true
+    },
+    webAnalytics: {
+      enabled: true
+    },
+    functionPerRoute: false,
+    imageService: true,
+    edgeMiddleware: true
   })
-})
+});

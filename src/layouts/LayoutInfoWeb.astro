@@ -1,0 +1,59 @@
+---
+import '../global.css'
+import Navbar from '@components/Navbar.astro'
+import { ViewTransitions } from 'astro:transitions'
+import { ILayoutProps } from '../types/main'
+const { title } = Astro.props as ILayoutProps
+---
+
+<!doctype html>
+<html lang='es'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta
+			name='description'
+			content='Pagina para saber cuanto falta para el proximo partido en el estadio UNO de Club Estudiantes de La Plata'
+		/>
+		<meta
+			name='keywords'
+			content='Estudiantes, EDLP, edlp, Estudiantes de La Plata, Partidos, Copa de La Liga, Copa Argentina, Copa Sudamericana, Copa Libertdores'
+		/>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta name='generator' content={Astro.generator} />
+
+		<meta property='twitter:image' content='Twitter link preview image URL' />
+		<meta property='twitter:card' content='summary_large_image' />
+		<meta property='twitter:title' content='Twitter link preview title' />
+		<meta property='twitter:description' content='Twitter link preview description' />
+
+		<meta property='og:image' content='Link preview image URL' />
+		<meta property='og:title' content='Link preview title' />
+		<meta property='og:description' content='Link preview description' />
+		<meta property='og:url' content='Canonical link preview URL' />
+
+		<link rel='icon' type='image/png' href='/favicon.png' />
+		<script src='../utils/darkMode.ts'></script>
+		<script src='../utils/EasterEgg.ts'></script>
+		<ViewTransitions />
+		<title>{title}</title>
+		<style is:global>
+			*,
+			*::after,
+			*::before {
+				outline: 0;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body
+		class='font-CCPL dark:bg-[#222] dark:text-[#ddd] text-[#222] bg-[#ddd] flex items-center justify-center'
+	>
+		<wc-toast position='bottom-right'></wc-toast>
+		<div id='#App' class='flex flex-col items-center justify-center w-full'>
+			<Navbar />
+			<slot />
+		</div>
+	</body>
+</html>

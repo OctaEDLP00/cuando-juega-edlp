@@ -45,9 +45,7 @@ export const POST: APIRoute = async ({ request }) => {
     }), { status: 400 })
   }
 
-  const api = fetchAPI('')
-
-  return Response(JSON.stringify({
+  return new Response(JSON.stringify({
     message: 'Enviado con exito!'
   }), { status: 200 })
 }

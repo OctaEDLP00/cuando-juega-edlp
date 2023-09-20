@@ -10,13 +10,13 @@ export const GET: APIRoute = async ({ params, request }) => {
     },
     {
       copa: "Torneo Binance 2023",
-      timestamp: null,
+      timestamp: 1696179600000,
       vs: "Gimnasia",
       img: "/assets/Gimnasia.png"
     },
     {
       copa: "Torneo Binance 2023",
-      timestamp: null,
+      timestamp: 1696705200000,
       vs: "Godoy Cruz",
       img: "/assets/GodoyCruz.svg"
     },

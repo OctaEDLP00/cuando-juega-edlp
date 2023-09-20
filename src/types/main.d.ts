@@ -11,6 +11,9 @@ export interface IPagesProps { }
 export interface ICardProps {
   vs: string
 }
+export interface IMainSpecialProps {
+  className?: string
+}
 
 // Json Interfaces
 export interface IPartidos {

@@ -1,6 +1,6 @@
 import { TRemainingTime } from '../types/main'
 
-export function renderTimeRemaining({ days, hours, minutes, seconds }: TRemainingTime<number | string>) {
+export function renderTimeRemaining({ days, hours, minutes, seconds }: TRemainingTime<string>) {
   if (days === '00' && hours === '00' && minutes === '00' && seconds === '00') {
     return (
       <div id='spans' className='dark:bg-[#f0f0f0] bg-red-600 text-white dark:text-black p-2 flex flex-col justify-center w-full'>
@@ -15,7 +15,7 @@ export function renderTimeRemaining({ days, hours, minutes, seconds }: TRemainin
         id='spans'
         className='dark:bg-[#f0f0f0] bg-red-600 text-white dark:text-black p-2 flex flex-col justify-center w-full'
       >
-        <span className='text-center'>{days} Days {hours}:{minutes}:{seconds}</span>
+        <span className='text-center'>{days} dias {hours}:{minutes}:{seconds}</span>
       </div>
     )
   }

@@ -1,0 +1,14 @@
+---
+import LayoutInfoWeb from '@layouts/LayoutInfoWeb.astro';
+import { IMainSpecialProps } from '../../types/main'
+const { className } = Astro.props as IMainSpecialProps
+---
+
+<LayoutInfoWeb>
+  <main class={className}>
+    <slot />
+  </main>
+</LayoutInfoWeb>
+
+
+
