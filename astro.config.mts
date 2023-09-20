@@ -13,14 +13,6 @@ export default defineConfig({
   ],
   output: 'server',
   adapter: vercel({
-    speedInsights: {
-      enabled: true
-    },
-    webAnalytics: {
-      enabled: true
-    },
-    functionPerRoute: false,
     imageService: true,
-    edgeMiddleware: true
   })
-});
+})
