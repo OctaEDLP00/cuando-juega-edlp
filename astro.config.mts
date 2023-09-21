@@ -7,6 +7,7 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
+  domain: 'https://cuando-juega-edlp.vercel.app',
   integrations: [
     react(),
     tailwind()
