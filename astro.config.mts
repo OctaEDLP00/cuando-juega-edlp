@@ -14,5 +14,20 @@ export default defineConfig({
   output: 'server',
   adapter: vercel({
     imageService: true,
+    edgeMiddleware: true,
+    functionPerRoute: false,
+    webAnalytics: {
+      enabled: true
+    },
+    speedInsights: {
+      enabled: true
+    },
+    devImageService: 'squoosh',
+    imagesConfig: {
+      domains: ['https://squoosh.app'],
+      sizes: [240, 320, 1280],
+      formats: ['image/webp'],
+      remotePatterns: []
+    }
   })
 })

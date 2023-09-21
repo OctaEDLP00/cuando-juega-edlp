@@ -1,8 +1,10 @@
-import { IPartidosVS } from '../types/main'
+import { IPartidos } from '../types/main'
 import { useRemaningTime } from '@hooks/useRemainingTime'
 import { renderTimeRemaining } from '@components/renderTimeRemaining'
 
-export default function CardVS({ timestamp }: IPartidosVS) {
+type PartidosVS = Omit<IPartidos, 'key' | 'copa' | 'vs' | 'img'>
+
+export default function CardVS({ timestamp }: PartidosVS) {
   const { days, hours, minutes, seconds } = useRemaningTime(new Date(timestamp))
 
   return (

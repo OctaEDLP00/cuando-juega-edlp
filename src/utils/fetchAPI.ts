@@ -1,10 +1,9 @@
+import { IPartidos } from "src/types/main"
 import { error } from "./console"
 
-interface Options extends RequestInit { }
-
-export const fetchAPI = async (url: string, options?: Options) => {
+export const fetchAPI = async (url: string): Promise<Array<IPartidos>> => {
   try {
-    const response = await fetch(url, options)
+    const response = await fetch(url)
     const json = await response.json()
     return json
   } catch (e) {

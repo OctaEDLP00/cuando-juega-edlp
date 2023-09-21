@@ -1,10 +1,9 @@
 ---
 import Card from './Card'
 import { fetchAPI } from '@utils/fetchAPI'
-import { URL_API_ENDPOINT_2023 } from '../const/index'
-import { IPartidos } from '../types/main'
+import { PROD_URL_API_ENDPOINT_2023 } from '../const/index'
 
-const partidos = await fetchAPI(URL_API_ENDPOINT_2023) as Array<IPartidos>
+const partidos = await fetchAPI(PROD_URL_API_ENDPOINT_2023)
 ---
 
 <main

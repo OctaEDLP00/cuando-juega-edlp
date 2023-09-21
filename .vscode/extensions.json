@@ -14,7 +14,8 @@
 		"christian-kohler.path-intellisense",
 		"dbaeumer.vscode-eslint",
 		"yoavbls.pretty-ts-errors",
-		"heybourn.headwind"
+		"heybourn.headwind",
+		"irongeek.vscode-env"
 	],
   "unwantedRecommendations": []
 }

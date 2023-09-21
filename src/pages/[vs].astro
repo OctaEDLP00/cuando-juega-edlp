@@ -2,12 +2,11 @@
 import Layout from '@layouts/Layout.astro'
 import CardVS from '@components/CardVS'
 import { fetchAPI } from '@utils/fetchAPI'
-import { URL_API_ENDPOINT_2023 } from '../const/index'
-import {  IPartidosVS } from 'src/types/main'
+import { PROD_URL_API_ENDPOINT_2023 } from '../const/index'
 
-const partidos = await fetchAPI(URL_API_ENDPOINT_2023) as Array<IPartidosVS>
+const partidos = await fetchAPI(PROD_URL_API_ENDPOINT_2023)
 const { vs: VS } = Astro.params
-const versusPartido = partidos.find(({ vs }) => vs.replace(' ', '-') === VS)
+const versusPartido = partidos.find(({ vs }) => vs.toLowerCase().replace(' ', '-') === VS.toLowerCase())
 if (!versusPartido) return Astro.redirect('/404')
 ---
 
@@ -37,9 +36,4 @@ if (!versusPartido) return Astro.redirect('/404')
 			</div>
 		</div>
 	</main>
-  <!--
-  <main class='grid place-content-center h-screen'>
-		<div>Trabando en esta feature</div>
-	</main>
-  -->
 </Layout>

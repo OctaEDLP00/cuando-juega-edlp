@@ -23,13 +23,6 @@ export interface IPartidos {
   vs: string
   img: string
 }
-export interface IPartidosVS {
-  key?: string
-  copa?: string
-  timestamp: number | null
-  vs?: string
-  img?: string
-}
 export interface IPromise {
   days: string | number
   hours: string | number
