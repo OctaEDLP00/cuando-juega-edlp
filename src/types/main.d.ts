@@ -26,7 +26,7 @@ export interface IPartidos {
 export interface IPartidosVS {
   key?: string
   copa?: string
-  timestamp: EpochTimeStamp | null
+  timestamp: number | null
   vs?: string
   img?: string
 }

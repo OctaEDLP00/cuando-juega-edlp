@@ -1,6 +1,4 @@
-import { IPartidos } from "../types/main"
-import { error, log } from "./console"
-import { URL_API_ENDPOINT_2023 } from '../const'
+import { error } from "./console"
 
 interface Options extends RequestInit { }
 

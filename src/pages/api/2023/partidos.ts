@@ -4,12 +4,6 @@ export const GET: APIRoute = async ({ params, request }) => {
   const partidos = [
     {
       copa: "Torneo Binance 2023",
-      timestamp: 1695245400000,
-      vs: "San Lorenzo",
-      img: "/assets/SanLorenzo.png"
-    },
-    {
-      copa: "Torneo Binance 2023",
       timestamp: 1696179600000,
       vs: "Gimnasia",
       img: "/assets/Gimnasia.png"
