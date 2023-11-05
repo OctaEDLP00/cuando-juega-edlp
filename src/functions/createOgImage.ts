@@ -1,38 +1,52 @@
-// @ts-nocheck
 import { Handler } from '@netlify/functions'
-import { chromium, Page } from 'playwright'
+import { chromium, type Page } from 'playwright'
 
-const handler: Handler = async (event) => {
-  try {
-    const { queryStringParameters: { url } } = event
+const isLocal = import.meta.env.MODE === 'development'
+const LOCAL_CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+const LOCAL_URL = 'http://localhost:4321'
 
-    if (url) {
-      const browser = await chromium.launch()
-      const page: Page = await browser.newPage()
-      await page.goto(url, { waitUntil: 'networkidle' })
-
-      const bodyHandle = await page.$('body')
-      const imageBuffer = await bodyHandle.screenshot()
-      await browser.close()
-
-      return {
-        statusCode: 200,
-        body: imageBuffer.toString('base64'),
-        isBase64Encoded: true,
-        headers: {
-          'Content-Type': 'image/jpg'
-        }
-      }
-    }
-  } catch (err) {
-    const { message } = err
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ errorMsg: message })
-    }
-  }
+const getConfig = async () => {
+  const executablePath = isLocal ? LOCAL_CHROME_PATH : await chromium.executablePath
+  const url = isLocal ? LOCAL_URL : import.meta.env.SITE
+  return { executablePath, url }
 }
 
-export {
-  handler
+const returnImage = (buffer) => ({
+  headers: {
+    'Content-Type': 'image/jpg'
+  },
+  statusCode: 200,
+  body: buffer.toString('base64'),
+  isBase64Encoded: true,
+})
+
+export const handler: Handler = async (event) => {
+
+  const browser = await chromium.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath,
+    headless: true,
+    ignoreHTTPSErrors: true,
+  })
+
+  const { executablePath, url } = await getConfig()
+
+  const page: Page = await browser.newPage()
+
+  await page.setViewport({
+    width: 1200,
+    height: 800,
+    deviceScaleFactor: 2
+  })
+
+  await page.goto(url)
+
+  const el = await page.$('body')
+
+  const screenshot = await el.screenshot()
+
+  await browser.close()
+
+  return returnImage(screenshot)
 }
