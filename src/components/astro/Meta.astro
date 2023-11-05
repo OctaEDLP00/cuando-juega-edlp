@@ -1,3 +1,12 @@
+---
+const imageSrc = import.meta.env.SITE + '/og.jpg'
+const {
+  title = 'Cuando juega EDLP',
+  image = imageSrc,
+  description = 'Informacion de proximos partidos de Estudiantes de La Plata'
+} = Astro.props
+---
+
 <meta charset='UTF-8' />
 <meta
 	name='description'
@@ -11,12 +20,15 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <meta name='generator' content={Astro.generator} />
 
-<meta property='twitter:title' content='Cuando juega EDLP' />
-<meta property='twitter:description' content='Twitter link preview description' />
-<meta property='twitter:image' content='Twitter link preview image URL' />
-<meta property='twitter:card' content='summary_large_image' />
+<meta property='og:url' content={import.meta.env.SITE} />
+<meta property='og:type' content='website' />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:image' content={image} />
 
-<meta property='og:title' content='Cuando juega EDLP' />
-<meta property='og:description' content='Link preview description' />
-<meta property='og:image' content='Link preview image URL' />
-<meta property='og:url' content='Canonical link preview URL' />
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:site' content='@CaroOcta00' />
+<meta name='twitter:creator' content='@CaroOcta00' />
+<meta name='twitter:title' content={title} />
+<meta name='twitter:description' content={description} />
+<meta name='twitter:image' content={image} />
