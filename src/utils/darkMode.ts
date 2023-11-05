@@ -1,8 +1,7 @@
-import { $id } from "./Dom"
+/*
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
-const { getItem, setItem } = window.localStorage || globalThis.localStorage
-
-let selectedTheme = 'light'
+let selectedTheme = systemTheme
 
 const setTheme = (theme: string) => {
   selectedTheme = theme
@@ -10,18 +9,22 @@ const setTheme = (theme: string) => {
 }
 
 window.onload = () => {
-  const themeSelected = $id('darkLightMode') as HTMLSelectElement
+  const themeSelect = document.getElementById('darkLightMode') as HTMLSelectElement
   setTheme(selectedTheme)
 
-  themeSelected.addEventListener('change', () => {
-    const themeSelectedValue = themeSelected.value
-    setTheme(themeSelectedValue)
+  const changeTheme = () => {
+    const themeSelectedValue = themeSelect.value
     localStorage.setItem('theme', themeSelectedValue)
-  })
+    setTheme(themeSelectedValue)
+  }
+
+  themeSelect.addEventListener('change', changeTheme)
 
   const localStorageTheme = localStorage.getItem('theme')
   if (localStorageTheme) {
+    // console.log(localStorageTheme)
+    themeSelect.value = localStorageTheme
     setTheme(localStorageTheme)
-    themeSelected.value = localStorageTheme
   }
 }
+*/

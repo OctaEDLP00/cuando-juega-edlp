@@ -1,4 +1,4 @@
-import { IPartidos } from "src/types/main"
+import { type IPartidos } from "src/types/main"
 import { error } from "./console"
 
 export const fetchAPI = async (url: string): Promise<Array<IPartidos>> => {

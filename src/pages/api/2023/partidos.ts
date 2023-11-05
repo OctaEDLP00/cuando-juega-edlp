@@ -1,38 +1,33 @@
 import { type APIRoute } from 'astro'
 
-export const GET: APIRoute = async ({ params, request }) => {
-  const partidos = [
-    {
-      copa: "Torneo Binance 2023",
-      timestamp: 1696179600000,
-      vs: "Gimnasia",
-      img: "/assets/Gimnasia.png"
-    },
-    {
-      copa: "Torneo Binance 2023",
-      timestamp: 1696705200000,
-      vs: "Godoy Cruz",
-      img: "/assets/GodoyCruz.svg"
-    },
-    {
-      copa: "Torneo Binance 2023",
-      timestamp: null,
-      vs: "Sarmiento",
-      img: "/assets/Sarmiento.png"
-    },
-    {
-      copa: "Torneo Binance 2023",
-      timestamp: null,
-      vs: "DyJ",
-      img: "/assets/DyJ.png"
-    },
-    {
-      copa: "Torneo Binance 2023",
-      timestamp: null,
-      vs: "Lanus",
-      img: "/assets/Lanus.png"
-    }
-  ]
+export const GET: APIRoute = () => new Response(
+  JSON.stringify(
+    [
+      {
+        copa: "Torneo Binance",
+        date: "2023-11-05T20:30:00",
+        vs: "DyJ",
+        img: "/assets/DyJ.webp"
+      },
+      {
+        copa: "Torneo Binance",
+        date: "2023-11-12T19:00:00",
+        vs: "Central Cba",
+        img: "/assets/CentralCba.webp"
+      },
+      {
+        copa: "Copa Argentina",
+        date: null,
+        vs: "Boca Juniors",
+        img: "/assets/BocaJrs.webp"
+      },
+      {
+        copa: "Torneo Binance",
+        date: null,
+        vs: "Lanus",
+        img: "/assets/Lanus.webp"
+      }
+    ]
+  )
+)
 
-  return new Response(JSON.stringify(partidos))
-}

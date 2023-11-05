@@ -1,39 +1,38 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import CardVS from '@components/CardVS'
+import CardVS from '@react/CardVS'
 import { fetchAPI } from '@utils/fetchAPI'
-import { PROD_URL_API_ENDPOINT_2023 } from '../const/index'
+import { URL_API_ENDPOINT_2023 } from '../const'
 
-const partidos = await fetchAPI(PROD_URL_API_ENDPOINT_2023)
-const { vs: VS } = Astro.params
-const versusPartido = partidos.find(({ vs }) => vs.toLowerCase().replace(' ', '-') === VS.toLowerCase())
+const partidos = await fetchAPI(URL_API_ENDPOINT_2023)
+const { vs: vsParams } = Astro.params
+const versusPartido = partidos.find(({ vs }) => vs.toLowerCase().replace(' ', '-') === vsParams.toLowerCase())
 if (!versusPartido) return Astro.redirect('/404')
 ---
 
 <Layout title={`Cuando juega EDLP - ${versusPartido.vs}`}>
   <main
-		class='flex flex-col items-center justify-center w-full gap-4 pt-16 mt-16 md:flex-row md:flex-wrap md:justify-center md:pt-24'
+		class='flex p-4 justify-center md:justify-evenly items-center md:h-full'
 	>
-		<div class='grid gap-4 place-content-center h-screen grid-rows-2 md:grid-cols-2'>
-			<div class='rows-span-1 md:cols-span1'>
-				<div class='flex flex-col gap-4 text-center items-center justify-center my-24'>
-					<picture>
-						<img
-              loading='lazy'
-							class='object-containe w-44 h-44'
-							src={versusPartido.img}
-							alt={`Escudo del equipo ${versusPartido.vs}`}
-						/>
-					</picture>
-					<h2 class='mx-0 my-2'>{versusPartido.vs}</h2>
-					<p class='text-sm'>{versusPartido.copa}</p>
-				</div>
-			</div>
-			<div class='rows-span-1 md:cols-span1'>
-        <div class='flex flex-col gap-4 text-center items-center justify-center my-24'>
-          <CardVS client:load timestamp={versusPartido.timestamp} />
-        </div>
-			</div>
+		<div
+      class='grid grid-rows-2 md:grid-cols-2 place-items-center gap-y-3'
+      transition:name={`partido-${versusPartido.vs}`}
+    >
+      <div class='col-span-1 text-center'>
+        <picture>
+          <img
+            loading='lazy'
+            class='object-contain w-auto h-44'
+            src={versusPartido.img}
+            alt={`Escudo del equipo ${versusPartido.vs}`}
+          />
+        </picture>
+        <h2 class='text-xl mx-0 my-2'>{versusPartido.vs}</h2>
+        <p class='text-sm'>{versusPartido.copa}</p>
+      </div>
+      <div class='col-span-1'>
+        <CardVS client:only='react' copa={versusPartido.copa} date={versusPartido.date} />
+      </div>
 		</div>
 	</main>
 </Layout>

@@ -9,13 +9,14 @@
 		"kisstkondoros.vscode-gutter-preview",
 		"ms-vscode.vscode-typescript-next",
 		"oliversturm.fix-json",
-		"unifiedjs.vscode-mdx",
 		"christian-kohler.npm-intellisense",
 		"christian-kohler.path-intellisense",
 		"dbaeumer.vscode-eslint",
 		"yoavbls.pretty-ts-errors",
 		"heybourn.headwind",
-		"irongeek.vscode-env"
-	],
-  "unwantedRecommendations": []
+		"irongeek.vscode-env",
+		"chakrounanas.turbo-console-log",
+		"tobermory.es6-string-html",
+		"tamasfe.even-better-toml"
+	]
 }

@@ -1,7 +1,15 @@
 {
-  "files.associations": {
-    "*.mdx": "markdown"
+  "[astro]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    }
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -9,10 +17,9 @@
     "typescript", // Enable .ts
     "typescripreact" // Enable .tsx
   ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "files.associations": {
+    "*.mdx": "markdown"
   },
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "editor.insertSpaces": false,
-  "editor.detectIndentation": false
+  "typescript.inlayHints.parameterNames.enabled": "all"
 }

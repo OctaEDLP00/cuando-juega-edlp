@@ -1,3 +1,5 @@
+import { REL, TARGET } from './enum'
+
 // Web Interfaces
 export interface ILayoutProps {
   title: string
@@ -14,14 +16,33 @@ export interface ICardProps {
 export interface IMainSpecialProps {
   className?: string
 }
+export interface IHeaderProps {
+  className?: string
+}
+
+export interface ILinkProps {
+  href: string
+  target?: TARGET
+  rel?: REL | string
+}
 
 // Json Interfaces
+type TimeType = `${number}-${number}-${number}T${number}:${number}:${number}`
+
+type Hexa = `#${string}`
+
+interface Color {
+  light: string
+  dark: string
+}
+
 export interface IPartidos {
   key?: string
   copa: string
-  timestamp: number | null
+  date: TimeType | null
   vs: string
   img: string
+  color?: Color
 }
 export interface IPromise {
   days: string | number

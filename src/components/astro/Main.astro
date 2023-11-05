@@ -1,0 +1,27 @@
+---
+import { fetchAPI } from '@utils/fetchAPI'
+import { URL_API_ENDPOINT_2023 } from '../../const/index'
+import Card from '../react/Card'
+
+const partidos = await fetchAPI(URL_API_ENDPOINT_2023)
+---
+
+<main class='flex p-4 justify-center md:justify-evenly items-center md:h-full'>
+	<div id='cards' class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6'>
+		{
+			partidos.map(({ vs, img, copa, date, color }) => (
+				<Card
+					client:only='react'
+					transition:animate='fade'
+					transition:name={`partido-${vs}`}
+					key={vs}
+					img={img}
+					color={color}
+					copa={copa}
+					date={date}
+					vs={vs}
+				/>
+			))
+		}
+	</div>
+</main>

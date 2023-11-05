@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "isolatedModules": true,
@@ -7,19 +8,36 @@
     "jsxImportSource": "react",
     "module": "ESNext",
     "moduleResolution": "node",
+    "noEmit": true,
     "outDir": "./dist",
+    "paths": {
+      "@astro/*": [
+        "src/components/astro/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@react/*": [
+        "src/components/react/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@const/*": [
+        "src/const/*"
+      ]
+    },
     "resolveJsonModule": true,
     "target": "ESNext",
     "types": [
       "vite/client",
       "react"
-    ],
-    "paths": {
-      "@components/*": [ "src/components/*" ],
-      "@layouts/*": [ "src/layouts/*" ],
-      "@utils/*": [ "src/utils/*" ],
-      "@pages/*": [ "src/pages/*" ],
-      "@hooks/*": [ "src/hooks/*" ]
-    }
+    ]
   }
 }

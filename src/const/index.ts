@@ -1,4 +1,3 @@
-export const isLocal = globalThis.process.env.IS_PROD ?? true
-export const LOCAL_URL_API_ENDPOINT_2023 = 'http://localhost:4321/api/2023/partidos'
-export const PROD_URL_API_ENDPOINT_2023 = 'https://cuando-juega-edlp.vercel.app/api/2023/partidos'
-export const useURL = isLocal ? LOCAL_URL_API_ENDPOINT_2023 : PROD_URL_API_ENDPOINT_2023
+const isLocal = import.meta.env.MODE === 'development'
+const baseUrlDev = 'http://localhost:4321'
+export const URL_API_ENDPOINT_2023 = isLocal ? `${baseUrlDev}/api/2023/partidos` : `${import.meta.env.SITE}/api/2023/partidos`

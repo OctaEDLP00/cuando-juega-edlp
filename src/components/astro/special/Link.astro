@@ -1,0 +1,21 @@
+---
+type Target = '_blank' | '_parent' | '_self' | '_top'
+type Rel = 'noopener noreferrer' | 'noopener' | 'noreferrer'
+
+interface Props {
+	href: string
+	target?: Target
+	rel?: Rel | string
+}
+
+const { href, target, rel } = Astro.props
+---
+
+<a
+	href={href}
+	target={target}
+	rel={rel}
+	class='flex justify-center w-8 h-8 sm:w-10 sm:h-10'
+>
+	<slot />
+</a>

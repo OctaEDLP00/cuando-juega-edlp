@@ -1,0 +1,8 @@
+---
+import { IHeaderProps } from '../../types/main'
+const { className } = Astro.props as IHeaderProps
+---
+
+<header class={className}>
+	<slot />
+</header>

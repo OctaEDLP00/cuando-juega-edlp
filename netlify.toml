@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  node_bundler = "esbuild"
+  publish = "dist"
+
+[functions]
+  directory = "src/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-core"

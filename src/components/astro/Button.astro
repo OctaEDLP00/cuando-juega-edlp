@@ -1,0 +1,9 @@
+---
+import { IButtonProps } from '../../types/main'
+
+const { className, href, target } = Astro.props as IButtonProps
+---
+
+<a href={href} class={className} target={target}>
+	<slot />
+</a>
