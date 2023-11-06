@@ -12,6 +12,6 @@ export default defineConfig({
   output: 'server',
   adapter: netlify({
     functionPerRoute: true,
-    dist: new URL('/dist', import.meta.url)
+    dist: new URL('./dist/', import.meta.url)
   })
 })
