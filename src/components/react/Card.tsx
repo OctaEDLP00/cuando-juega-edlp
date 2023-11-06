@@ -28,7 +28,7 @@ export default function Card({ date, copa, vs, img }: IPartidos) {
             </span>
           </div>
         ) : (
-          <div id='spans' className={`${cn(copa === 'Copa Argentina' && 'bg-[#FF5722] dark:bg-[#FF9800]', copa === 'Torneo Binance' && 'bg-[#09798C] dark:bg-[#0BBAD9]', copa === 'Copa Libertadores' && 'bg-[#007848] dark:bg-[#4AA02C]', copa === 'Copa Sudamericana' && 'bg-[#A10102] dark:bg-[#FF1010]')} rounded-md py-2 px-4 flex flex-col justify-center w-full`}>
+            <div id='spans' className={`${cn(copa === 'Copa Argentina' && 'bg-[#FF5722] dark:bg-[#FF9800]', copa === 'Torneo Binance' && 'bg-[#09798C] dark:bg-[#0BBAD9]', copa === 'Copa Libertadores' && 'bg-[#007848] dark:bg-[#4AA02C]', copa === 'Copa Sudamericana' && 'bg-[#A10102] dark:bg-[#FF1010]')} rounded-md py-2 px-4 flex flex-col justify-center h-full w-full`}>
             {
               renderTimeRemaining({ days, hours, minutes, seconds })
             }

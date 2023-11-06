@@ -22,7 +22,7 @@ export function renderTimeRemaining({ days, hours, minutes, seconds }: TRemainin
   }
 
   if (Number(days) === 0 && Number(hours) !== 0 && Number(minutes) !== 0 && Number(seconds) !== 0) {
-    return <span className='text-center'>
+    return <span>
       {hours}:{minutes}:{seconds}
     </span>
   }
