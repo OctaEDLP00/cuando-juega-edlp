@@ -5,6 +5,3 @@
 
 [functions]
   directory = "src/functions"
-
-[[plugins]]
-  package = "@netlify/plugin-functions-core"
