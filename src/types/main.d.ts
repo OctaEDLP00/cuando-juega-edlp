@@ -27,22 +27,20 @@ export interface ILinkProps {
 }
 
 // Json Interfaces
-type TimeType = `${number}-${number}-${number}T${number}:${number}:${number}`
-
-type Hexa = `#${string}`
-
-interface Color {
-  light: string
-  dark: string
-}
+export type TimeType = `${number}-${number}-${number}T${number}:${number}:${number}`
+export type CopaType =
+  "Torneo Binance" |
+  "Copa Libertadores" |
+  "Copa Sudamericana" |
+  "Copa Argentina"
 
 export interface IPartidos {
   key?: string
-  copa: string
+  copa: CopaType
   date: TimeType | null
   vs: string
   img: string
-  color?: Color
+
 }
 export interface IPromise {
   days: string | number
