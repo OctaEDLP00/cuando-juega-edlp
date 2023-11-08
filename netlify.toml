@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   node_bundler = "esbuild"
-  publish = "dist"
+  publish = "dist/"
 
 [functions]
   directory = "src/functions"
