@@ -43,5 +43,14 @@
     "start:host": "astro dev --host"
   },
   "type": "module",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/"
+    },
+    {
+      "type": "MIT"
+    }
+  ]
 }
