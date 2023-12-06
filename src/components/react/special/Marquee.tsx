@@ -7,7 +7,7 @@ interface MarqueeProps {
   pauseOnHover?: boolean
   children?: ReactNode
   [key: string]: unknown
-  size?: string
+  size?: 'small' | 'large'
 }
 
 export default function Marquee({
@@ -21,9 +21,15 @@ export default function Marquee({
   return (
     <div
       {...props}
-      className={cn('flex w-full overflow-x-hidden [--duration:40s] [--gap:1rem]', className, {
-        'flex-col xl:flex-row items-center xl:justify-normal xl:items-stretch': size === 'large'
-      })}
+      className={
+        cn(
+          'flex w-full overflow-x-hidden [--duration:40s] [--gap:1rem]',
+          className,
+          {
+            'flex-col xl:flex-row items-center xl:justify-normal xl:items-stretch': size === 'large'
+          }
+        )
+      }
     >
       <div
         className={cn('flex w-max animate-marquee items-stretch gap-[--gap]', {

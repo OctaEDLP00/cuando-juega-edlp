@@ -31,3 +31,6 @@ css
 # Local Netlify folder
 .netlify
 .vercel
+
+# Files
+src/components/react/special/Marquee.tsx
