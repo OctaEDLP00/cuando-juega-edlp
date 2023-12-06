@@ -12,13 +12,13 @@ interface NetworkSocial extends ILinkProps {
 
 export const SOCIAL_NETWORKS: Array<NetworkSocial> = [
   {
-    href: 'https://instagram.com/octaviocaro_22.tsx',
+    href: 'https://instagram.com/octaviocaro_23.tsx',
     IconComponent: InstagramIcon,
     target: TARGET.BLANK,
     rel: REL.NOOPENERNOREFERRER
   },
   {
-    href: 'https://threads.net/octaviocaro_22.tsx',
+    href: 'https://threads.net/octaviocaro_23.tsx',
     IconComponent: Threadsicon,
     target: TARGET.BLANK,
     rel: REL.NOOPENERNOREFERRER
@@ -36,7 +36,7 @@ export const SOCIAL_NETWORKS: Array<NetworkSocial> = [
     rel: REL.NOOPENERNOREFERRER
   },
   {
-    href: 'https://discordapp.com/user/684060236549718132',
+    href: 'https://discordapp.com/users/684060236549718132',
     IconComponent: DiscordIcon,
     target: TARGET.BLANK,
     rel: REL.NOOPENERNOREFERRER
