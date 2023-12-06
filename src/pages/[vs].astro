@@ -6,19 +6,19 @@ import { URL_API_ENDPOINT_2023 } from '../const'
 
 const partidos = await fetchAPI(URL_API_ENDPOINT_2023)
 const { vs: vsParams } = Astro.params
-const versusPartido = partidos.find(({ vs }) => vs.toLowerCase().replace(' ', '-') === vsParams.toLowerCase())
+const versusPartido = partidos.find(({ vs }) => vs.toLowerCase().replaceAll(' ', '-') === vsParams.toLowerCase())
 if (!versusPartido) return Astro.redirect('/404')
 ---
 
 <Layout title={`Cuando juega EDLP - ${versusPartido.vs}`}>
   <main
-		class='flex p-4 justify-center md:justify-evenly items-center md:h-full'
+		class='max-w-screen-xl flex justify-center m-auto md:h-full'
 	>
 		<div
-      class='grid grid-rows-2 md:grid-cols-2 place-items-center gap-y-3'
+      class='grid md:grid-cols-2 place-content-center gap-y-6'
       transition:name={`partido-${versusPartido.vs}`}
     >
-      <div class='col-span-1 text-center'>
+      <div class='md:col-span-1 row-span-1 flex flex-col items-center justify-center'>
         <picture>
           <img
             loading='lazy'
@@ -30,7 +30,7 @@ if (!versusPartido) return Astro.redirect('/404')
         <h2 class='text-xl mx-0 my-2'>{versusPartido.vs}</h2>
         <p class='text-sm'>{versusPartido.copa}</p>
       </div>
-      <div class='col-span-1'>
+      <div class='md:col-span-1 row-span-1 flex justify-center items-center'>
         <CardVS client:only='react' copa={versusPartido.copa} date={versusPartido.date} />
       </div>
 		</div>
