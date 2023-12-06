@@ -4,18 +4,23 @@ import { REL, TARGET } from './enum'
 export interface ILayoutProps {
   title: string
 }
+
 export interface IButtonProps {
   className: string
   href: string
   target?: string
 }
+
 export interface IPagesProps { }
+
 export interface ICardProps {
   vs: string
 }
+
 export interface IMainSpecialProps {
   className?: string
 }
+
 export interface IHeaderProps {
   className?: string
 }
@@ -27,12 +32,18 @@ export interface ILinkProps {
 }
 
 // Json Interfaces
-export type TimeType = `${number}-${number}-${number}T${number}:${number}:${number}`
-export type CopaType =
-  "Torneo Binance" |
-  "Copa Libertadores" |
-  "Copa Sudamericana" |
-  "Copa Argentina"
+type TimeType = `${number}-${number}-${number}T${number}:${number}:${number}`
+type CopaType = 'Copa de La Liga' | 'Copa Libertadores' | 'Copa Sudamericana' | 'Copa Argentina'
+type Fecha = 'final' | 'semifinal' | '4tos' | '8avos' | '32avos'
+
+export interface Partidos {
+  copa: CopaType,
+  date: TimeType | null,
+  vs: string,
+  img: string,
+  fecha: Fecha | number,
+  isVisitor?: boolean
+}
 
 export interface IPartidos {
   key?: string
