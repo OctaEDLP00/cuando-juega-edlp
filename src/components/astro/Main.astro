@@ -1,27 +1,48 @@
 ---
-import { fetchAPI } from '@utils/fetchAPI'
-import { URL_API_ENDPOINT_2023 } from '../../const/index'
-import Card from '../react/Card'
+import { fetchAPI } from '@utils/fetchAPI';
+import { URL_API_ENDPOINT } from '../../const/index';
+import Card from '../react/Card';
 
-const partidos = await fetchAPI(URL_API_ENDPOINT_2023)
+const partidos = await fetchAPI(URL_API_ENDPOINT('2023'))
 ---
 
-<main class='flex p-4 justify-center md:justify-evenly items-center md:h-full'>
-	<div id='cards' class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6'>
-		{
-			partidos.map(({ vs, img, copa, date, color }) => (
-				<Card
-					client:only='react'
-					transition:animate='fade'
-					transition:name={`partido-${vs}`}
-					key={vs}
-					img={img}
-					color={color}
-					copa={copa}
-					date={date}
-					vs={vs}
-				/>
-			))
-		}
-	</div>
+<main class='max-w-screen-xl flex my-auto justify-center items-center md:h-full'>
+  {
+    partidos.length > 0 && partidos.length >= 3 ? <div id='cards' class='grid place-content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6'>
+      {
+        partidos.map(({ vs, img, copa, date }) => (
+          <Card
+            client:only='react'
+            transition:animate='fade'
+            transition:name={`partido-${vs}`}
+            key={vs}
+            img={img}
+            copa={copa}
+            date={date}
+            vs={vs}
+          />
+        ))
+      }
+    </div> : <div id='cards' class='flex md:flex-row flex-col justify-center gap-y-6 md:gay-x-6'>
+      {
+        partidos.map(({ vs, img, copa, date }) => (
+          <Card
+            client:only='react'
+            transition:animate='fade'
+            transition:name={`partido-${vs}`}
+            key={vs}
+            img={img}
+            copa={copa}
+            date={date}
+            vs={vs}
+          />
+        ))
+      }
+    </div>
+  }
+	{
+    partidos.length === 0 && <marquee class='text-6xl p-3'>
+      Vuele el proximo Torneo/Copa de la Liga
+    </marquee>
+  }
 </main>
