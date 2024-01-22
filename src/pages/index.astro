@@ -1,8 +1,26 @@
 ---
+import Card from '@components/Card.astro'
+import { URL_API_ENDPOINT } from '@const/index'
 import Layout from '@layouts/Layout.astro'
-import Main from '@astro/Main.astro'
+import { fetchAPI } from '@utils/fetchAPI'
+const partidos = await fetchAPI(URL_API_ENDPOINT)
 ---
 
 <Layout title='Cuando juega Edlp'>
-  <Main />
+  <main class=''>
+    <div id='cards' class='grid place-items-center grid-cols-1 md:grid-cols-2'>
+      {
+        partidos.map(({ vs, img, copa, date, fecha, isVisitor })=> (
+          <Card
+            vs={vs}
+            img={img}
+            copa={copa}
+            date={date}
+            fecha={fecha}
+            isVisitor={isVisitor}
+          />
+        ))
+      }
+    </div>
+  </main>
 </Layout>

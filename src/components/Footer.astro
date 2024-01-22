@@ -1,0 +1,25 @@
+---
+import { SOCIAL_NETWORKS } from '@const/socialNetworks.ts'
+import Link from './Link.astro'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer class=''>
+	<div class=''>
+		<span class=''>
+			&copy;2023 - {currentYear} Todos los derechos reservados
+		</span>
+		<ul class=''>
+			{
+				SOCIAL_NETWORKS.map(({ href, IconComponent, target, rel, disabled }) => (
+					<li>
+						<Link href={href} target={target} rel={rel} className={`${disabled ? 'hidden' : ''}`}>
+							<IconComponent />
+						</Link>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</footer>

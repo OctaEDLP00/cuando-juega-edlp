@@ -1,0 +1,12 @@
+---
+interface Props {
+	nameComponent: string
+}
+
+const { nameComponent } = Astro.props
+---
+
+<section>
+	<h1>{nameComponent}</h1>
+	<slot />
+</section>

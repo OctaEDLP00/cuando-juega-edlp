@@ -1,0 +1,10 @@
+---
+import { type IBadgeProps } from '@/types/main'
+const { isVisitor } = Astro.props as IBadgeProps
+---
+
+<span
+	class='bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:text-blue-400 border border-blue-400'
+>
+	{isVisitor ? 'V' : 'L'}
+</span>

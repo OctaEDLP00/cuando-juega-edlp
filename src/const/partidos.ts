@@ -1,19 +1,16 @@
-import { type Partidos } from '../types/main'
+import { type IPartidos } from '../types/main'
 
-export const partidos: Array<Partidos> = [
+export const partidos: Array<IPartidos> = [
   {
     copa: 'Copa Argentina',
-    date: null,
-    vs: 'Defensa y Justicia',
-    img: '/assets/DyJ.webp',
-    fecha: 'final'
-  }
-]
-
-export const partidos2024: Array<Partidos> = [
+    date: '2024-01-25T00:00:00',
+    vs: 'Deportivo Argentino',
+    img: '/assets/ArgMonteMaiz.webp',
+    fecha: '32avos'
+  },
   {
     copa: 'Copa de La Liga',
-    date: null,
+    date: '2024-01-28T21:00:00',
     vs: 'Belgrano',
     img: '/assets/Belgrano.webp',
     fecha: 1,
@@ -21,15 +18,15 @@ export const partidos2024: Array<Partidos> = [
   },
   {
     copa: 'Copa de La Liga',
-    date: null,
-    vs: 'Union',
+    date: '2024-02-01T21:30:00',
+    vs: 'Unión',
     img: '/assets/Union.webp',
     fecha: 2,
     isVisitor: true
   },
   {
     copa: 'Copa de La Liga',
-    date: null,
+    date: '2024-02-05T21:30:00',
     vs: 'Racing',
     img: '/assets/Racing.webp',
     fecha: 3,
@@ -37,7 +34,7 @@ export const partidos2024: Array<Partidos> = [
   },
   {
     copa: 'Copa de La Liga',
-    date: null,
+    date: '2024-02-09T19:00:00',
     vs: 'Tigre',
     img: '/assets/Tigre.webp',
     fecha: 4,
@@ -45,15 +42,15 @@ export const partidos2024: Array<Partidos> = [
   },
   {
     copa: 'Copa de La Liga',
-    date: null,
-    vs: 'San Silencio',
+    date: '2024-02-13T17:00:00',
+    vs: 'San Lorenzo',
     img: '/assets/SanLorenzo.webp',
     fecha: 5,
     isVisitor: true
   },
   {
     copa: 'Copa de La Liga',
-    date: null,
+    date: '2024-02-19T19:15:00',
     vs: 'Newell`s',
     img: '/assets/Newells.webp',
     fecha: 6,
@@ -95,7 +92,7 @@ export const partidos2024: Array<Partidos> = [
     copa: 'Copa de La Liga',
     date: null,
     vs: 'Boca',
-    img: '/assets/Boca.webp',
+    img: '/assets/BocaJrs.webp',
     fecha: 11,
     isVisitor: false
   },

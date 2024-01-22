@@ -1,21 +1,21 @@
 {
   "[astro]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.organizeImports": true
-    }
+			"source.fixAll": "explicit",
+			"source.organizeImports": "explicit"
+		}
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
+		"source.fixAll.eslint": "explicit"
+	},
   "editor.detectIndentation": false,
   "editor.insertSpaces": false,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "astro", // Enable .astro
-    "typescript", // Enable .ts
-    "typescripreact" // Enable .tsx
+    "astro",
+    "typescript",
+    "typescripreact"
   ],
   "files.associations": {
     "*.mdx": "markdown"

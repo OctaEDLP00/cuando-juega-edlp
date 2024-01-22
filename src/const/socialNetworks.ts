@@ -1,44 +1,42 @@
-import DiscordIcon from '@astro/icons/Discord.astro'
-import GithubIcon from '@astro/icons/Github.astro'
-import InstagramIcon from '@astro/icons/Instagram.astro'
-import Threadsicon from '@astro/icons/Threads.astro'
-import TwitterIcon from '@astro/icons/Twitter.astro'
-import { REL, TARGET } from '../types/enum'
-import { type ILinkProps } from '../types/main'
+// import DiscordIcon from '@components/icons/Discord.astro'
+import { type INetworkSocial } from '@/types/main'
+import GithubIcon from '@components/icons/Github.astro'
+import InstagramIcon from '@components/icons/Instagram.astro'
+import Threadsicon from '@components/icons/Threads.astro'
+import TwitterIcon from '@components/icons/Twitter.astro'
 
-interface NetworkSocial extends ILinkProps {
-  IconComponent: any
-}
-
-export const SOCIAL_NETWORKS: Array<NetworkSocial> = [
+export const SOCIAL_NETWORKS: Array<INetworkSocial> = [
   {
     href: 'https://instagram.com/octaviocaro_23.tsx',
     IconComponent: InstagramIcon,
-    target: TARGET.BLANK,
-    rel: REL.NOOPENERNOREFERRER
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
   {
     href: 'https://threads.net/octaviocaro_23.tsx',
     IconComponent: Threadsicon,
-    target: TARGET.BLANK,
-    rel: REL.NOOPENERNOREFERRER
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
   {
     href: 'https://twitter.com/CaroOcta00',
     IconComponent: TwitterIcon,
-    target: TARGET.BLANK,
-    rel: REL.NOOPENERNOREFERRER
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
   {
     href: 'https://github.com/OctaEDLP00/cuando-juega-edlp',
     IconComponent: GithubIcon,
-    target: TARGET.BLANK,
-    rel: REL.NOOPENERNOREFERRER
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
+  /*
   {
     href: 'https://discordapp.com/users/684060236549718132',
     IconComponent: DiscordIcon,
     target: TARGET.BLANK,
-    rel: REL.NOOPENERNOREFERRER
+    rel: REL.NOOPENERNOREFERRER,
+    disabled: true
   }
+  */
 ]

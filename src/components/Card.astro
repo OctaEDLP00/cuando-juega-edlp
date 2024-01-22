@@ -1,0 +1,24 @@
+---
+import { ICardProps } from '@/types/main'
+import Badge from '@components/Badge.astro'
+import Temporizador from '@components/Temporizador.tsx'
+
+const { img, vs, isVisitor, copa, fecha, date } = Astro.props as ICardProps
+---
+
+<section class='w-64 h-full flex flex-col justify-center items-center gap-8'>
+	<header class='relative'>
+		<img class='' loading='lazy' src={img} alt={`Escudo del club ${vs}`} />
+		<Badge isVisitor={isVisitor} />
+	</header>
+	<main class=''>
+		<h1 class=''>{vs}</h1>
+		<h2 class=''>{copa}</h2>
+		<p class=''>{fecha}</p>
+	</main>
+	<footer class=''>
+		<div class=''>
+			<Temporizador client:only copa={copa} date={date} />
+		</div>
+	</footer>
+</section>

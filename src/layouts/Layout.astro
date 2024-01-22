@@ -1,17 +1,17 @@
 ---
-import Footer from '@astro/Footer.astro'
-import Links from '@astro/Links.astro'
-import Meta from '@astro/Meta.astro'
-import Navbar from '@astro/Navbar.astro'
-import Scripts from '@astro/Scripts.astro'
+import { ILayoutProps } from '@/types/main'
+import Footer from '@components/Footer.astro'
+import Navbar from '@components/Navbar.astro'
+import Links from '@components/head/Links.astro'
+import Meta from '@components/head/Meta.astro'
+import Scripts from '@components/head/Scripts.astro'
 import { ViewTransitions } from 'astro:transitions'
 import '../styles/main.css'
-import { ILayoutProps } from '../types/main'
 
 const { title } = Astro.props as ILayoutProps
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang='es'>
 	<head>
     <Meta />
@@ -20,8 +20,8 @@ const { title } = Astro.props as ILayoutProps
     <ViewTransitions />
     <title>{title}</title>
   </head>
-  <body class='font-CCLP bg-[#ccc] text-[#151515] dark:bg-[#151515] dark:text-[#ccc] scroll-smooth'>
-    <div id='App' class='flex flex-col m-auto justify-center md:h-screen w-full max-w-screen-xl h-screen'>
+  <body class='dark:bg-[#151515] dark:text-[#ccc] bg-[#ccc] text-[#151515] font-CCLP scroll-smooth'>
+    <div id='App' class='w-screen max-w-6xl mx-auto h-full'>
       <Navbar />
       <slot />
       <Footer />

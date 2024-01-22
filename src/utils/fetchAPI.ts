@@ -1,7 +1,7 @@
-import { type IPartidos } from "src/types/main"
+import { type ICardPartidos } from "@/types/main"
 import { error } from "./console"
 
-export const fetchAPI = async (url: string): Promise<Array<IPartidos>> => {
+export const fetchAPI = async (url: string): Promise<Array<ICardPartidos>> => {
   try {
     const response = await fetch(url)
     const json = await response.json()

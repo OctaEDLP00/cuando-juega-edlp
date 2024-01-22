@@ -11,9 +11,6 @@
     "noEmit": true,
     "outDir": "./dist",
     "paths": {
-      "@astro/*": [
-        "src/components/astro/*"
-      ],
       "@hooks/*": [
         "src/hooks/*"
       ],
@@ -23,14 +20,23 @@
       "@pages/*": [
         "src/pages/*"
       ],
-      "@react/*": [
-        "src/components/react/*"
+      "@components/*": [
+        "src/components/*"
       ],
       "@utils/*": [
         "src/utils/*"
       ],
       "@const/*": [
         "src/const/*"
+      ],
+      "@scripts/*": [
+        "src/scripts/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@/*": [
+        "src/*"
       ]
     },
     "resolveJsonModule": true,

@@ -1,0 +1,13 @@
+---
+import { type ILinkProps } from '@/types/main'
+const { href, target, rel, className } = Astro.props as ILinkProps
+---
+
+<a
+	href={href}
+	target={target}
+	rel={rel}
+	class={`${className} flex justify-center w-8 h-8 sm:w-10 sm:h-10`}
+>
+	<slot />
+</a>
