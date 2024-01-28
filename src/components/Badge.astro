@@ -4,7 +4,7 @@ const { isVisitor } = Astro.props as IBadgeProps
 ---
 
 <span
-	class='bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:text-blue-400 border border-blue-400'
+	class='bg-blue-100 text-blue-800 font-medium w-6 h-6 rounded-full dark:text-blue-400 border border-blue-400 absolute right-0 bottom-0 flex items-center justify-center'
 >
-	{isVisitor ? 'V' : 'L'}
+	<p class='text-xs'>{isVisitor ? 'V' : 'L'}</p>
 </span>
