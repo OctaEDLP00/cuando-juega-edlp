@@ -6,19 +6,28 @@ import Temporizador from '@components/Temporizador.tsx'
 const { img, vs, isVisitor, copa, fecha, date } = Astro.props as ICardProps
 ---
 
-<section class='w-64 h-full flex flex-col justify-center items-center gap-8'>
+<section class:list={[
+  copa === 'Copa de La Liga' && 'bg-[#0BBAD9] dark:bg-[#09798C] shadow-[#09798C] dark:shadow-[#0BBAD9]',
+  copa === 'Copa Libertadores' && 'bg-[#4AA02C] dark:bg-[#007848] shadow-[#007848] dark:shadow-[#4AA02C]',
+  copa === 'Copa Sudamericana' && 'bg-[#FF1010] dark:bg-[#A10102] shadow-[#A10102] dark:shadow-[#FF1010]',
+  copa === 'Copa Argentina' && 'bg-[#dd794b] dark:bg-[#FF5722] shadow-[#FF5722] dark:shadow-[#dd794b]',
+  copa === 'Noche del León' && 'bg-[#6366F1] dark:bg-[#3730A3] shadow-[#3730A3] dark:shadow-[#6366F1]'
+]} class='w-40 h-auto flex flex-col shadow-lg justify-center rounded-lg items-center gap-4'>
 	<header class='relative'>
-		<img class='' loading='lazy' src={img} alt={`Escudo del club ${vs}`} />
+		<img
+      class='w-14 h-14 aspect-square'
+      loading='lazy'
+      src={img}
+      alt={`Escudo del club ${vs}`}
+    />
 		<Badge isVisitor={isVisitor} />
 	</header>
-	<main class=''>
-		<h1 class=''>{vs}</h1>
+	<main class='flex flex-col items-center gap-1.5'>
+		<h1 class='uppercase'>{vs}</h1>
 		<h2 class=''>{copa}</h2>
-		<p class=''>{fecha}</p>
+		<p class='text-sm'>Fecha {fecha}</p>
 	</main>
-	<footer class=''>
-		<div class=''>
-			<Temporizador client:only copa={copa} date={date} />
-		</div>
+	<footer class='w-full h-6'>
+		<Temporizador client:only copa={copa} date={date} />
 	</footer>
 </section>
