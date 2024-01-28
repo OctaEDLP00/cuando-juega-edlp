@@ -8,9 +8,9 @@ const partidos = await fetchAPI(URL_API_ENDPOINT)
 
 <Layout title='Cuando juega Edlp'>
   <main class=''>
-    <div id='cards' class='grid place-items-center grid-cols-1 md:grid-cols-2'>
+    <div id='cards' class='grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
       {
-        partidos.map(({ vs, img, copa, date, fecha, isVisitor })=> (
+        partidos.map(({ vs, img, copa, date, fecha, isVisitor }) => (
           <Card
             vs={vs}
             img={img}
