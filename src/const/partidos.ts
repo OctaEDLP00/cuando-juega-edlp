@@ -2,13 +2,6 @@ import { type IPartidos } from '../types/main'
 
 export const partidos: Array<IPartidos> = [
   {
-    copa: 'Copa Argentina',
-    date: '2024-01-25T00:00:00',
-    vs: 'Deportivo Argentino',
-    img: '/assets/ArgMonteMaiz.webp',
-    fecha: '32avos'
-  },
-  {
     copa: 'Copa de La Liga',
     date: '2024-01-28T21:00:00',
     vs: 'Belgrano',
