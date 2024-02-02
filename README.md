@@ -76,70 +76,70 @@ Write about 1-2 paragraphs describing the purpose of your project.
 ```
 /
 ├─ .vscode/
-  └─ extension.json
-  └─ launch.json
-  └─ settings.json
+| └─ extension.json
+| └─ launch.json
+| └─ settings.json
 |- node_modules/ carpeta de dependencias que necesita el proyecto para funcionar
 ├─ public/
-  └─ assets/
-    └─ Todas la imagenes necesarias para la pagina (escudos)
-  └─ favicon.webp
+| └─ assets/
+| | └─ Todas la imagenes necesarias para la pagina (escudos)
+| └─ favicon.webp
 ├─ src/
-  ├─ components/
-    └─ head/
-      └─ Links.astro
-      └─ Meta.astro
-      └─ Scripts.astro
-    └─ icons/
-      └─ Github.astro
-      └─ Instagram.astro
-      └─ Threads.astro
-      └─ Twitter.astro
-    └─ Badge.astro
-    └─ BuiltWith.astro
-    └─ Card.astro
-    └─ Component.astro
-    └─ Footer.astro
-    └─ Header.astro
-    └─ Link.astro
-    └─ Navbar.astro
-    └─ RenderTimeRemaining.tsx
-    └─ Temporizador.tsx
-  ├─ const/
-    └─ components.ts
-    └─ index.ts
-    └─ partidos.ts
-    └─ socialNetwork.ts
-  ├─ functions/
-    └─ createOGImage.ts
-  ├─ hooks/
-    └─ useRemainingTime.ts
-  ├─ layouts/
-    └─ Layout.astro
-  └─ pages/
-    └─ api/
-      └─ partido/
-        └─ [visitor].ts
-        └─ [vs].ts
-      └─ partidos.ts
-    └─ components.astro
-    └─ index.astro
-  └─ styles/
-    └─ main.css
-  └─ types/
-    └─ enum.ts
-    └─ main.d.ts
-  └─ utils/
-    └─ alwaysPositive.ts
-    └─ cn.ts
-    └─ console.ts
-    └─ Dom.ts
-    └─ fetchAPI.ts
-    └─ fillZeros.ts
-    └─ getRemainingTime.ts
-    └─ index.ts
-    └─ mapValues.ts
-  └── env.d.ts
+| ├─ components/
+| | └─ head/
+| | | └─ Links.astro
+| | | └─ Meta.astro
+| | | └─ Scripts.astro
+| | └─ icons/
+| | | └─ Github.astro
+| | | └─ Instagram.astro
+| | | └─ Threads.astro
+| | | └─ Twitter.astro
+| | └─ Badge.astro
+| | └─ BuiltWith.astro
+| | └─ Card.astro
+| | └─ Component.astro
+| | └─ Footer.astro
+| | └─ Header.astro
+| | └─ Link.astro
+| | └─ Navbar.astro
+| | └─ RenderTimeRemaining.tsx
+| | └─ Temporizador.tsx
+| ├─ const/
+| | └─ components.ts
+| | └─ index.ts
+| | └─ partidos.ts
+| | └─ socialNetwork.ts
+| ├─ functions/
+| | └─ createOGImage.ts
+| ├─ hooks/
+| | └─ useRemainingTime.ts
+| ├─ layouts/
+| | └─ Layout.astro
+| └─ pages/
+| | └─ api/
+| | | └─ partido/
+| | | | └─ [visitor].ts
+| | | | └─ [vs].ts
+| | | └─ partidos.ts
+| | └─ components.astro
+| | └─ index.astro
+| └─ styles/
+| | └─ main.css
+| └─ types/
+| | └─ enum.ts
+| | └─ main.d.ts
+| └─ utils/
+| | └─ alwaysPositive.ts
+| | └─ cn.ts
+| | └─ console.ts
+| | └─ Dom.ts
+| | └─ fetchAPI.ts
+| | └─ fillZeros.ts
+| | └─ getRemainingTime.ts
+| | └─ index.ts
+| | └─ mapValues.ts
+| └── env.d.ts
 └── .editorconfig
 └── .eslintrc.js
 └── .gitignore
@@ -150,22 +150,22 @@ Write about 1-2 paragraphs describing the purpose of your project.
 └── LICENSE-MIT.txt
 └── netlify.toml
 └── package.json/
-   └─ .eslintignore
-   └─ pnpm-lock.yaml // ignorado por el archivo .gitignore al subirse al github
-   └─ tailwind.config.cjs
-   └─ tsconfig.json
+|  └─ .eslintignore
+|  └─ pnpm-lock.yaml // ignorado por el archivo .gitignore al subirse al github
+|  └─ tailwind.config.cjs
+|  └─ tsconfig.json
 └── README.md/
    └─ CONTRIBUITING.md
 ```
 
 # Endpoints <a id="endpoints"></a>
 
-- GET `/api/partidos`. Todos los partidos de local del año corriente
+- **GET** `/api/partidos`. Todos los partidos de local del año corriente
 
-- GET `/api/partido/[EQUIPO]`. Obtener info de solo un equipo
+- **GET** `/api/partido/[EQUIPO]`. Obtener info de solo un equipo
   * `[EQUIPO]` nombre del equipo a buscar los valore posibles salen en `/api/partidos`
 
-- GET `/api/partido/[VISITANTE]`. Obtener info de solo los partidos que se juegan de local o visitante
+- **GET** `/api/partido/[VISITANTE]`. Obtener info de solo los partidos que se juegan de local o visitante
   * `[VISITANTE]` unicos valores posibles `visitante` ó `local`
 
 # Rutas <a id="routes"></a>
