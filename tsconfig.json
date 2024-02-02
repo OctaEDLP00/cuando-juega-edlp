@@ -42,7 +42,6 @@
     "resolveJsonModule": true,
     "target": "ESNext",
     "types": [
-      "vite/client",
       "react"
     ]
   }
