@@ -1,31 +1,22 @@
-<p align="center">
-  <a href="https://cuando-juega-edlp.netlify.app" rel="noopener">
-  <img width=200 height=200 src="./public/favicon.webp" alt="Project logo"></a>
-</p>
-<h3 align="center">CUANDO JUEGA EDLP</h3>
+<!--a href="https://cuando-juega-edlp.netlify.app" rel="noopener">
+  <img width=200 height=200 src="./public/favicon.webp" alt="Project logo">
+</a>-->
+# CUANDO JUEGA EDLP
 
-<style>
-  .prev {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    padding: 30px;
-  }
-</style>
----
-<h2 align=center>Previzualizacion</h2>
+Proyecto para saber el tiempo restante de los proximos partidos de Estudiantes de La Plata.
+Hecho con mucho cariño
 
-<div class='prev'>
-  <div>
-    <h2>Dark Mode</h2>
-    <img width=400 height=200 src="./Desktop - DarkMode.jpg" alt="Previsualizacion del Dark Mode de la pagina" />
-  </div>
-  <div>
-    <h2>Light Mode</h2>
-    <img width=400 height=200 src="./Desktop - LightMode.jpg" alt="Previsualizacion del Light Mode de la pagina" />
-  </div>
+## Previzualizacion
+
+<div align=center>
+  <img width=300 height=200 src="./Desktop - DarkMode.jpg" 
+    alt="Previsualizacion del Dark Mode de la pagina" 
+  />
+  <br>
+  <img width=300 height=200 src="./Desktop - LightMode.jpg"
+    alt="Previsualizacion del Light Mode de la pagina"
+  />
 </div>
-
 
 <div align="center">
 
@@ -38,17 +29,12 @@
 
 ---
 
-<p align="center">
-  Proyecto para saber el tiempo restante de
-  <br> los proximos partidos de Estudiantes de La Plata. <br>Hecho con mucho cariño
-</p>
-
 <br>
 
 <fieldset>
   <legend>📝 Tabla de contenidos</legend>
   <span>Índice</span>
-  <ol>
+  <ol style="text-decoration: none;">
     <li>
       <a href='#about'>About</a>
     </li>
@@ -67,23 +53,18 @@
     <li>
       <a href='#authors'>Autor/es</a>
     </li>
-    <!--
-    <li>
-      <a href='#acknowledgement'>Agradecimientos</a>
-    </li>
-    -->
+    <fieldset>
+      <legend>Extra</legend>
+      <ol style="text-decoration: none;" type=1>
+        <li>
+          <a href='../TODO.md'>TODO</a>
+        </li>
+        <li>
+          <a href='../CONTRIBUITING.md'>Contribuciones</a>
+        </li>
+      </ol>
+    </fieldset>
   </ol>
-  <fieldset>
-    <legend>Extra</legend>
-    <ol type=A>
-      <li>
-        <a href='../TODO.md'>TODO</a>
-      </li>
-      <li>
-        <a href='../CONTRIBUITING.md'>Contribuciones</a>
-      </li>
-    </ol>
-  </fieldset>
 </fieldset>
 
 # 🧐 About <a id="about"></a>
