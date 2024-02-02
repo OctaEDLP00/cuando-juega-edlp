@@ -3,9 +3,6 @@
 </a>-->
 # CUANDO JUEGA EDLP
 
-Proyecto para saber el tiempo restante de los proximos partidos de Estudiantes de La Plata.
-Hecho con mucho cariño
-
 ## Previzualizacion
 
 <div align=center>
@@ -69,7 +66,8 @@ Hecho con mucho cariño
 
 # 🧐 About <a id="about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudiantes de La Plata](https://estudiantesdelaplata.com/).
+<br>Hecho con mucho cariño ❤️🤍❤️🦁
 
 # Estructura del Proyecto <a id="project_structure"></a>
 
