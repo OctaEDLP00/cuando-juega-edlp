@@ -2,13 +2,11 @@
 	"recommendations": [
 		"astro-build.astro-vscode",
 		"pflannery.vscode-versionlens",
-		"usernamehw.errorlens",
-		"wallabyjs.console-ninja",
+    "usernamehw.errorlens",
 		"editorconfig.editorconfig",
 		"wix.vscode-import-cost",
 		"kisstkondoros.vscode-gutter-preview",
-		"ms-vscode.vscode-typescript-next",
-		"oliversturm.fix-json",
+    "ms-vscode.vscode-typescript-next",
 		"christian-kohler.npm-intellisense",
 		"christian-kohler.path-intellisense",
 		"dbaeumer.vscode-eslint",
@@ -18,6 +16,7 @@
 		"chakrounanas.turbo-console-log",
 		"tobermory.es6-string-html",
 		"tamasfe.even-better-toml",
-		"unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "esbenp.prettier-vscode"
 	]
 }
