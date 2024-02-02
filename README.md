@@ -1,13 +1,10 @@
-<!--a href="https://cuando-juega-edlp.netlify.app" rel="noopener">
-  <img width=200 height=200 src="./public/favicon.webp" alt="Project logo">
-</a>-->
 # CUANDO JUEGA EDLP
 
 ## Previzualizacion
 
 <div align=center>
-  <img width=300 height=200 src="./Desktop - DarkMode.jpg" 
-    alt="Previsualizacion del Dark Mode de la pagina" 
+  <img width=300 height=200 src="./Desktop - DarkMode.jpg"
+    alt="Previsualizacion del Dark Mode de la pagina"
   />
   <br>
   <img width=300 height=200 src="./Desktop - LightMode.jpg"
