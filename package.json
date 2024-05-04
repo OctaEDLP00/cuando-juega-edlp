@@ -1,5 +1,5 @@
 {
-  "name": "cuando-juega-estudiantes-astro",
+	"name": "@octaedlp00/cuando-juega-estudiantes",
   "version": "0.0.1",
   "type": "module",
   "licenses": [
@@ -21,38 +21,38 @@
     "start:host": "astro dev --host"
   },
   "dependencies": {
-    "@astrojs/netlify": "5.0.1",
-    "@astrojs/react": "3.0.9",
+		"@astrojs/netlify": "5.2.0",
+		"@astrojs/react": "3.3.0",
     "@astrojs/tailwind": "5.1.0",
-    "astro": "4.3.2",
+		"astro": "4.6.3",
     "canvas-confetti": "1.9.2",
     "miduco": "1.0.2",
-    "playwright": "1.41.2",
+		"playwright": "1.43.1",
     "react-dom": "18.2.0",
     "react": "18.2.0",
-    "tailwindcss": "3.4.1",
+		"tailwindcss": "3.4.3",
     "toastify-js": "1.12.0",
-    "zustand": "4.5.0"
+		"zustand": "4.5.2"
   },
   "devDependencies": {
     "@types/canvas-confetti": "1.6.4",
-    "@types/eslint": "8.56.2",
-    "@types/node": "20.11.16",
-    "@types/react-dom": "18.2.18",
-    "@types/react": "18.2.51",
+		"@types/eslint": "8.56.10",
+		"@types/node": "20.12.7",
+		"@types/react-dom": "18.2.25",
+		"@types/react": "18.2.79",
     "@types/toastify-js": "1.12.3",
-    "@typescript-eslint/eslint-plugin": "6.20.0",
-    "@typescript-eslint/parser": "6.20.0",
+		"@typescript-eslint/eslint-plugin": "7.7.0",
+		"@typescript-eslint/parser": "7.7.0",
     "clsx": "2.1.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-config-standard": "17.1.0",
-    "eslint-plugin-astro": "0.31.4",
+		"eslint-plugin-astro": "0.34.0",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-n": "16.6.2",
+		"eslint-plugin-n": "17.2.1",
     "eslint-plugin-promise": "6.1.1",
-    "eslint": "8.56.0",
+		"eslint": "9.0.0",
     "prettier-plugin-astro": "0.13.0",
-    "prettier": "3.2.4",
-    "tailwind-merge": "2.2.1"
+		"prettier": "3.2.5",
+		"tailwind-merge": "2.3.0"
   }
 }
