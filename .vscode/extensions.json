@@ -17,6 +17,7 @@
 		"tobermory.es6-string-html",
 		"tamasfe.even-better-toml",
     "unifiedjs.vscode-mdx",
-    "esbenp.prettier-vscode"
+		"esbenp.prettier-vscode",
+		"bradlc.vscode-tailwindcss"
 	]
 }

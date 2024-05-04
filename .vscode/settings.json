@@ -21,5 +21,7 @@
     "*.mdx": "markdown"
   },
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "typescript.inlayHints.parameterNames.enabled": "all"
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "prettier.enable": true,
+  "prettier.configPath": ".prettierrc"
 }
