@@ -1,0 +1,53 @@
+<script>
+	import confetti from 'canvas-confetti'
+	import Toastify from 'toastify-js'
+	import { $query } from '@utils/Dom'
+	import { Konami } from '@utils/Konami'
+	import { konamiCodes } from '@const/konami-codes'
+
+	const { edlp, edlpCursor, lali, laliCursor } = konamiCodes
+	let konamiCodeInProgress = false
+	const container = $query('#App')
+
+	const activateEasterEgg = () => {
+		const toast = Toastify({
+			selector: $query('#App'),
+			text: '✔ ✅ Easter egg desbloqueado!',
+			duration: 3000,
+			gravity: 'bottom',
+			style: {
+				background: 'linear-gradient(to right, #0e03c7, #058eaa)'
+			}
+		})
+		toast.showToast()
+		confetti({
+			colors: ['#f00', '#fff'],
+			shapes: ['circle', 'square', 'star'],
+			ticks: 300,
+			particleCount: 400,
+			origin: {
+				y: 0.2
+			}
+		})
+	}
+
+	const EventListenerFn = (e: KeyboardEvent) => {}
+
+	window.addEventListener('keydown', EventListenerFn)
+
+	// const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+	// export const isMobileDevice = (): boolean => mobile.test(navigator.userAgent)
+
+	/*
+	const EventListenerFn = (e: KeyboardEvent) => {
+		konamiCodes.push(e.key.toLowerCase())
+		konamiCodes.splice(-secretCode.length - 1, konamiCodes.length - secretCode.length)
+
+		if (JSON.stringify(konamiCodes) === JSON.stringify(secretCode)) {
+			activateEasterEgg()
+		}
+	}
+
+	if (!isMobileDevice()) window.addEventListener('keydown', EventListenerFn)
+  */
+</script>
