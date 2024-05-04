@@ -1,6 +1,14 @@
-import { RULES } from './src/types/enum'
+const RULES = {
+  ON: 'on',
+  OFF: 'off',
+  WARN: 'warn',
+  ERROR: 'error',
+  ALWAYS: 'always',
+  NEVER: 'never'
+}
 
-export default {
+/** @type {import('eslint').ESLint.ConfigData} */
+module.exports = {
   env: {
     es2022: true,
     node: true,
@@ -8,8 +16,8 @@ export default {
   },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-plugin',
-    'plugin:@typesxript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'eslint-config-prettier',
     'standard',
     'plugin:astro/recommended'
@@ -21,7 +29,8 @@ export default {
     sourceType: 'module'
   },
   rules: {
-    'no-unused-vars': RULES.OFF,
+    'space-before-function-paren': RULES.OFF,
+    'no-unused-vars': RULES.WARN,
     '@typescript-eslint/no-unused-vars': [
       RULES.WARN,
       {
@@ -32,10 +41,22 @@ export default {
     ],
     'no-multiple-empty-lines': RULES.OFF,
     'no-tabs': RULES.OFF,
-    'comma-dangle': [RULES.ERROR, 'never'],
-    ident: [RULES.WARN, 'space'],
-    quotes: [RULES.WARN, 'single'],
-    'jsx-quotes': [RULES.WARN, 'prefer-single'],
+    'comma-dangle': [
+      RULES.ERROR,
+      'never'
+    ],
+    ident: [
+      RULES.WARN,
+      'space'
+    ],
+    quotes: [
+      RULES.WARN,
+      'single'
+    ],
+    'jsx-quotes': [
+      RULES.WARN,
+      'prefer-single'
+    ],
     'eol-last': RULES.OFF
   },
   overrides: [
@@ -47,7 +68,8 @@ export default {
         extraFileExtension: ['*.astro']
       },
       rules: {
-        'astro/no-set-html-direective': RULES.ERROR
+        'astro/no-set-html-direective': RULES.ERROR,
+        'space-before-function-paren': RULES.OFF
       }
     }
   ]
