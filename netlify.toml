@@ -3,5 +3,11 @@
   node_bundler = "esbuild"
   publish = "dist/"
 
+[dev]
+  functionsPort = 4321
+
 [functions]
   directory = "src/functions"
+
+[functions.image]
+  external_node_modules = ["playwright"]
