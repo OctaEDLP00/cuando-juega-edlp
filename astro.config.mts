@@ -7,11 +7,11 @@ import netlify from '@astrojs/netlify'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://cuando-juega-edlp.netlify.app',
+	site: 'https://cuando-juega-edlp.netlify.app',
+	devToolbar: { enabled: false },
   integrations: [react(), tailwind()],
   output: 'server',
-  adapter: netlify({
-    functionPerRoute: true,
-    dist: new URL('./dist/', import.meta.url)
-  })
+	adapter: netlify()
 })
+
+// { edgeMiddleware: true }
