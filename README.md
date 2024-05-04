@@ -1,33 +1,34 @@
 # CUANDO JUEGA EDLP
 
+---
+
 ## Previzualizacion
 
 <div align=center>
   <img width=300 height=200 src="./Desktop - DarkMode.jpg"
     alt="Previsualizacion del Dark Mode de la pagina"
   />
-  <br>
   <img width=300 height=200 src="./Desktop - LightMode.jpg"
     alt="Previsualizacion del Light Mode de la pagina"
   />
 </div>
 
+<br>
+
 <div align="center">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/818d8c25-ecf0-4ab1-945e-0495ab7d083d/deploy-status)](https://app.netlify.com/sites/cuando-juega-edlp/deploys)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/OctaEDLP00/cuando-juega-edlp.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/OctaEDLP00/cuando-juega-edlp.svg)](https://github.com/OctaEDLP00/The-Documentation-Compendium/pulls)
 [![GitHub Issues](https://img.shields.io/github/issues/OctaEDLP00/cuando-juega-edlp.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
 
 </div>
 
 ---
 
-<br>
-
-<fieldset>
+<fieldset style="border: none;">
   <legend>📝 Tabla de contenidos</legend>
-  <span>Índice</span>
+	<br>
   <ol style="text-decoration: none;">
     <li>
       <a href='#about'>About</a>
@@ -47,14 +48,14 @@
     <li>
       <a href='#authors'>Autor/es</a>
     </li>
-    <fieldset>
+    <fieldset style="border: none;">
       <legend>Extra</legend>
       <ol style="text-decoration: none;" type=1>
         <li>
-          <a href='../TODO.md'>TODO</a>
+          <a href='!#'></a>
         </li>
         <li>
-          <a href='../CONTRIBUITING.md'>Contribuciones</a>
+          <a href='./CONTRIBUITING.md'>Contribuciones</a>
         </li>
       </ol>
     </fieldset>
@@ -63,8 +64,8 @@
 
 # 🧐 About <a id="about"></a>
 
-Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudiantes de La Plata](https://estudiantesdelaplata.com/).
-<br>Hecho con mucho cariño ❤️🤍❤️🦁
+Proyecto para saber el tiempo restante de los  proximos partidos de <br> [Estudiantes de La Plata](https://estudiantesdelaplata.com/). Hecho con mucho cariño ❤️🤍❤️🦁 <br>
+ESTUDIOOOO ESTUDIOOOO!!!
 
 # Estructura del Proyecto <a id="project_structure"></a>
 
@@ -82,18 +83,16 @@ Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudia
 ├─ src/
 | ├─ components/
 | | └─ head/
+| | | └─ EasterEgg.astro
 | | | └─ Links.astro
 | | | └─ Meta.astro
-| | | └─ Scripts.astro
 | | └─ icons/
 | | | └─ Github.astro
 | | | └─ Instagram.astro
 | | | └─ Threads.astro
 | | | └─ Twitter.astro
 | | └─ Badge.astro
-| | └─ BuiltWith.astro
 | | └─ Card.astro
-| | └─ Component.astro
 | | └─ Footer.astro
 | | └─ Header.astro
 | | └─ Link.astro
@@ -101,12 +100,13 @@ Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudia
 | | └─ RenderTimeRemaining.tsx
 | | └─ Temporizador.tsx
 | ├─ const/
-| | └─ components.ts
 | | └─ index.ts
+| | └─ konami-codes.ts
 | | └─ partidos.ts
 | | └─ socialNetwork.ts
+| | └─ types.ts
 | ├─ functions/
-| | └─ createOGImage.ts
+| | └─ createOgImage.js
 | ├─ hooks/
 | | └─ useRemainingTime.ts
 | ├─ layouts/
@@ -114,16 +114,13 @@ Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudia
 | └─ pages/
 | | └─ api/
 | | | └─ partido/
+| | | | └─ [copa].ts
 | | | | └─ [visitor].ts
-| | | | └─ [vs].ts
+| | | | └─ [versus].ts
 | | | └─ partidos.ts
-| | └─ components.astro
 | | └─ index.astro
 | └─ styles/
 | | └─ main.css
-| └─ types/
-| | └─ enum.ts
-| | └─ main.d.ts
 | └─ utils/
 | | └─ alwaysPositive.ts
 | | └─ cn.ts
@@ -133,24 +130,26 @@ Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudia
 | | └─ fillZeros.ts
 | | └─ getRemainingTime.ts
 | | └─ index.ts
+| | └─ Konami.ts
 | | └─ mapValues.ts
 | └── env.d.ts
-└── .editorconfig
-└── .eslintrc.js
-└── .gitignore
-└── .npmrc
-└── .prettierrc.js
-└── astro.config.mts
-└── LICENSE-APACHE-2.0.txt
-└── LICENSE-MIT.txt
-└── netlify.toml
 └── package.json/
-|  └─ .eslintignore
-|  └─ pnpm-lock.yaml // ignorado por el archivo .gitignore al subirse al github
-|  └─ tailwind.config.cjs
-|  └─ tsconfig.json
-└── README.md/
-   └─ CONTRIBUITING.md
+| | └─ .editorconfig
+| | └─ .eslintrc.cjs
+| | └─ .gitignore
+| | └─ .npmrc
+| | └─ .prettierrc
+| | └─ astro.config.mts
+| | └─ LICENSE-APACHE-2.0.txt
+| | └─ LICENSE-MIT.txt
+| | └─ netlify.toml
+| | └─ .eslintignore
+| | └─ pnpm-lock.yaml // ignorado por el archivo .gitignore al subirse al github
+| | └─ tailwind.config.cjs
+| | └─ tsconfig.json
+| | └─ README.md/
+| | └─ CONTRIBUITING.md
+└─/
 ```
 
 # Endpoints <a id="endpoints"></a>
@@ -158,10 +157,51 @@ Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudia
 - **GET** `/api/partidos`. Todos los partidos de local del año corriente
 
 - **GET** `/api/partido/[EQUIPO]`. Obtener info de solo un equipo
-  * `[EQUIPO]` nombre del equipo a buscar los valore posibles salen en `/api/partidos`
+  * `[EQUIPO]` nombre del equipo a buscar. Los valore posibles salen en `/api/partidos`
+	* Ejemplo1 `api/partido/defensayjusticia`
+	* Ejemplo2 `api/partido/tigre`
+
+```json
+	[
+		{
+			"copa": "Copa de La Liga",
+			"date": "2024-05-12T00:00:00",
+			"fecha": 1,
+			"img": {
+				"src": "/assets/Tigre.webp",
+				"alt": "Escudo del Equipo Tigre"
+			},
+			"isVisitor": true,
+			"vs": "Tigre"
+		},
+		{
+			"copa": "Copa de La Liga",
+			"date": "2024-09-29T00:00:00",
+			"fecha": 16,
+			"img": {
+				"src": "/assets/DyJ.webp",
+				"alt": "Escudo del Equipo Defensa y Justicia"
+			},
+			"isVisitor": false,
+			"vs": "Defensa y Justicia"
+		}
+	]
+```
 
 - **GET** `/api/partido/[VISITANTE]`. Obtener info de solo los partidos que se juegan de local o visitante
-  * `[VISITANTE]` unicos valores posibles `visitante` ó `local`
+  * `[VISITANTE]` unicos valores posibles:
+
+	* `visitante` ó `local`
+
+- **GET** `/api/partido/[COPA]`. Obtener info de solo los partidos que se juegan en cierta copa
+  * `[COPA]` unicos valores posibles:
+
+	* `copa-de-la-liga`
+	* `copa-libertadores`
+	* `copa-sudamericana`
+	* `copa-argentina`
+	* `noche-del-león`
+	* `supercopa-argentina`
 
 # Rutas <a id="routes"></a>
 
@@ -169,6 +209,7 @@ Proyecto para saber el tiempo restante de los <br> proximos partidos de [Estudia
 - [API]((https://cuando-juega-edlp.netlify.app/api/partidos)) => `/api/2023/partidos`
 - [INFO EQUIPO](https://cuando-juega-edlp.netlify.app/api/partido/[EQUIPO]) => `/api/partido/[EQUIPO]`
 - [INFO VISITANTE](https://cuando-juega-edlp.netlify.app/api/partido/[VISITANTE]) => `/api/partido/[VISITANTE]`
+- [INFO COPA](https://cuando-juega-edlp.netlify.app/api/partido/[COPA]) => `/api/partido/[VISITANTE]`
 
 # ⛏️ Built Using <a id="built_using"></a>
 
