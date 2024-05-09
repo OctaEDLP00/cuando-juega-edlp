@@ -1,33 +1,70 @@
 ---
-import { ICardProps } from '@/types/main'
 import Badge from '@components/Badge.astro'
 import Temporizador from '@components/Temporizador.tsx'
+import { COPA_TYPE, FECHA_TYPE } from '@const/types'
 
-const { img, vs, isVisitor, copa, fecha, date } = Astro.props as ICardProps
+/**
+ * El formato es de tipo Fecha
+ * que lleva los siguientes valores
+ * `año`-`mes`-`dia`T`hora`:`minutos` ó
+ * `año`-`mes`-`dia`T`hora`:`minutos:segundos`
+ */
+type DateType =
+	| `${number}-${number}-${number}T${number}:${number}`
+	| `${number}-${number}-${number}T${number}:${number}:${number}`
+type Fecha = (typeof FECHA_TYPE)[keyof typeof FECHA_TYPE]
+type Copa = (typeof COPA_TYPE)[keyof typeof COPA_TYPE]
+
+interface ImgProps {
+	src: string
+	alt: string
+	height?: string | number
+	width?: string | number
+}
+
+interface Props {
+	copa: Copa
+	date: DateType | null
+	fecha: Fecha | number
+	img: ImgProps
+	isSuspended?: boolean
+	isVisitor?: boolean | null
+	rawVs: string
+	vs: string
+}
+
+const { copa, date, fecha, img, isSuspended, isVisitor, vs } = Astro.props
 ---
 
-<section class:list={[
-  copa === 'Copa de La Liga' && 'bg-[#0BBAD9] dark:bg-[#09798C] shadow-[#09798C] dark:shadow-[#0BBAD9]',
-  copa === 'Copa Libertadores' && 'bg-[#4AA02C] dark:bg-[#007848] shadow-[#007848] dark:shadow-[#4AA02C]',
-  copa === 'Copa Sudamericana' && 'bg-[#FF1010] dark:bg-[#A10102] shadow-[#A10102] dark:shadow-[#FF1010]',
-  copa === 'Copa Argentina' && 'bg-[#dd794b] dark:bg-[#FF5722] shadow-[#FF5722] dark:shadow-[#dd794b]',
-  copa === 'Noche del León' && 'bg-[#6366F1] dark:bg-[#3730A3] shadow-[#3730A3] dark:shadow-[#6366F1]'
-]} class='w-40 h-auto flex flex-col shadow-lg justify-center rounded-lg items-center gap-4'>
+<section
+	class:list={[
+		copa === 'Copa de La Liga' &&
+			'bg-[#0BBAD9] dark:bg-[#09798C] shadow-[#09798C] dark:shadow-[#0BBAD9]',
+		copa === 'Copa Libertadores' &&
+			'bg-[#4AA02C] dark:bg-[#007848] shadow-[#007848] dark:shadow-[#4AA02C]',
+		copa === 'Copa Sudamericana' &&
+			'bg-[#FF1010] dark:bg-[#A10102] shadow-[#A10102] dark:shadow-[#FF1010]',
+		copa === 'Copa Argentina' &&
+			'bg-[#dd794b] dark:bg-[#FF5722] shadow-[#FF5722] dark:shadow-[#dd794b]',
+		copa === 'Noche del León' &&
+			'bg-[#6366F1] dark:bg-[#3730A3] shadow-[#3730A3] dark:shadow-[#6366F1]',
+		copa === 'Supercopa Argentina' &&
+			'bg-[#B93CA5] dark:bg-[#8b1578] shadow-[#8b1578] dark:shadow-[#B93CA5]'
+	]}
+	class='w-40 h-56 flex flex-col shadow-lg justify-center rounded-lg items-center gap-4 relative'
+>
 	<header class='relative'>
-		<img
-      class='w-14 h-14 aspect-square'
-      loading='lazy'
-      src={img}
-      alt={`Escudo del club ${vs}`}
-    />
+		<img loading='lazy' class='h-16 w-16' alt={img.alt} src={img.src} />
 		<Badge isVisitor={isVisitor} />
 	</header>
 	<main class='flex flex-col items-center gap-1.5'>
-		<h1 class='uppercase'>{vs}</h1>
-		<h2 class=''>{copa}</h2>
-		<p class='text-sm'>Fecha {fecha}</p>
+		<h1 class='text-base uppercase'>{vs}</h1>
+		<h2 class='text-sm'>{copa}</h2>
+		<p class='text-xs capitalize'>
+			{typeof fecha === 'number' ? <>Fecha {fecha}</> : <>{fecha}</>}
+		</p>
 	</main>
 	<footer class='w-full h-6'>
-		<Temporizador client:only copa={copa} date={date} />
+		<Temporizador client:only='react' isSuspended={isSuspended} copa={copa} date={date} />
 	</footer>
 </section>
