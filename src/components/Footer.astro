@@ -5,12 +5,12 @@ import Link from './Link.astro'
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class='max-w-6xl w-screen mx-auto h-16'>
-	<div class='flex items-center justify-evenly gap-4'>
-		<span class=''>
-			&copy;2023 - {currentYear} Todos los derechos reservados
+<footer class='flex justify-center w-full h-16 mx-auto'>
+	<div class='flex flex-col md:flex-row items-center justify-evenly w-[60%]'>
+		<span>
+			&copy; {currentYear} All right reserved.
 		</span>
-		<ul class='flex items-center gap-8'>
+		<ul class='flex items-center gap-4'>
 			{
 				SOCIAL_NETWORKS.map(({ href, IconComponent, target, rel, disabled }) => (
 					<li>
