@@ -1,10 +1,14 @@
 ---
-import { type IBadgeProps } from '@/types/main'
-const { isVisitor } = Astro.props as IBadgeProps
+interface Props {
+	isVisitor?: boolean | undefined
+}
+const { isVisitor } = Astro.props
 ---
 
-<span
-	class='bg-blue-100 text-blue-800 font-medium w-6 h-6 rounded-full dark:text-blue-400 border border-blue-400 absolute right-0 bottom-0 flex items-center justify-center'
->
-	<p class='text-xs'>{isVisitor ? 'V' : 'L'}</p>
-</span>
+{
+	isVisitor !== undefined && (
+		<span class='bg-blue-100 text-blue-800 font-medium w-6 h-6 rounded-full dark:text-blue-400 border border-blue-400 absolute right-1 bottom-1 flex items-center justify-center'>
+			<p class='text-xs'>{isVisitor ? 'V' : 'L'}</p>
+		</span>
+	)
+}
