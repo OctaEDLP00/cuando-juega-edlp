@@ -1,6 +1,14 @@
 ---
-import { type ILinkProps } from '@/types/main'
-const { href, target, rel, className } = Astro.props as ILinkProps
+type Target = '_blank' | '_parent' | '_self' | '_top'
+type Rel = 'noopener noreferrer' | 'noopener' | 'noreferrer'
+
+interface Props {
+	href: string
+	target?: Target | undefined
+	rel?: Rel | undefined
+	className?: string | undefined
+}
+const { href, target, rel, className } = Astro.props
 ---
 
 <a
