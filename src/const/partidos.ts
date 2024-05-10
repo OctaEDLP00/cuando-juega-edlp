@@ -53,6 +53,7 @@ export const partidos: Array<IPartidos> = [
 			alt: 'Escudo del Equipo Gremio',
 			src: '/assets/Gremio.webp'
 		},
+		isSuspended: true,
 		isVisitor: true,
 		rawVs: 'gremio',
 		vs: 'Gremio'
