@@ -1,5 +1,6 @@
 ---
 import Badge from '@components/Badge.astro'
+import Fecha from '@components/Fecha.astro'
 import Temporizador from '@components/Temporizador.tsx'
 import { COPA_TYPE, FECHA_TYPE } from '@const/types'
 
@@ -9,10 +10,8 @@ import { COPA_TYPE, FECHA_TYPE } from '@const/types'
  * `año`-`mes`-`dia`T`hora`:`minutos` ó
  * `año`-`mes`-`dia`T`hora`:`minutos:segundos`
  */
-type DateType =
-	| `${number}-${number}-${number}T${number}:${number}`
-	| `${number}-${number}-${number}T${number}:${number}:${number}`
-type Fecha = (typeof FECHA_TYPE)[keyof typeof FECHA_TYPE]
+type DateType = `${number}-${number}-${number}T${number}:${number}`	| `${number}-${number}-${number}T${number}:${number}:${number}`
+type FechaT = (typeof FECHA_TYPE)[keyof typeof FECHA_TYPE]
 type Copa = (typeof COPA_TYPE)[keyof typeof COPA_TYPE]
 
 interface ImgProps {
@@ -25,7 +24,7 @@ interface ImgProps {
 interface Props {
 	copa: Copa
 	date: DateType | null
-	fecha: Fecha | number
+	fecha: FechaT | number
 	img: ImgProps
 	isSuspended?: boolean
 	isVisitor?: boolean | null
@@ -60,9 +59,7 @@ const { copa, date, fecha, img, isSuspended, isVisitor, vs } = Astro.props
 	<main class='flex flex-col items-center gap-1.5'>
 		<h1 class='text-base uppercase'>{vs}</h1>
 		<h2 class='text-sm'>{copa}</h2>
-		<p class='text-xs capitalize'>
-			{typeof fecha === 'number' ? <>Fecha {fecha}</> : <>{fecha}</>}
-		</p>
+		<Fecha fecha={fecha}/>
 	</main>
 	<footer class='w-full h-6'>
 		<Temporizador client:only='react' isSuspended={isSuspended} copa={copa} date={date} />

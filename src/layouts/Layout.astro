@@ -1,30 +1,29 @@
 ---
-import { ILayoutProps } from '@/types/main'
-import Footer from '@components/Footer.astro'
-import Navbar from '@components/Navbar.astro'
+interface Props {
+	title: string
+	description?: string
+}
+
+import EasterEgg from '@components/head/EasterEgg.astro'
 import Links from '@components/head/Links.astro'
 import Meta from '@components/head/Meta.astro'
-import Scripts from '@components/head/Scripts.astro'
 import { ViewTransitions } from 'astro:transitions'
 import '../styles/main.css'
 
-const { title } = Astro.props as ILayoutProps
+const { title, description } = Astro.props
 ---
 
 <!doctype html>
 <html lang='es'>
 	<head>
-    <Meta />
-    <Links />
-    <Scripts />
-    <ViewTransitions />
-    <title>{title}</title>
-  </head>
-  <body class='dark:bg-[#151515] dark:text-[#ccc] bg-[#ccc] text-[#151515] font-CCLP scroll-smooth'>
-    <div id='App' class='w-screen max-w-6xl mx-auto h-full'>
-      <Navbar />
-      <slot />
-      <Footer />
-    </div>
-  </body>
+		<Meta description={description} title={title} />
+		<Links />
+		<EasterEgg />
+		<ViewTransitions />
+	</head>
+	<body class='dark:bg-[#151515] dark:text-[#ccc] bg-[#ccc] text-[#151515] font-CCLP scroll-smooth'>
+		<div id='App' class='w-full h-screen mx-auto'>
+			<slot />
+		</div>
+	</body>
 </html>

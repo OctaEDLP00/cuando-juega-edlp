@@ -1,35 +1,41 @@
 ---
-import { type IMetaProps } from '@/types/main'
+interface Props {
+	title: string
+	ogTitle?: string
+	image?: string
+	description?: string
+	ogDescription?: string
+}
+
+const keywords =
+	'Estudiantes, EDLP, edlp, Estudiantes de La Plata, Partidos, Copa de La Liga, Copa Argentina, Copa Sudamericana, Copa Libertdores, Noche del León, Supercopa Argentina, Local, Visitantes'
 
 const {
-	title = 'Cuando juega EDLP',
-	image = `${import.meta.env.SITE}/og.jpg`,
-	description = 'Informacion de proximos partidos de Estudiantes de La Plata'
-} = Astro.props as IMetaProps
+	title,
+	ogTitle,
+	image = `/og.jpg`,
+	description = 'Pagina para saber cuanto falta para el proximo partido del Club Estudiantes de La Plata',
+	ogDescription = 'Informacion de proximos partidos de Estudiantes de La Plata'
+} = Astro.props
 ---
 
 <meta charset='UTF-8' />
-<meta
-	name='description'
-	content='Pagina para saber cuanto falta para el proximo partido del Club Estudiantes de La Plata'
-/>
-<meta
-	name='keywords'
-	content='Estudiantes, EDLP, edlp, Estudiantes de La Plata, Partidos, Copa de La Liga, Copa Argentina, Copa Sudamericana, Copa Libertdores, Local, Visitantes'
-/>
-<meta name='theme-color' content='#ff0000' />
+<meta name='description ' content={description} />
+<meta name='keywords' content={keywords} />
+<meta name='theme-color' content='#ff0000' media='(prefers-color-scheme: light)' />
 <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <meta name='generator' content={Astro.generator} />
-
+<!-- Open Graph Facebook and other pages -->
 <meta property='og:url' content={import.meta.env.SITE} />
 <meta property='og:type' content='website' />
-<meta property='og:title' content={title} />
-<meta property='og:description' content={description} />
+<meta property='og:title' content={ogTitle ?? title} />
+<meta property='og:description' content={ogDescription} />
 <meta property='og:image' content={image} />
-
+<!-- Open Graph Twitter and other pages -->
 <meta name='twitter:card' content='summary_large_image' />
 <meta name='twitter:site' content='@CaroOcta00' />
 <meta name='twitter:creator' content='@CaroOcta00' />
-<meta name='twitter:title' content={title} />
-<meta name='twitter:description' content={description} />
+<meta name='twitter:title' content={ogTitle ?? title} />
+<meta name='twitter:description' content={ogDescription} />
 <meta name='twitter:image' content={image} />
+<title>{title}</title>

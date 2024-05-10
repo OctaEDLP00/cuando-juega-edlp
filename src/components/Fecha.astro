@@ -1,0 +1,14 @@
+---
+import { FECHA_TYPE } from '@const/types'
+type Fecha = (typeof FECHA_TYPE)[keyof typeof FECHA_TYPE]
+
+interface Props {
+	fecha: Fecha | number
+}
+
+const { fecha } = Astro.props
+---
+
+<p class='text-xs capitalize'>
+	{typeof fecha === 'number' ? <>Fecha {fecha}</> : <>{fecha}</>}
+</p>
