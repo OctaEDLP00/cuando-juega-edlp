@@ -5,13 +5,30 @@
 	import { Konami } from '@utils/Konami'
 	import { konamiCodes } from '@const/konami-codes'
 
-	const { edlp, edlpCursor, lali, laliCursor } = konamiCodes
+	const { edlp, edlpCursor, lali, laliCursor, himnoEdlp } = konamiCodes
 	let konamiCodeInProgress = false
-	const container = $query('#App')
+	const $container = $query('#App') as HTMLDivElement
+	const $body = $query('body') as HTMLBodyElement
+
+	interface Manager {
+		audioInstance: HTMLAudioElement | null
+		getAudioInstance: (audioSrc: string) => HTMLAudioElement | null
+	}
+
+	const audioManager: Manager = {
+		audioInstance: null,
+		getAudioInstance: (audioSrc: string) => {
+			if (!audioManager.audioInstance) {
+				audioManager.audioInstance = new Audio(audioSrc)
+				return audioManager.audioInstance
+			}
+			return null
+		}
+	}
 
 	const activateEasterEgg = () => {
 		const toast = Toastify({
-			selector: $query('#App'),
+			selector: $container,
 			text: '✔ ✅ Easter egg desbloqueado!',
 			duration: 3000,
 			gravity: 'bottom',
@@ -20,34 +37,104 @@
 			}
 		})
 		toast.showToast()
-		confetti({
-			colors: ['#f00', '#fff'],
-			shapes: ['circle', 'square', 'star'],
-			ticks: 300,
-			particleCount: 400,
-			origin: {
-				y: 0.2
+	}
+
+	const EventListenerFn = ({ key }: KeyboardEvent) => {
+		Konami({
+			code: edlp,
+			keyPressed: key,
+			onFinishTime: 1500,
+			onSucces: () => {
+				if (konamiCodeInProgress) {
+					return (konamiCodeInProgress = true)
+				}
+				const audio = audioManager.getAudioInstance(
+					'/assets/music/el-cielo-nos-queda-muy-chico-Ivan-Sadovsky.mp3'
+				)
+				if (audio !== null) {
+					audio.volume = 0.2
+					audio.play()
+				}
+				activateEasterEgg()
+			},
+			onFinish: () => {
+				if (audioManager.audioInstance !== null && audioManager.audioInstance.paused) {
+					audioManager.audioInstance = null
+					konamiCodeInProgress = false
+				}
+			}
+		})
+
+		Konami({
+			code: himnoEdlp,
+			keyPressed: key,
+			onFinishTime: 1500,
+			onSucces: () => {
+				if (konamiCodeInProgress) {
+					return (konamiCodeInProgress = true)
+				}
+				const audio = audioManager.getAudioInstance(
+					'/assets/music/himno-del-club-estudiantes-de-la-plata.mp3'
+				)
+				if (audio !== null) {
+					audio.volume = 0.2
+					audio.play()
+				}
+				activateEasterEgg()
+			},
+			onFinish: () => {
+				if (audioManager.audioInstance !== null && audioManager.audioInstance.paused) {
+					audioManager.audioInstance = null
+					konamiCodeInProgress = false
+				}
+			}
+		})
+
+		Konami({
+			code: lali,
+			keyPressed: key,
+			onFinishTime: 1500,
+			onSucces: () => {
+				if (konamiCodeInProgress) {
+					return (konamiCodeInProgress = true)
+				}
+				const audio = audioManager.getAudioInstance(
+					'/assets/music/la-cancion-de-la-alegria-libertadores.mp3'
+				)
+				if (audio !== null) {
+					audio.volume = 0.3
+					audio.play()
+				}
+				activateEasterEgg()
+			},
+			onFinish: () => {
+				if (audioManager.audioInstance !== null && audioManager.audioInstance.paused) {
+					audioManager.audioInstance = null
+					konamiCodeInProgress = false
+				}
+			}
+		})
+
+		Konami({
+			code: edlpCursor,
+			keyPressed: key,
+			onFinishTime: 1500,
+			onSucces: () => {
+				$body.style.cursor = 'url(/assets/cursors/ClubEstudiantesDeLaPlata.webp), auto'
+				activateEasterEgg()
+			}
+		})
+
+		Konami({
+			code: laliCursor,
+			keyPressed: key,
+			onFinishTime: 1500,
+			onSucces: () => {
+				$body.style.cursor = 'url(/assets/cursors/copa-libertadores.webp), auto'
+				activateEasterEgg()
 			}
 		})
 	}
 
-	const EventListenerFn = (e: KeyboardEvent) => {}
-
 	window.addEventListener('keydown', EventListenerFn)
-
-	// const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
-	// export const isMobileDevice = (): boolean => mobile.test(navigator.userAgent)
-
-	/*
-	const EventListenerFn = (e: KeyboardEvent) => {
-		konamiCodes.push(e.key.toLowerCase())
-		konamiCodes.splice(-secretCode.length - 1, konamiCodes.length - secretCode.length)
-
-		if (JSON.stringify(konamiCodes) === JSON.stringify(secretCode)) {
-			activateEasterEgg()
-		}
-	}
-
-	if (!isMobileDevice()) window.addEventListener('keydown', EventListenerFn)
-  */
 </script>

@@ -47,4 +47,15 @@ export const konamiCodes = {
 		'e',
 		's'
 	],
+	himnoEdlp: [
+		'h',
+		'i',
+		'm',
+		'n',
+		'o',
+		'e',
+		'd',
+		'l',
+		'p',
+	]
 }
