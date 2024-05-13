@@ -10,7 +10,9 @@ import { COPA_TYPE, FECHA_TYPE } from '@const/types'
  * `año`-`mes`-`dia`T`hora`:`minutos` ó
  * `año`-`mes`-`dia`T`hora`:`minutos:segundos`
  */
-type DateType = `${number}-${number}-${number}T${number}:${number}`	| `${number}-${number}-${number}T${number}:${number}:${number}`
+type DateType =
+	| `${number}-${number}-${number}T${number}:${number}`
+	| `${number}-${number}-${number}T${number}:${number}:${number}`
 type FechaT = (typeof FECHA_TYPE)[keyof typeof FECHA_TYPE]
 type Copa = (typeof COPA_TYPE)[keyof typeof COPA_TYPE]
 
@@ -37,6 +39,8 @@ const { copa, date, fecha, img, isSuspended, isVisitor, vs } = Astro.props
 
 <section
 	class:list={[
+		copa === 'Torneo de La Liga' &&
+			'bg-[#4394ff] dark:bg-[#1c4b88] shadow-[#1c4b88] dark:shadow-[#4394ff]',
 		copa === 'Copa de La Liga' &&
 			'bg-[#0BBAD9] dark:bg-[#09798C] shadow-[#09798C] dark:shadow-[#0BBAD9]',
 		copa === 'Copa Libertadores' &&
@@ -50,16 +54,16 @@ const { copa, date, fecha, img, isSuspended, isVisitor, vs } = Astro.props
 		copa === 'Supercopa Argentina' &&
 			'bg-[#B93CA5] dark:bg-[#8b1578] shadow-[#8b1578] dark:shadow-[#B93CA5]'
 	]}
-	class='w-40 h-56 flex flex-col shadow-lg justify-center rounded-lg items-center gap-4 relative'
+	class='relative flex flex-col items-center justify-center w-40 h-56 gap-4 rounded-lg shadow-lg'
 >
 	<header class='relative'>
-		<img loading='lazy' class='h-16 w-16' alt={img.alt} src={img.src} />
+		<img loading='lazy' class='w-16 h-16' alt={img.alt} src={img.src} />
 		<Badge isVisitor={isVisitor} />
 	</header>
 	<main class='flex flex-col items-center gap-1.5'>
 		<h1 class='text-base uppercase'>{vs}</h1>
 		<h2 class='text-sm'>{copa}</h2>
-		<Fecha fecha={fecha}/>
+		<Fecha fecha={fecha} />
 	</main>
 	<footer class='w-full h-6'>
 		<Temporizador client:only='react' isSuspended={isSuspended} copa={copa} date={date} />
