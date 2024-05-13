@@ -34,32 +34,7 @@ interface IPartidos {
 // Primer partido: vs Tigre
 export const partidos: Array<IPartidos> = [
 	{
-		copa: 'Copa de La Liga',
-		date: '2024-05-12T15:30',
-		fecha: 1,
-		img: {
-			alt: 'Escudo del Equipo Tigre',
-			src: '/assets/Tigre.webp'
-		},
-		isVisitor: true,
-		rawVs: 'tigre',
-		vs: 'Tigre'
-	},
-	{
-		copa: 'Copa Libertadores',
-		date: '2024-05-15T19:00',
-		fecha: 'fase de grupos',
-		img: {
-			alt: 'Escudo del Equipo Gremio',
-			src: '/assets/Gremio.webp'
-		},
-		isSuspended: true,
-		isVisitor: true,
-		rawVs: 'gremio',
-		vs: 'Gremio'
-	},
-	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-05-19T19:00',
 		fecha: 2,
 		img: {
@@ -71,7 +46,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Riestra'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-05-26T21:15',
 		fecha: 3,
 		img: {
@@ -95,7 +70,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Huachipato'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-06-02T21:15',
     fecha: 4,
 		img: {
@@ -105,9 +80,21 @@ export const partidos: Array<IPartidos> = [
 		isVisitor: false,
 		rawVs: 'godoycruz',
 		vs: 'Godoy Cruz'
-  },
-  {
-    copa: 'Copa de La Liga',
+	},
+	{
+		copa: 'Copa Libertadores',
+		date: '2024-06-08T19:00',
+		fecha: 'fase de grupos',
+		img: {
+			alt: 'Escudo del Equipo Gremio',
+			src: '/assets/Gremio.webp'
+		},
+		isVisitor: true,
+		rawVs: 'gremio',
+		vs: 'Gremio'
+	},
+	{
+		copa: 'Torneo de La Liga',
 		date: '2024-06-12T00:00',
     fecha: 5,
 		img: {
@@ -119,7 +106,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Sarmiento'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-07-21T00:00',
     fecha: 6,
 		img: {
@@ -131,7 +118,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Union'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-07-24T00:00',
     fecha: 7,
 		img: {
@@ -143,7 +130,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Huracan'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-07-28T00:00',
     fecha: 8,
 		img: {
@@ -155,7 +142,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Gimnasia'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-08-04T00:00',
     fecha: 9,
 		img: {
@@ -167,7 +154,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Newell`s'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-08-11T00:00',
     fecha: 10,
 		img: {
@@ -179,7 +166,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Independiente'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-08-18T00:00',
     fecha: 11,
 		img: {
@@ -191,7 +178,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Atletico (Tuc)'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-08-25T00:00',
     fecha: 12,
 		img: {
@@ -203,7 +190,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Boca Jrs'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-09-01T00:00',
     fecha: 13,
 		img: {
@@ -215,7 +202,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Talleres'
   },
   {
-    copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-09-15T00:00',
     fecha: 14,
 		img: {
@@ -227,7 +214,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Platense'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-09-22T00:00',
 		fecha: 15,
 		img: {
@@ -239,7 +226,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Velez'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-09-29T00:00',
 		fecha: 16,
 		img: {
@@ -251,7 +238,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Defensa y Justicia'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-10-06T00:00',
 		fecha: 17,
 		img: {
@@ -263,7 +250,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Banfield'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-10-20T00:00',
 		fecha: 18,
 		img: {
@@ -275,7 +262,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Instituto'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-10-27T00:00',
 		fecha: 19,
 		img: {
@@ -287,7 +274,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Barracas Central'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-11-03T00:00',
 		fecha: 20,
 		img: {
@@ -299,7 +286,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Indep (Mdz)'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-11-06T00:00',
 		fecha: 21,
 		img: {
@@ -311,7 +298,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'San Lorenzo'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-11-10T00:00',
 		fecha: 22,
 		img: {
@@ -323,7 +310,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Central Cordoba'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-11-20T00:00',
 		fecha: 23,
 		img: {
@@ -335,7 +322,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Rosario Central'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-11-24T00:00',
 		fecha: 24,
 		img: {
@@ -347,7 +334,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Racing'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-12-01T00:00',
 		fecha: 25,
 		img: {
@@ -359,7 +346,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'River Plate'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-12-08T00:00',
 		fecha: 26,
 		img: {
@@ -371,7 +358,7 @@ export const partidos: Array<IPartidos> = [
 		vs: 'Belgrano'
 	},
 	{
-		copa: 'Copa de La Liga',
+		copa: 'Torneo de La Liga',
 		date: '2024-12-15T00:00',
 		fecha: 27,
 		img: {
