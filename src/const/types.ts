@@ -12,6 +12,7 @@ export const FECHA_TYPE = {
 
 export const COPA_TYPE = {
 	COPA_LIGA: 'Copa de La Liga',
+	TORNEO_LIGA: 'Torneo de La Liga',
 	LIBERATDORES: 'Copa Libertadores',
 	SUDAMERICANA: 'Copa Sudamericana',
 	COPA_ARGENTINA: 'Copa Argentina',
