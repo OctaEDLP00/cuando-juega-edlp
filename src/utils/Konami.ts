@@ -25,7 +25,7 @@ const konamiState: KonamiState = {}
  */
 export function Konami({ code, keyPressed, onFinishTime, onSucces, onFinish }: KonamiProps): void {
 	const codeKey = code.join('-')
-	const konamiCodePosition = konamiState[codeKey]
+	const konamiCodePosition = konamiState[codeKey] || 0
 
 	const actualKey = keyPressed.toLowerCase()
 	const actualCode = code[konamiCodePosition].toLowerCase()
