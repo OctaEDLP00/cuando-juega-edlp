@@ -1,0 +1,15 @@
+<script>
+	import requestNotification from '@utils/Notification.ts'
+	import { partidos } from '@const/partidos'
+
+	if ('Notification' in window) {
+		for (let { date, img, vs, isSuspended } of partidos) {
+			const { src } = img
+			if (!isSuspended) requestNotification({
+				icon: src,
+				notificationMsg: `El partido contra ${vs} ya empezo`,
+				date: date
+			})
+		}
+	}
+</script>
