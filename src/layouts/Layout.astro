@@ -8,7 +8,7 @@ import EasterEgg from '@components/head/EasterEgg.astro'
 import Links from '@components/head/Links.astro'
 import Meta from '@components/head/Meta.astro'
 import Notification from '@components/head/Notification.astro'
-import { ViewTransitions } from 'astro:transitions'
+// import { ViewTransitions } from 'astro:transitions'
 import '../styles/main.css'
 
 const { title, description } = Astro.props
@@ -20,8 +20,8 @@ const { title, description } = Astro.props
 		<Meta description={description} title={title} />
 		<Links />
 		<EasterEgg />
-		<Notification />
-		<ViewTransitions />
+		<!-- <Notification />
+		<ViewTransitions /> -->
 	</head>
 	<body class='dark:bg-[#151515] dark:text-[#ccc] bg-[#ccc] text-[#151515] font-CCLP scroll-smooth'>
 		<div id='App' class='w-full h-screen mx-auto'>
