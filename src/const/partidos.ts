@@ -35,7 +35,7 @@ interface IPartidos {
 export const partidos: Array<IPartidos> = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-05-19T19:00',
+		date: '2024-05-20T19:00',
 		fecha: 2,
 		img: {
 			alt: 'Escudo del Equipo Deportivo Riestra',
