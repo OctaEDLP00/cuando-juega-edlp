@@ -24,26 +24,40 @@ const returnImage = (buffer) => ({
   isBase64Encoded: true,
 })
 
-exports.handler = async (_event) => {
+exports.handler = async (_, _, callback) => {
 	const { url, executablePath } = await getConfig()
 
-	const browser = await chromium.puppeteer.launch({
-		args: chromium.args,
-		defaultViewport: chromium.defaultViewport,
-    executablePath,
-		headless: true,
-		ignoreHTTPSErrors: true
-  })
+	let browser = null
+	let screenshot = null
 
-  const page = await browser.newPage()
-  await page.setViewport({
-    width: 1200,
-    height: 800,
-  })
-  await page.goto(url)
+	try {
+		browser = await chromium.puppeteer.launch({
+			args: chromium.args,
+			defaultViewport: chromium.defaultViewport,
+			executablePath,
+			headless: true,
+			ignoreHTTPSErrors: true
+		})
 
-	const el = await page.$('#App main')
-	const screenshot = await el?.screenshot()
-  await browser.close()
-  return returnImage(screenshot)
+		const page = await browser.newPage()
+
+		await page.setViewport({
+			width: 1200,
+			height: 800,
+			deviceScaleFactor: 2
+		})
+
+		await page.goto(url)
+
+		const el = await page.$('#App main')
+
+		screenshot = await el?.screenshot()
+	} catch (error) {
+		return callback(error)
+	} finally {
+		if (browser != null) {
+			await browser.close()
+		}
+	}
+	return returnImage(screenshot)
 }
