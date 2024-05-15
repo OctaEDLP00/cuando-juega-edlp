@@ -1,9 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { chromium } = require('playwright')
-const Chromium = require('chromium')
-
+const chromium = require('chrome-aws-lambda')
 const isLocal = process.env.NETLIFY_LOCAL === 'true'
-
 const LOCAL_CHROME_PATH = 'Applications/Google Chrome.app/Contents/Windows/Google Chrome'
 const LOCAL_URL = 'http://localhost:4321/'
 
@@ -27,20 +24,19 @@ const returnImage = (buffer) => ({
   isBase64Encoded: true,
 })
 
-/** @type {import('@netlify/functions').Handler} */
 exports.handler = async (_event) => {
 	const { url, executablePath } = await getConfig()
 
-	/** @type {import('playwright').Browser} */
-  const browser = await chromium.launch({
+	const browser = await chromium.puppeteer.launch({
+		args: chromium.args,
+		defaultViewport: chromium.defaultViewport,
     executablePath,
-    headless: true,
+		headless: true,
+		ignoreHTTPSErrors: true
   })
 
-  /** @type {import('playwright').Page} */
   const page = await browser.newPage()
-
-  await page.setViewportSize({
+  await page.setViewport({
     width: 1200,
     height: 800,
   })
