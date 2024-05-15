@@ -10,4 +10,4 @@
   directory = "src/functions"
 
 [functions.image]
-  external_node_modules = ["chrome-aws-lambda"]
+  external_node_modules = ["playwright-core"]
