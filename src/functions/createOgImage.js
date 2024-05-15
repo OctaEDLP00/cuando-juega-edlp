@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const chromium = require('chrome-aws-lambda')
+const { chromium } = require('playwright-core')
 const isLocal = process.env.NETLIFY_LOCAL === 'true'
 const LOCAL_CHROME_PATH = 'Applications/Google Chrome.app/Contents/Windows/Google Chrome'
 const LOCAL_URL = 'http://localhost:4321/'
@@ -31,21 +31,16 @@ exports.handler = async (_event, _context, callback) => {
 	let screenshot = null
 
 	try {
-		browser = await chromium.puppeteer.launch({
-			ignoreDefaultArgs: ['--disable-extensions'],
-			args: chromium.args,
-			defaultViewport: chromium.defaultViewport,
+		browser = await chromium.launch({
 			executablePath,
-			headless: true,
-			ignoreHTTPSErrors: true
+			headless: true
 		})
 
 		const page = await browser.newPage()
 
-		await page.setViewport({
+		await page.setViewportSize({
 			width: 1200,
-			height: 800,
-			deviceScaleFactor: 2
+			height: 800
 		})
 
 		await page.goto(url)
