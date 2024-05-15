@@ -24,7 +24,7 @@ const returnImage = (buffer) => ({
   isBase64Encoded: true,
 })
 
-exports.handler = async (_, _, callback) => {
+exports.handler = async (_event, _context, callback) => {
 	const { url, executablePath } = await getConfig()
 
 	let browser = null
