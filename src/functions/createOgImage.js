@@ -5,7 +5,7 @@ const LOCAL_CHROME_PATH = 'Applications/Google Chrome.app/Contents/Windows/Googl
 const LOCAL_URL = 'http://localhost:4321/'
 
 const getConfig = async () => {
-	const executablePath = isLocal ? LOCAL_CHROME_PATH : Chromium.path
+	const executablePath = isLocal ? LOCAL_CHROME_PATH : await chromium.executablePath
   const url = isLocal ? LOCAL_URL : 'https://cuando-juega-edlp.netlify.app/'
   return { executablePath, url }
 }
