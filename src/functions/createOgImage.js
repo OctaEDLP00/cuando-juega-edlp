@@ -32,6 +32,7 @@ exports.handler = async (_event, _context, callback) => {
 
 	try {
 		browser = await chromium.puppeteer.launch({
+			ignoreDefaultArgs: ['--disable-extensions'],
 			args: chromium.args,
 			defaultViewport: chromium.defaultViewport,
 			executablePath,
