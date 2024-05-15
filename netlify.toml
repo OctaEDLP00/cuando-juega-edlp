@@ -4,10 +4,10 @@
   publish = "dist/"
 
 [dev]
-  functionsPort = 4321
+  functionsPort = 1234
 
 [functions]
   directory = "src/functions"
 
 [functions.image]
-  external_node_modules = ["playwright"]
+  external_node_modules = ["chrome-aws-lambda"]
