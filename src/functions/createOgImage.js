@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { chromium } = require('playwright')
+const Chromium = require('chromium')
 
 const isLocal = process.env.NETLIFY_LOCAL === 'true'
 
@@ -7,7 +8,7 @@ const LOCAL_CHROME_PATH = 'Applications/Google Chrome.app/Contents/Windows/Googl
 const LOCAL_URL = 'http://localhost:4321/'
 
 const getConfig = async () => {
-  const executablePath = isLocal ? LOCAL_CHROME_PATH : chromium.executablePath
+	const executablePath = isLocal ? LOCAL_CHROME_PATH : Chromium.path
   const url = isLocal ? LOCAL_URL : 'https://cuando-juega-edlp.netlify.app/'
   return { executablePath, url }
 }
