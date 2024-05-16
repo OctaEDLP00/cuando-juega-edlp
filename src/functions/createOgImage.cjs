@@ -1,15 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const chromium = require('chrome-aws-lambda')
-const puppeteer = require('puppeteer-core')
+const { chromium: playwright } = require('playwright-core')
+const chromium = require('@sparticuz/chromium')
 
 const isLocal = process.env.NETLIFY_LOCAL === 'true'
 const LOCAL_CHROME_PATH = 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe'
 const LOCAL_URL = 'http://localhost:4321/'
 
-async function getConfig() {
-	const executablePath = isLocal ? LOCAL_CHROME_PATH : await chromium.executablePath
-  const url = isLocal ? LOCAL_URL : 'https://cuando-juega-edlp.netlify.app/'
-  return { executablePath, url }
+async function getConfig () {
+	const executablePath = isLocal ? LOCAL_CHROME_PATH : await chromium.executablePath()
+	const url = isLocal ? LOCAL_URL : 'https://cuando-juega-edlp.netlify.app/'
+	return { executablePath, url }
 }
 
 /**
@@ -17,7 +17,7 @@ async function getConfig() {
  * @param {Buffer | string | void} buffer
  * @return {{ headers: Headers, statusCode: number, body: string, isBase64Encoded: boolean }}
  */
-function returnImage(buffer) {
+function returnImage (buffer) {
 	return {
 		headers: {
 			'Content-Type': 'image/png'
@@ -35,19 +35,13 @@ function returnImage(buffer) {
  */
 exports.handler = async function (_event, _context, _callback) {
 	const { url, executablePath } = await getConfig()
-
-	const browser = await puppeteer.launch({
-		args: chromium.args,
+	const browser = await playwright.launch({
 		executablePath,
-		headless: true,
-		ignoreHTTPSErrors: true
+		headless: true
 	})
-	const page = await browser.newPage()
-	await page.setViewport({
-		width: 1200,
-		height: 800,
-
-	})
+	const context = await browser.newContext()
+	const page = await context.newPage()
+	await page.setViewportSize({ width: 1200, height: 800 })
 	await page.goto(url)
 	const el = await page.$('#App main')
 	const screenshot = await el?.screenshot()
