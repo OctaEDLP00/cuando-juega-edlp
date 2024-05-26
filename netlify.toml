@@ -9,5 +9,8 @@
 [functions]
   directory = "src/functions"
 
-[functions.image]
-  external_node_modules = ["@sparticuz/chromium"]
+[functions.createOgImage]
+  external_node_modules = ["@sparticuz/chromium", "playwright-core"]
+
+# [functions.imageFromStorage]
+#   external_node_modules = ["@sparticuz/chromium", "playwright-core"]
