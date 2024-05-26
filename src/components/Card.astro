@@ -2,39 +2,19 @@
 import Badge from '@components/Badge.astro'
 import Fecha from '@components/Fecha.astro'
 import Temporizador from '@components/Temporizador.tsx'
-import { COPA_TYPE, FECHA_TYPE } from '@const/types'
-
-/**
- * El formato es de tipo Fecha
- * que lleva los siguientes valores
- * `año`-`mes`-`dia`T`hora`:`minutos` ó
- * `año`-`mes`-`dia`T`hora`:`minutos:segundos`
- */
-type DateType =
-	| `${number}-${number}-${number}T${number}:${number}`
-	| `${number}-${number}-${number}T${number}:${number}:${number}`
-type FechaT = (typeof FECHA_TYPE)[keyof typeof FECHA_TYPE]
-type Copa = (typeof COPA_TYPE)[keyof typeof COPA_TYPE]
-
-interface ImgProps {
-	src: string
-	alt: string
-	height?: string | number
-	width?: string | number
-}
-
-interface Props {
-	copa: Copa
-	date: DateType | null
-	fecha: FechaT | number
-	img: ImgProps
-	isSuspended?: boolean
-	isVisitor?: boolean | null
-	rawVs: string
-	vs: string
-}
-
-const { copa, date, fecha, img, isSuspended, isVisitor, vs } = Astro.props
+import type { IPartidos } from '@const/types'
+interface Props extends IPartidos {}
+const {
+	copa,
+	date,
+	fecha,
+	footballTeam: {
+		img: { alt, src },
+		vs
+	},
+	isSuspended,
+	isVisitor
+} = Astro.props
 ---
 
 <section
@@ -57,7 +37,7 @@ const { copa, date, fecha, img, isSuspended, isVisitor, vs } = Astro.props
 	class='relative flex flex-col items-center justify-center w-40 h-56 gap-4 rounded-lg shadow-lg'
 >
 	<header class='relative'>
-		<img loading='lazy' class='w-16 h-16' alt={img.alt} src={img.src} />
+		<img loading='lazy' class='w-16 h-16' alt={alt} src={src} />
 		<Badge isVisitor={isVisitor} />
 	</header>
 	<main class='flex flex-col items-center gap-1.5'>

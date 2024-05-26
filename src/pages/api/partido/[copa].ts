@@ -1,9 +1,8 @@
 import { partidos } from '@const/partidos'
-import { type APIRoute } from 'astro'
+import { type CopaWithoutSpaces as Copa } from '@const/types'
+import { type APIContext } from 'astro'
 
-type Copa = "copa-de-la-liga" | "copa-libertadores" | "copa-sudamericana" | "copa-argentina" | "noche-del-león" | "supercopa-argentina" | "torneo-de-la-liga"
-
-export const GET: APIRoute = ({ params }) => {
+export async function GET({ params }: APIContext) {
 	const { copa } = params as { copa: Copa }
 	const partidoPorCopa = partidos.filter(({ copa: COPA }) => COPA.replaceAll(' ', '-').toLowerCase() === copa)
 	return new Response(JSON.stringify(partidoPorCopa))

@@ -1,6 +1,5 @@
 ---
-import { FECHA_TYPE } from '@const/types'
-type Fecha = (typeof FECHA_TYPE)[keyof typeof FECHA_TYPE]
+import { type Fecha } from '@const/types'
 
 interface Props {
 	fecha: Fecha | number

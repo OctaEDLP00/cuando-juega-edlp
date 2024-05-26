@@ -1,21 +1,11 @@
 import { getRemainingTime } from './getRemainingTime.ts'
 import Toastify from 'toastify-js'
+import type { DateType, INotification, INotificationWithoutDate } from '@const/types'
 
 function checkMatchNotification(date: DateType): boolean {
 	const targetDate = new Date(date)
 	const { days, hours, minutes, seconds } = getRemainingTime(targetDate)
 	return days === 0 && hours === 0 && minutes === 0 && seconds === 0
-}
-
-type DateType =
-	`${number}-${number}-${number}T${number}:${number}`
-	| `${number}-${number}-${number}T${number}:${number}:${number}`
-
-interface INotification {
-	body?: string
-	date: DateType
-	icon?: string
-	notificationMsg?: string
 }
 
 export default function requestNotification(
@@ -65,7 +55,7 @@ export default function requestNotification(
 		}).showToast()
 	})
 }
-type INotificationWithoutDate = Omit<INotification, 'date'>
+
 function showNotification({ icon, notificationMsg, body }: INotificationWithoutDate) {
 	return new Notification(notificationMsg ?? 'El partido ya comenzo!!', {
 		body: body ?? '¡No te lo pierdas!',

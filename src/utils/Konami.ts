@@ -1,14 +1,4 @@
-interface KonamiProps {
-	code: Array<string>
-	keyPressed: string
-	onFinishTime?: number
-	onSucces: () => void
-	onFinish?: () => void
-}
-
-interface KonamiState {
-	[key: string]: number
-}
+import type { KonamiProps, KonamiState } from '@const/types'
 
 const konamiState: KonamiState = {}
 
@@ -19,8 +9,8 @@ const konamiState: KonamiState = {}
  * @param {Array<string>} code The Konami code
  * @param {string} keyPressed The key pressed by the user
  * @param {number} onFinishTime The time to wait before calling onFinish
- * @param {Function} onSucces The function to call when the Konami code is successfully entered
- * @param {Function} onFinish The function to call when the Konami code is not successfully entered
+ * @param {function} onSucces The function to call when the Konami code is successfully entered
+ * @param {function} onFinish The function to call when the Konami code is not successfully entered
  * @returns {void}
  */
 export function Konami({ code, keyPressed, onFinishTime, onSucces, onFinish }: KonamiProps): void {

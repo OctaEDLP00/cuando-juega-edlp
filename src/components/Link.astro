@@ -1,7 +1,5 @@
 ---
-type Target = '_blank' | '_parent' | '_self' | '_top'
-type Rel = 'noopener noreferrer' | 'noopener' | 'noreferrer'
-
+import type { Rel, Target } from '@const/types'
 interface Props {
 	href: string
 	target?: Target | undefined
