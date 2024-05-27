@@ -3,21 +3,7 @@ import GithubIcon from '@components/icons/Github.astro'
 import InstagramIcon from '@components/icons/Instagram.astro'
 import Threadsicon from '@components/icons/Threads.astro'
 import TwitterIcon from '@components/icons/Twitter.astro'
-import { REL_TYPE, TARGET_TYPE } from './types'
-
-type Rel = typeof REL_TYPE[keyof typeof REL_TYPE]
-type Target = typeof TARGET_TYPE[keyof typeof TARGET_TYPE]
-
-interface ILinkProps {
-	href: string
-	target: Target
-	rel: Rel
-}
-
-interface INetworkSocial extends ILinkProps {
-	IconComponent: any
-	disabled?: boolean | undefined
-}
+import type { INetworkSocial } from './types'
 
 export const SOCIAL_NETWORKS: Array<INetworkSocial> = [
   {
@@ -48,8 +34,8 @@ export const SOCIAL_NETWORKS: Array<INetworkSocial> = [
   {
     href: 'https://discordapp.com/users/684060236549718132',
     IconComponent: DiscordIcon,
-    target: TARGET.BLANK,
-    rel: REL.NOOPENERNOREFERRER,
+    target: '_blank',
+    rel: 'noopener noreferrer',
     disabled: true
   }
   */
