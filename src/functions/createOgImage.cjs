@@ -3,11 +3,11 @@ const { chromium: playwright } = require('playwright-core')
 const chromium = require('@sparticuz/chromium')
 
 const isLocal = process.env.NETLIFY_LOCAL === 'true'
-const LOCAL_CHROME_PATH = 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe'
-const LOCAL_URL = 'http://localhost:4321/'
+const LOCAL_CHROMIUM_PATH = process.env.LOCAL_CHROMIUM_PATH
+const LOCAL_URL = process.env.LOCAL_URL
 
 async function getConfig () {
-	const executablePath = isLocal ? LOCAL_CHROME_PATH : await chromium.executablePath()
+	const executablePath = isLocal ? LOCAL_CHROMIUM_PATH : await chromium.executablePath()
 	const url = isLocal ? LOCAL_URL : 'https://cuando-juega-edlp.netlify.app/'
 	return { executablePath, url }
 }
@@ -36,15 +36,22 @@ function returnImage (buffer) {
 exports.handler = async function (_event, _context, _callback) {
 	const { url, executablePath } = await getConfig()
 	const browser = await playwright.launch({
+		args: [
+			...chromium.args,
+			'--disable-extensions',
+			'--disable-gpu',
+			'--disable-dev-shm-usage',
+			'--no-sandbox'
+		],
 		executablePath,
 		headless: true
 	})
-	const context = await browser.newContext()
-	const page = await context.newPage()
+	const page = await browser.newPage()
 	await page.setViewportSize({ width: 1200, height: 800 })
-	await page.goto(url)
-	const el = await page.$('#App main')
-	const screenshot = await el?.screenshot()
+	await page.goto(url, { waitUntil: 'networkidle' })
+	const el = await page.$('#App')
+	if (!el) throw new Error('Element not found')
+	const screenshot = await el.screenshot()
 	await browser.close()
 	return returnImage(screenshot)
 }
