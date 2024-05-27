@@ -12,16 +12,17 @@ import Layout from '@layouts/Layout.astro'
 		{
 			partidos && (
 				<div class='grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
-					{partidos.map(({ vs, img, copa, date, fecha, isVisitor, isSuspended, rawVs }) => (
+					{partidos.map(({
+						copa, date, fecha, footballTeam,
+						isSuspended, isVisitor
+					}) => (
 						<Card
-							vs={vs}
-							img={img}
 							copa={copa}
 							date={date}
 							fecha={fecha}
+							footballTeam={footballTeam}
 							isVisitor={isVisitor}
 							isSuspended={isSuspended}
-							rawVs={rawVs}
 						/>
 					))}
 				</div>
