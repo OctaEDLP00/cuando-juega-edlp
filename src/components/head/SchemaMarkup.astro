@@ -1,0 +1,8 @@
+---
+import { partidos } from '@const/partidos'
+import { getSchemaScripts } from '@utils/generateSchemaMarkup'
+
+const schemaScripts = getSchemaScripts(partidos)
+---
+
+<script is:inline set:html={JSON.stringify([schemaScripts], null, 2)} type='application/ld+json' />
