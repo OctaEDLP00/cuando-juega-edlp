@@ -1,12 +1,6 @@
 {
-  "[astro]": {
-    "editor.codeActionsOnSave": {
-			"source.fixAll": "explicit",
-			"source.organizeImports": "explicit"
-		}
-  },
-  "editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
 	},
   "editor.detectIndentation": false,
   "editor.insertSpaces": false,
@@ -19,9 +13,6 @@
   ],
   "files.associations": {
     "*.mdx": "markdown"
-  },
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "prettier.enable": true,
-  "prettier.configPath": ".prettierrc"
+	},
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true
 }
