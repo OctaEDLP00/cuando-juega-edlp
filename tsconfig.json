@@ -1,16 +1,20 @@
 {
-  "compilerOptions": {
-    "allowImportingTsExtensions": true,
-    "allowSyntheticDefaultImports": true,
-		"allowJs": true,
-    "baseUrl": ".",
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"target": "ESNext",
+		"module": "ESNext",
+		"resolveJsonModule": true,
     "isolatedModules": true,
+		"types": [
+			"astro/client",
+			"vite/client",
+			"react"
+		],
+		"outDir": "./dist",
+		"moduleResolution": "node",
     "jsx": "react-jsx",
 		"jsxImportSource": "react",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "outDir": "./dist",
+		"baseUrl": ".",
     "paths": {
       "@hooks/*": [
         "src/hooks/*"
@@ -39,13 +43,6 @@
       "@/*": [
         "src/*"
       ]
-    },
-    "resolveJsonModule": true,
-    "target": "ESNext",
-    "types": [
-			"astro/client",
-			"vite/client",
-      "react"
-    ]
+		}
   }
 }
