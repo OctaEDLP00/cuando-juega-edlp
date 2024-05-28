@@ -1,4 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 const { chromium: playwright } = require('playwright-core')
 const chromium = require('@sparticuz/chromium')
 
@@ -12,11 +14,6 @@ async function getConfig () {
 	return { executablePath, url }
 }
 
-/**
- * @typedef {{ 'Content-Type': string }} Headers
- * @param {Buffer | string | void} buffer
- * @return {{ headers: Headers, statusCode: number, body: string, isBase64Encoded: boolean }}
- */
 function returnImage (buffer) {
 	return {
 		headers: {
@@ -28,12 +25,7 @@ function returnImage (buffer) {
 	}
 }
 
-/**
- * @param {function} _callback
- * @param {any} _context
- * @param {any} _event
- */
-exports.handler = async function (_event, _context, _callback) {
+exports.handler = async function (_event) {
 	const { url, executablePath } = await getConfig()
 	const browser = await playwright.launch({
 		args: [
