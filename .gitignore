@@ -32,5 +32,6 @@ css
 .netlify
 .vercel
 
-# Files
-src/components/react/special/Marquee.tsx
+# Supabase
+.branches
+.temp

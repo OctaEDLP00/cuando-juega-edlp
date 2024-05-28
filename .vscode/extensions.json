@@ -1,23 +1,24 @@
 {
 	"recommendations": [
 		"astro-build.astro-vscode",
-		"pflannery.vscode-versionlens",
-    "usernamehw.errorlens",
-		"editorconfig.editorconfig",
-		"wix.vscode-import-cost",
-		"kisstkondoros.vscode-gutter-preview",
-    "ms-vscode.vscode-typescript-next",
+		"bradlc.vscode-tailwindcss",
+		"chakrounanas.turbo-console-log",
 		"christian-kohler.npm-intellisense",
 		"christian-kohler.path-intellisense",
 		"dbaeumer.vscode-eslint",
-		"yoavbls.pretty-ts-errors",
+		"denoland.vscode-deno",
+		"editorconfig.editorconfig",
+		"esbenp.prettier-vscode",
 		"heybourn.headwind",
 		"irongeek.vscode-env",
-		"chakrounanas.turbo-console-log",
-		"tobermory.es6-string-html",
+		"kisstkondoros.vscode-gutter-preview",
+		"ms-vscode.vscode-typescript-next",
+		"pflannery.vscode-versionlens",
 		"tamasfe.even-better-toml",
-    "unifiedjs.vscode-mdx",
-		"esbenp.prettier-vscode",
-		"bradlc.vscode-tailwindcss"
+		"tobermory.es6-string-html",
+		"unifiedjs.vscode-mdx",
+		"usernamehw.errorlens",
+		"wix.vscode-import-cost",
+		"yoavbls.pretty-ts-errors"
 	]
 }

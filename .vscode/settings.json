@@ -1,7 +1,15 @@
 {
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "deno.enablePaths": [
+    "supabase/functions"
+  ],
+  "deno.lint": true,
+  "deno.unstable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.detectIndentation": false,
   "editor.insertSpaces": false,
   "eslint.validate": [
@@ -13,6 +21,6 @@
   ],
   "files.associations": {
     "*.mdx": "markdown"
-	},
-	"javascript.format.insertSpaceBeforeFunctionParenthesis": true
+  },
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true
 }
