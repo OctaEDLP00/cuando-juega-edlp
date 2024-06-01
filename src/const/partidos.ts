@@ -47,7 +47,7 @@ export const partidos: Array<IPartidos> = [
 		},
 		isVisitor: true
 	},
-  {
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-07-21T00:00'
 		fecha: 6,
@@ -62,7 +62,7 @@ export const partidos: Array<IPartidos> = [
 		},
 		isVisitor: false
 	},
-  {
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-07-24T00:00',
 		fecha: 7,
@@ -77,7 +77,7 @@ export const partidos: Array<IPartidos> = [
 		},
 		isVisitor: true
 	},
-  {
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-07-28T00:00',
 		fecha: 8,
@@ -92,7 +92,7 @@ export const partidos: Array<IPartidos> = [
 		},
 		isVisitor: false
 	},
-  {
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-08-04T00:00',
 		fecha: 9,
@@ -107,7 +107,7 @@ export const partidos: Array<IPartidos> = [
 		},
 		isVisitor: true
 	},
-  {
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-08-11T00:00',
 		fecha: 10,
@@ -122,7 +122,7 @@ export const partidos: Array<IPartidos> = [
 		},
 		isVisitor: false
 	},
-  {
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-08-18T00:00',
 		fecha: 11,
@@ -136,8 +136,8 @@ export const partidos: Array<IPartidos> = [
 			vs: 'Atlético (Tuc)'
 		},
 		isVisitor: true
-  },
-  {
+	},
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-08-25T00:00',
 		fecha: 12,
@@ -151,8 +151,8 @@ export const partidos: Array<IPartidos> = [
 			vs: 'Boca Jrs'
 		},
 		isVisitor: false
-  },
-  {
+	},
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // 2024-09-01T00:00,
 		fecha: 13,
@@ -166,8 +166,8 @@ export const partidos: Array<IPartidos> = [
 			vs: 'Talleres'
 		},
 		isVisitor: true
-  },
-  {
+	},
+	{
 		copa: 'Torneo de La Liga',
 		date: null, // '2024-09-15T00:00',
 		fecha: 14,
@@ -210,7 +210,7 @@ export const partidos: Array<IPartidos> = [
 			rawVs: 'defensayjusticia',
 			vs: 'Defensa y Justicia'
 		},
-		isVisitor: false,
+		isVisitor: false
 	},
 	{
 		copa: 'Torneo de La Liga',
@@ -285,7 +285,7 @@ export const partidos: Array<IPartidos> = [
 			rawVs: 'sanlorenzo',
 			vs: 'San Lorenzo'
 		},
-		isVisitor: true,
+		isVisitor: true
 	},
 	{
 		copa: 'Torneo de La Liga',
@@ -300,7 +300,7 @@ export const partidos: Array<IPartidos> = [
 			rawVs: 'centralcordoba',
 			vs: 'Central Cordoba'
 		},
-		isVisitor: true,
+		isVisitor: true
 	},
 	{
 		copa: 'Torneo de La Liga',
@@ -315,7 +315,7 @@ export const partidos: Array<IPartidos> = [
 			rawVs: 'rosariocentral',
 			vs: 'Rosario Central'
 		},
-		isVisitor: false,
+		isVisitor: false
 	},
 	{
 		copa: 'Torneo de La Liga',
@@ -330,7 +330,7 @@ export const partidos: Array<IPartidos> = [
 			rawVs: 'racing',
 			vs: 'Racing'
 		},
-		isVisitor: true,
+		isVisitor: true
 	},
 	{
 		copa: 'Torneo de La Liga',
@@ -345,7 +345,7 @@ export const partidos: Array<IPartidos> = [
 			rawVs: 'riverplate',
 			vs: 'River Plate'
 		},
-		isVisitor: false,
+		isVisitor: false
 	},
 	{
 		copa: 'Torneo de La Liga',
