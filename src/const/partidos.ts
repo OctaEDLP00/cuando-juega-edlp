@@ -3,21 +3,6 @@ import type { IPartidos } from './types'
 // Primer partido: vs Tigre
 export const partidos: Array<IPartidos> = [
 	{
-		copa: 'Copa Libertadores',
-		date: '2024-05-29T19:00',
-		fecha: 'fase de grupos',
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Huachipato',
-				src: '/assets/Huachipato.webp'
-			},
-			rawVs: 'huachipato',
-			vs: 'Huachipato'
-		},
-		isVisitor: false
-	},
-	{
 		copa: 'Torneo de La Liga',
 		date: '2024-06-03T21:15',
 		fecha: 4,
