@@ -8,8 +8,8 @@
   "deno.lint": true,
   "deno.unstable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
+		"source.fixAll.eslint": "explicit"
+	},
   "editor.detectIndentation": false,
   "editor.insertSpaces": false,
   "eslint.validate": [
