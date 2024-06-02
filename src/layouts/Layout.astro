@@ -1,14 +1,19 @@
 ---
-interface Props {
-	title: string
-	description?: string
-}
-
+import { getOgImage } from '@utils/supabase'
 import EasterEgg from '@components/head/EasterEgg.astro'
 import Links from '@components/head/Links.astro'
 import Meta from '@components/head/Meta.astro'
 import SchemaMarkup from '@components/head/SchemaMarkup.astro'
 import '../styles/main.css'
+
+const { data, error } = await getOgImage()
+if (error) console.error(error)
+const { image } = data
+
+interface Props {
+	title: string
+	description?: string
+}
 
 const { title } = Astro.props
 ---
@@ -18,7 +23,7 @@ const { title } = Astro.props
 	<head>
 		<Meta
 			title={title}
-			ogImage='https://rwvrxejmxblbgualefhj.supabase.co/storage/v1/object/public/image-og/og.png'
+			ogImage=`https://rwvrxejmxblbgualefhj.supabase.co/storage/v1/object/public/image-og/${image}.png`
 		/>
 		<Links />
 		<EasterEgg />
