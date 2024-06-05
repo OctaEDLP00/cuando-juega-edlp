@@ -6,9 +6,9 @@ import Meta from '@components/head/Meta.astro'
 import SchemaMarkup from '@components/head/SchemaMarkup.astro'
 import '../styles/main.css'
 
-const { data, error } = await getOgImage()
-if (error) console.error(error)
-const { image } = data
+// const { data, error } = await getOgImage()
+// if (error) console.error(error)
+// const { image } = data
 
 interface Props {
 	title: string
@@ -23,7 +23,7 @@ const { title } = Astro.props
 	<head>
 		<Meta
 			title={title}
-			ogImage=`https://rwvrxejmxblbgualefhj.supabase.co/storage/v1/object/public/image-og/${image}.png`
+			ogImage='https://rwvrxejmxblbgualefhj.supabase.co/storage/v1/object/public/image-og/og.png'
 		/>
 		<Links />
 		<EasterEgg />
