@@ -3,21 +3,6 @@ import type { IPartidos } from './types'
 // Primer partido: vs Tigre
 export const partidos: Array<IPartidos> = [
 	{
-		copa: 'Torneo de La Liga',
-		date: '2024-06-03T21:15',
-		fecha: 4,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Godoy Cruz',
-				src: '/assets/GodoyCruz.webp'
-			},
-			rawVs: 'godoycruz',
-			vs: 'Godoy Cruz'
-		},
-		isVisitor: false
-	},
-	{
 		copa: 'Copa Libertadores',
 		date: '2024-06-08T19:00',
 		fecha: 'fase de grupos',
