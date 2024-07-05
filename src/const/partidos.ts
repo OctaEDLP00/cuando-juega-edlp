@@ -3,38 +3,8 @@ import type { IPartidos } from './types'
 // Primer partido: vs Tigre
 export const partidos: Array<IPartidos> = [
 	{
-		copa: 'Copa Libertadores',
-		date: '2024-06-08T19:00',
-		fecha: 'fase de grupos',
-		footballTeam: {
-			footballStadium: '',
-			img: {
-				alt: 'Escudo del Equipo Gremio',
-				src: '/assets/Gremio.webp'
-			},
-			rawVs: 'gremio',
-			vs: 'Gremio'
-		},
-		isVisitor: true
-	},
-	{
 		copa: 'Torneo de La Liga',
-		date: '2024-06-13T19:00',
-		fecha: 5,
-		footballTeam: {
-			footballStadium: 'Estadio Eva Perón (Club Atletico Sarmiento)',
-			img: {
-				alt: 'Escudo del Equipo Sarmiento',
-				src: '/assets/Sarmiento.webp'
-			},
-			rawVs: 'sarmiento',
-			vs: 'Sarmiento'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: null, // '2024-07-21T00:00'
+		date: '2024-07-21T17:15',
 		fecha: 6,
 		footballTeam: {
 			footballStadium: null,
@@ -49,7 +19,7 @@ export const partidos: Array<IPartidos> = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-07-24T00:00',
+		date: '2024-07-24T19:30',
 		fecha: 7,
 		footballTeam: {
 			footballStadium: 'Estadio Tomás Adolfo Ducó (Huracan)',
@@ -64,7 +34,7 @@ export const partidos: Array<IPartidos> = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-07-28T00:00',
+		date: '2024-07-28T15:00',
 		fecha: 8,
 		footballTeam: {
 			footballStadium: null,
@@ -79,7 +49,7 @@ export const partidos: Array<IPartidos> = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-08-04T00:00',
+		date: '2024-08-02T20:00',
 		fecha: 9,
 		footballTeam: {
 			footballStadium: 'Estadio Marcelo Bielsa (Newell\'s Old Boys)',
