@@ -2,6 +2,21 @@ import type { IPartidos } from './types'
 // Segunda Fase: 27 Partidos, 13 de Local - 14 de Visitante
 // Primer partido: vs Tigre
 export const partidos: Array<IPartidos> = [
+ {
+		copa: 'Copa Argentina',
+		date: '2024-07-17T18:00',
+		fecha: '16avos',
+		footballTeam: {
+			footballStadium: null,
+			img: {
+				alt: 'Escudo del Equipo Central Cordoba',
+				src: '/assets/CentralCba.webp'
+			},
+			rawVs: 'central cba',
+			vs: 'Cantral Cba'
+		},
+		isVisitor: false
+	},
 	{
 		copa: 'Torneo de La Liga',
 		date: '2024-07-21T17:15',
