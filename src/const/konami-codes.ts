@@ -31,7 +31,7 @@ export const konamiCodes = {
 		'n',
 		't',
 		'e',
-		's',
+		's'
 	],
 	laliCursor: [
 		'l',
@@ -56,6 +56,6 @@ export const konamiCodes = {
 		'e',
 		'd',
 		'l',
-		'p',
+		'p'
 	]
 }
