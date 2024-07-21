@@ -1,9 +1,9 @@
 <script>
-	import confetti from 'canvas-confetti'
-	import Toastify from 'toastify-js'
-	import { $query } from '@utils/Dom'
-	import { Konami } from '@utils/Konami'
+	// import confetti from 'canvas-confetti'
 	import { konamiCodes } from '@const/konami-codes'
+import { error } from '@utils/console'
+import { $query } from '@utils/Dom'
+import { Konami } from '@utils/Konami'
 
 	const { edlp, edlpCursor, lali, laliCursor, himnoEdlp } = konamiCodes
 	let konamiCodeInProgress = false
@@ -18,7 +18,7 @@
 	const audioManager: Manager = {
 		audioInstance: null,
 		getAudioInstance: (audioSrc: string) => {
-			if (!audioManager.audioInstance) {
+			if (audioManager.audioInstance == null) {
 				audioManager.audioInstance = new Audio(audioSrc)
 				return audioManager.audioInstance
 			}
@@ -27,30 +27,35 @@
 	}
 
 	const activateEasterEgg = () => {
-		const toast = Toastify({
-			selector: $container,
-			text: '✔ ✅ Easter egg desbloqueado!',
-			duration: 3000,
-			gravity: 'bottom',
-			style: {
-				background: 'linear-gradient(to right, #0e03c7, #058eaa)'
-			}
-		})
-		toast.showToast()
+		const toast = import('toastify-js')
+		toast
+			.then((deps) => {
+				const { default: Toastify } = deps
+				Toastify({
+					selector: $container,
+					text: '✔ Easter Egg desbloqueado!',
+					duration: 3000,
+					gravity: 'bottom',
+					style: {
+						background: 'linear-gradient(to right, #0e03c7, #058eaa)'
+					}
+				}).showToast()
+			})
+			.catch(error)
 	}
 
 	const EventListenerFn = ({ key }: KeyboardEvent) => {
-		Konami({
+		// songs
+		new Konami({
 			code: edlp,
 			keyPressed: key,
 			onFinishTime: 1500,
 			onSucces: () => {
-				if (konamiCodeInProgress) {
-					return (konamiCodeInProgress = true)
-				}
+				if (konamiCodeInProgress) return (konamiCodeInProgress = true)
 				const audio = audioManager.getAudioInstance(
 					'/assets/music/el-cielo-nos-queda-muy-chico-Ivan-Sadovsky.mp3'
 				)
+
 				if (audio !== null) {
 					audio.volume = 0.2
 					audio.play()
@@ -65,14 +70,12 @@
 			}
 		})
 
-		Konami({
+		new Konami({
 			code: himnoEdlp,
 			keyPressed: key,
 			onFinishTime: 1500,
 			onSucces: () => {
-				if (konamiCodeInProgress) {
-					return (konamiCodeInProgress = true)
-				}
+				if (konamiCodeInProgress) return (konamiCodeInProgress = true)
 				const audio = audioManager.getAudioInstance(
 					'/assets/music/himno-del-club-estudiantes-de-la-plata.mp3'
 				)
@@ -90,14 +93,12 @@
 			}
 		})
 
-		Konami({
+		new Konami({
 			code: lali,
 			keyPressed: key,
 			onFinishTime: 1500,
 			onSucces: () => {
-				if (konamiCodeInProgress) {
-					return (konamiCodeInProgress = true)
-				}
+				if (konamiCodeInProgress) return (konamiCodeInProgress = true)
 				const audio = audioManager.getAudioInstance(
 					'/assets/music/la-cancion-de-la-alegria-libertadores.mp3'
 				)
@@ -115,22 +116,24 @@
 			}
 		})
 
-		Konami({
+		// cursors
+
+		new Konami({
 			code: edlpCursor,
 			keyPressed: key,
 			onFinishTime: 1500,
 			onSucces: () => {
-				$body.style.cursor = 'url(/assets/cursors/ClubEstudiantesDeLaPlata.webp), auto'
+				$body.style.cursor = 'url(/assets/cursors/escudo-club-estudiantes-de-la-plata.png), auto'
 				activateEasterEgg()
 			}
 		})
 
-		Konami({
+		new Konami({
 			code: laliCursor,
 			keyPressed: key,
 			onFinishTime: 1500,
 			onSucces: () => {
-				$body.style.cursor = 'url(/assets/cursors/copa-libertadores.webp), auto'
+				$body.style.cursor = 'url(/assets/cursors/copa-libertadores.png), auto'
 				activateEasterEgg()
 			}
 		})
