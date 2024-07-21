@@ -33,7 +33,7 @@ const COPA_TYPE_WITHOUT_SPACES = {
 export const REL_TYPE = {
 	NOOPENERNOREFERRER: 'noopener noreferrer',
 	NOOPENER: 'noopener',
-	NOREFERRER: 'noreferrer',
+	NOREFERRER: 'noreferrer'
 } as const
 
 export const TARGET_TYPE = {
@@ -75,6 +75,7 @@ interface ILinkProps {
 }
 
 export interface INetworkSocial extends ILinkProps {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	IconComponent: any
 	disabled?: boolean | undefined
 }
