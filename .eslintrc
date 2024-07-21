@@ -35,7 +35,8 @@
 		"indent": [ "warn", "tab" ],
 		"quotes": [ "warn", "single" ],
 		"jsx-quotes": [ "warn", "prefer-single" ],
-		"eol-last": "off"
+		"eol-last": "off",
+		"padded-blocks": "off"
 	},
 	"overrides": [
 		{
