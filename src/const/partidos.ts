@@ -1,22 +1,6 @@
 import type { IPartidos } from './types'
-// Segunda Fase: 27 Partidos, 13 de Local - 14 de Visitante
-// Primer partido: vs Tigre
+
 export const partidos: Array<IPartidos> = [
- {
-		copa: 'Copa Argentina',
-		date: '2024-07-17T18:00',
-		fecha: '16avos',
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Central Cordoba',
-				src: '/assets/CentralCba.webp'
-			},
-			rawVs: 'central cba',
-			vs: 'Cantral Cba'
-		},
-		isVisitor: false
-	},
 	{
 		copa: 'Torneo de La Liga',
 		date: '2024-07-21T17:15',
@@ -25,7 +9,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Union',
-				src: '/assets/Union.webp'
+				src: '/assets/shields/Union.webp'
 			},
 			rawVs: 'union',
 			vs: 'Union'
@@ -40,7 +24,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Tomás Adolfo Ducó (Huracan)',
 			img: {
 				alt: 'Escudo del Equipo Huracan',
-				src: '/assets/Huracan.webp'
+				src: '/assets/shields/Huracan.webp'
 			},
 			rawVs: 'huracan',
 			vs: 'Huracan'
@@ -55,7 +39,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Gimnasia Y Esgrima de La Plata',
-				src: '/assets/Gimnasia.webp'
+				src: '/assets/shields/Gimnasia.webp'
 			},
 			rawVs: 'gimnasia',
 			vs: 'Gimnasia'
@@ -70,7 +54,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Marcelo Bielsa (Newell\'s Old Boys)',
 			img: {
 				alt: 'Escudo del Equipo Newell`s',
-				src: '/assets/Newells.webp'
+				src: '/assets/shields/Newells.webp'
 			},
 			rawVs: 'newells',
 			vs: 'Newell`s'
@@ -85,7 +69,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Independiente',
-				src: '/assets/Independiente.webp'
+				src: '/assets/shields/Independiente.webp'
 			},
 			rawVs: 'independiente',
 			vs: 'Independiente'
@@ -100,7 +84,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Monumental José Fierro (Club Atlético de Tucumán)',
 			img: {
 				alt: 'Escudo del Equipo Atlético de Tucumán',
-				src: '/assets/AtleTucuman.webp'
+				src: '/assets/shields/AtleTucuman.webp'
 			},
 			rawVs: 'atleticotucuman',
 			vs: 'Atlético (Tuc)'
@@ -115,7 +99,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo BocaJrs',
-				src: '/assets/BocaJrs.webp'
+				src: '/assets/shields/BocaJrs.webp'
 			},
 			rawVs: 'bocajrs',
 			vs: 'Boca Jrs'
@@ -130,7 +114,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Fransisco Cabesés "La Boutique de Barrio Jardin" (Club Atletico Talleres)',
 			img: {
 				alt: 'Escudo del Equipo Talleres',
-				src: '/assets/Talleres.webp'
+				src: '/assets/shields/Talleres.webp'
 			},
 			rawVs: 'talleres',
 			vs: 'Talleres'
@@ -145,7 +129,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Platense',
-				src: '/assets/Platense.webp'
+				src: '/assets/shields/Platense.webp'
 			},
 			rawVs: 'platense',
 			vs: 'Platense'
@@ -160,7 +144,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio José Amalfitani (Velez Sarsfield)',
 			img: {
 				alt: 'Escudo del Equipo Velez',
-				src: '/assets/Velez.webp'
+				src: '/assets/shields/Velez.webp'
 			},
 			rawVs: 'velez',
 			vs: 'Velez'
@@ -175,7 +159,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Defensa y Justicia',
-				src: '/assets/DyJ.webp'
+				src: '/assets/shields/DyJ.webp'
 			},
 			rawVs: 'defensayjusticia',
 			vs: 'Defensa y Justicia'
@@ -190,7 +174,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Florencio Sola (Banfield)',
 			img: {
 				alt: 'Escudo del Equipo Banfield',
-				src: '/assets/Banfield.webp'
+				src: '/assets/shields/Banfield.webp'
 			},
 			rawVs: 'banfield',
 			vs: 'Banfield'
@@ -205,7 +189,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Instituto',
-				src: '/assets/Instituto.webp'
+				src: '/assets/shields/Instituto.webp'
 			},
 			rawVs: 'instituto',
 			vs: 'Instituto'
@@ -220,7 +204,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Claudio Fabian Tapia (Barracas)',
 			img: {
 				alt: 'Escudo del Equipo Barracas',
-				src: '/assets/Barracas.webp'
+				src: '/assets/shields/Barracas.webp'
 			},
 			rawVs: 'barracascentral',
 			vs: 'Barracas Central'
@@ -235,7 +219,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Independiente(Mdz)',
-				src: '/assets/Independiente(Mdz).webp'
+				src: '/assets/shields/Independiente(Mdz).webp'
 			},
 			rawVs: 'independientedemendoza',
 			vs: 'Indep (Mdz)'
@@ -250,7 +234,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Nuevo Gasometro (San Lorenzo)',
 			img: {
 				alt: 'Escudo del Equipo San Lorenzo',
-				src: '/assets/SanLorenzo.webp'
+				src: '/assets/shields/SanLorenzo.webp'
 			},
 			rawVs: 'sanlorenzo',
 			vs: 'San Lorenzo'
@@ -265,7 +249,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Unico Ciudad de Madres (Central Cordoba)',
 			img: {
 				alt: 'Escudo del Equipo Central Cordoba',
-				src: '/assets/CentralCba.webp'
+				src: '/assets/shields/CentralCba.webp'
 			},
 			rawVs: 'centralcordoba',
 			vs: 'Central Cordoba'
@@ -280,7 +264,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Rosario Central',
-				src: '/assets/RosarioCentral.webp'
+				src: '/assets/shields/RosarioCentral.webp'
 			},
 			rawVs: 'rosariocentral',
 			vs: 'Rosario Central'
@@ -295,7 +279,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Cilindro de Avellaneda (Racing Club)',
 			img: {
 				alt: 'Escudo del Equipo Racing',
-				src: '/assets/Racing.webp'
+				src: '/assets/shields/Racing.webp'
 			},
 			rawVs: 'racing',
 			vs: 'Racing'
@@ -310,7 +294,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo River Plate',
-				src: '/assets/River.webp'
+				src: '/assets/shields/River.webp'
 			},
 			rawVs: 'riverplate',
 			vs: 'River Plate'
@@ -325,7 +309,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: 'Estadio Julio Cesar Villagra (Belgrano)',
 			img: {
 				alt: 'Escudo del Equipo Belgrano',
-				src: '/assets/Belgrano.webp'
+				src: '/assets/shields/Belgrano.webp'
 			},
 			rawVs: 'belgrano',
 			vs: 'Belgrano'
@@ -340,7 +324,7 @@ export const partidos: Array<IPartidos> = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Argentinos Jrs',
-				src: '/assets/ArgentinosJrs.webp'
+				src: '/assets/shields/ArgentinosJrs.webp'
 			},
 			rawVs: 'argentinosjrs',
 			vs: 'Argentinos Jrs'
