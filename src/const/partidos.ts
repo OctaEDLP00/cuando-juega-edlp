@@ -3,36 +3,6 @@ import type { IPartidos } from './types'
 export const partidos: Array<IPartidos> = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-07-21T17:15',
-		fecha: 6,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Union',
-				src: '/assets/shields/Union.webp'
-			},
-			rawVs: 'union',
-			vs: 'Union'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-07-24T19:30',
-		fecha: 7,
-		footballTeam: {
-			footballStadium: 'Estadio Tomás Adolfo Ducó (Huracan)',
-			img: {
-				alt: 'Escudo del Equipo Huracan',
-				src: '/assets/shields/Huracan.webp'
-			},
-			rawVs: 'huracan',
-			vs: 'Huracan'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
 		date: '2024-07-28T15:00',
 		fecha: 8,
 		footballTeam: {
