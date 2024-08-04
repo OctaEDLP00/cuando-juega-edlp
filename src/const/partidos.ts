@@ -3,37 +3,7 @@ import type { IPartidos } from './types'
 export const partidos: Array<IPartidos> = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-07-28T15:00',
-		fecha: 8,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Gimnasia Y Esgrima de La Plata',
-				src: '/assets/shields/Gimnasia.webp'
-			},
-			rawVs: 'gimnasia',
-			vs: 'Gimnasia'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-08-02T20:00',
-		fecha: 9,
-		footballTeam: {
-			footballStadium: 'Estadio Marcelo Bielsa (Newell\'s Old Boys)',
-			img: {
-				alt: 'Escudo del Equipo Newell`s',
-				src: '/assets/shields/Newells.webp'
-			},
-			rawVs: 'newells',
-			vs: 'Newell`s'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: null, // '2024-08-11T00:00',
+		date: '2024-08-11T20:00',
 		fecha: 10,
 		footballTeam: {
 			footballStadium: null,
@@ -48,7 +18,7 @@ export const partidos: Array<IPartidos> = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-08-18T00:00',
+		date: '2024-08-18T17:00',
 		fecha: 11,
 		footballTeam: {
 			footballStadium: 'Estadio Monumental José Fierro (Club Atlético de Tucumán)',
@@ -63,7 +33,7 @@ export const partidos: Array<IPartidos> = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-08-25T00:00',
+		date: '2024-08-26T21:00',
 		fecha: 12,
 		footballTeam: {
 			footballStadium: null,
