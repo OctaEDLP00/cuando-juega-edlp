@@ -1,21 +1,6 @@
 import type { IPartidos } from './types'
 
-export const partidos: Array<IPartidos> = [
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-08-11T20:00',
-		fecha: 10,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Independiente',
-				src: '/assets/shields/Independiente.webp'
-			},
-			rawVs: 'independiente',
-			vs: 'Independiente'
-		},
-		isVisitor: false
-	},
+export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
 		date: '2024-08-18T17:00',
@@ -271,10 +256,6 @@ export const partidos: Array<IPartidos> = [
 		},
 		isVisitor: false
 	}
-]
+] satisfies Array<IPartidos>
 
-/*
-const proximaFase: Array<IPartidos> = [
-
-]
-*/
+/* const proximaFase = [ ] satisfies Array<IPartidos> */
