@@ -3,21 +3,6 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-08-18T17:00',
-		fecha: 11,
-		footballTeam: {
-			footballStadium: 'Estadio Monumental José Fierro (Club Atlético de Tucumán)',
-			img: {
-				alt: 'Escudo del Equipo Atlético de Tucumán',
-				src: '/assets/shields/AtleTucuman.webp'
-			},
-			rawVs: 'atleticotucuman',
-			vs: 'Atlético (Tuc)'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
 		date: '2024-08-26T21:00',
 		fecha: 12,
 		footballTeam: {
