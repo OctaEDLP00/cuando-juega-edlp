@@ -3,22 +3,7 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-08-26T21:00',
-		fecha: 12,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo BocaJrs',
-				src: '/assets/shields/BocaJrs.webp'
-			},
-			rawVs: 'bocajrs',
-			vs: 'Boca Jrs'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: null, // 2024-09-01T00:00,
+		date: '2024-08-31T18:00',
 		fecha: 13,
 		footballTeam: {
 			footballStadium: 'Estadio Fransisco Cabesés "La Boutique de Barrio Jardin" (Club Atletico Talleres)',
