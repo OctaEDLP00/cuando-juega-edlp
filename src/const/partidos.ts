@@ -3,22 +3,7 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-08-31T18:00',
-		fecha: 13,
-		footballTeam: {
-			footballStadium: 'Estadio Fransisco Cabesés "La Boutique de Barrio Jardin" (Club Atletico Talleres)',
-			img: {
-				alt: 'Escudo del Equipo Talleres',
-				src: '/assets/shields/Talleres.webp'
-			},
-			rawVs: 'talleres',
-			vs: 'Talleres'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: null, // '2024-09-15T00:00',
+		date: '2024-09-15T15:00',
 		fecha: 14,
 		footballTeam: {
 			footballStadium: null,
@@ -33,7 +18,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-09-22T00:00',
+		date: '2024-09-23T21:00',
 		fecha: 15,
 		footballTeam: {
 			footballStadium: 'Estadio José Amalfitani (Velez Sarsfield)',
