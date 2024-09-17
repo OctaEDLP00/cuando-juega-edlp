@@ -3,21 +3,6 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-09-15T15:00',
-		fecha: 14,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Platense',
-				src: '/assets/shields/Platense.webp'
-			},
-			rawVs: 'platense',
-			vs: 'Platense'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
 		date: '2024-09-23T21:00',
 		fecha: 15,
 		footballTeam: {
