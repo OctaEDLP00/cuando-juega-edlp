@@ -3,22 +3,7 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-09-23T21:00',
-		fecha: 15,
-		footballTeam: {
-			footballStadium: 'Estadio José Amalfitani (Velez Sarsfield)',
-			img: {
-				alt: 'Escudo del Equipo Velez',
-				src: '/assets/shields/Velez.webp'
-			},
-			rawVs: 'velez',
-			vs: 'Velez'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: null, // '2024-09-29T00:00',
+		date: '2024-09-28T17:30',
 		fecha: 16,
 		footballTeam: {
 			footballStadium: null,
@@ -33,7 +18,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-10-06T00:00',
+		date: '2024-10-07T21:00',
 		fecha: 17,
 		footballTeam: {
 			footballStadium: 'Estadio Florencio Sola (Banfield)',
