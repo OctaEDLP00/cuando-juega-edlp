@@ -3,22 +3,7 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-09-28T17:30',
-		fecha: 16,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Defensa y Justicia',
-				src: '/assets/shields/DyJ.webp'
-			},
-			rawVs: 'defensayjusticia',
-			vs: 'Defensa y Justicia'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-10-07T21:00',
+		date: '2024-10-07T18:00',
 		fecha: 17,
 		footballTeam: {
 			footballStadium: 'Estadio Florencio Sola (Banfield)',
