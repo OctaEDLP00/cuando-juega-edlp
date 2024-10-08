@@ -3,21 +3,6 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-10-07T18:00',
-		fecha: 17,
-		footballTeam: {
-			footballStadium: 'Estadio Florencio Sola (Banfield)',
-			img: {
-				alt: 'Escudo del Equipo Banfield',
-				src: '/assets/shields/Banfield.webp'
-			},
-			rawVs: 'banfield',
-			vs: 'Banfield'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
 		date: null, // '2024-10-20T00:00',
 		fecha: 18,
 		footballTeam: {
