@@ -3,22 +3,7 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-10-07T18:00',
-		fecha: 17,
-		footballTeam: {
-			footballStadium: 'Estadio Florencio Sola (Banfield)',
-			img: {
-				alt: 'Escudo del Equipo Banfield',
-				src: '/assets/shields/Banfield.webp'
-			},
-			rawVs: 'banfield',
-			vs: 'Banfield'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: null, // '2024-10-20T00:00',
+		date: '2024-10-20T17:15',
 		fecha: 18,
 		footballTeam: {
 			footballStadium: null,
@@ -33,7 +18,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-10-27T00:00',
+		date: '2024-10-25T15:00',
 		fecha: 19,
 		footballTeam: {
 			footballStadium: 'Estadio Claudio Fabian Tapia (Barracas)',
@@ -48,7 +33,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-11-03T00:00',
+		date: '2024-10-31T19:00',
 		fecha: 20,
 		footballTeam: {
 			footballStadium: null,
@@ -63,7 +48,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-11-06T00:00',
+		date: '2024-11-05T18:45',
 		fecha: 21,
 		footballTeam: {
 			footballStadium: 'Estadio Nuevo Gasometro (San Lorenzo)',
@@ -78,7 +63,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-11-10T00:00',
+		date: '2024-11-10T15:00',
 		fecha: 22,
 		footballTeam: {
 			footballStadium: 'Estadio Unico Ciudad de Madres (Central Cordoba)',
