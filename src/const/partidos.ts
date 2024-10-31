@@ -3,36 +3,6 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-10-20T17:15',
-		fecha: 18,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Instituto',
-				src: '/assets/shields/Instituto.webp'
-			},
-			rawVs: 'instituto',
-			vs: 'Instituto'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-10-25T15:00',
-		fecha: 19,
-		footballTeam: {
-			footballStadium: 'Estadio Claudio Fabian Tapia (Barracas)',
-			img: {
-				alt: 'Escudo del Equipo Barracas',
-				src: '/assets/shields/Barracas.webp'
-			},
-			rawVs: 'barracascentral',
-			vs: 'Barracas Central'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
 		date: '2024-10-31T19:00',
 		fecha: 20,
 		footballTeam: {
