@@ -3,21 +3,6 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-10-31T19:00',
-		fecha: 20,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Independiente(Mdz)',
-				src: '/assets/shields/Independiente(Mdz).webp'
-			},
-			rawVs: 'independientedemendoza',
-			vs: 'Indep (Mdz)'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
 		date: '2024-11-05T18:45',
 		fecha: 21,
 		footballTeam: {
