@@ -3,22 +3,7 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-11-05T18:45',
-		fecha: 21,
-		footballTeam: {
-			footballStadium: 'Estadio Nuevo Gasometro (San Lorenzo)',
-			img: {
-				alt: 'Escudo del Equipo San Lorenzo',
-				src: '/assets/shields/SanLorenzo.webp'
-			},
-			rawVs: 'sanlorenzo',
-			vs: 'San Lorenzo'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-11-10T15:00',
+		date: '2024-11-10T16:00',
 		fecha: 22,
 		footballTeam: {
 			footballStadium: 'Estadio Unico Ciudad de Madres (Central Cordoba)',
@@ -33,7 +18,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-11-20T00:00',
+		date: '2024-11-20T19:15',
 		fecha: 23,
 		footballTeam: {
 			footballStadium: null,
@@ -48,7 +33,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-11-24T00:00',
+		date: '2024-11-24T19:00',
 		fecha: 24,
 		footballTeam: {
 			footballStadium: 'Estadio Cilindro de Avellaneda (Racing Club)',
@@ -63,7 +48,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-12-01T00:00',
+		date: '2024-11-29T21:00',
 		fecha: 25,
 		footballTeam: {
 			footballStadium: null,
