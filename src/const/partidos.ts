@@ -3,36 +3,6 @@ import type { IPartidos } from './types'
 export const partidos = [
 	{
 		copa: 'Torneo de La Liga',
-		date: '2024-11-10T16:00',
-		fecha: 22,
-		footballTeam: {
-			footballStadium: 'Estadio Unico Ciudad de Madres (Central Cordoba)',
-			img: {
-				alt: 'Escudo del Equipo Central Cordoba',
-				src: '/assets/shields/CentralCba.webp'
-			},
-			rawVs: 'centralcordoba',
-			vs: 'Central Cordoba'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-11-20T19:15',
-		fecha: 23,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Rosario Central',
-				src: '/assets/shields/RosarioCentral.webp'
-			},
-			rawVs: 'rosariocentral',
-			vs: 'Rosario Central'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo de La Liga',
 		date: '2024-11-24T19:00',
 		fecha: 24,
 		footballTeam: {
@@ -45,21 +15,6 @@ export const partidos = [
 			vs: 'Racing'
 		},
 		isVisitor: true
-	},
-	{
-		copa: 'Torneo de La Liga',
-		date: '2024-11-29T21:00',
-		fecha: 25,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo River Plate',
-				src: '/assets/shields/River.webp'
-			},
-			rawVs: 'riverplate',
-			vs: 'River Plate'
-		},
-		isVisitor: false
 	},
 	{
 		copa: 'Torneo de La Liga',
@@ -90,7 +45,23 @@ export const partidos = [
 			vs: 'Argentinos Jrs'
 		},
 		isVisitor: false
-	}
+	}/*,
+ {
+  copa: 'Torneo de La Liga',
+		date: null, // '2024-12-21T00:00',
+		fecha: 'unica',
+		footballTeam: {
+			footballStadium: 'Estadio Unico Madres de Ciudades',
+			img: {
+				alt: 'Escudo del Equipo',
+				src: '/assets/shields/.webp'
+			},
+			rawVs: '',
+			vs: ''
+		},
+		isVisitor: false
+ }
+ */
 ] satisfies Array<IPartidos>
 
 /* const proximaFase = [ ] satisfies Array<IPartidos> */
