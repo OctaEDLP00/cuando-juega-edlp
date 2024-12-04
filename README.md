@@ -4,6 +4,7 @@
 
 ## Previzualizacion
 
+<!--
 <div align=center>
   <img width=300 height=200 src="./Desktop - DarkMode.jpg"
     alt="Previsualizacion del Dark Mode de la pagina"
@@ -12,6 +13,9 @@
     alt="Previsualizacion del Light Mode de la pagina"
   />
 </div>
+-->
+
+Coming soon!!!
 
 <br>
 
