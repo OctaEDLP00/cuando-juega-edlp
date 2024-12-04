@@ -47,9 +47,9 @@ export const partidos = [
 		isVisitor: false
 	}/*,
  {
-  copa: 'Torneo de La Liga',
+  copa: 'Trofeo de Campeones',
 		date: '2024-12-21T00:00',
-		fecha: 'unica',
+		fecha: 'final',
 		footballTeam: {
 			footballStadium: 'Estadio Unico Madres de Ciudades',
 			img: {
