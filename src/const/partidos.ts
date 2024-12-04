@@ -18,7 +18,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-12-08T00:00',
+		date: '2024-12-09T19:15',
 		fecha: 26,
 		footballTeam: {
 			footballStadium: 'Estadio Julio Cesar Villagra (Belgrano)',
@@ -33,7 +33,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo de La Liga',
-		date: null, // '2024-12-15T00:00',
+		date: '2024-12-15T00:00',
 		fecha: 27,
 		footballTeam: {
 			footballStadium: null,
@@ -48,7 +48,7 @@ export const partidos = [
 	}/*,
  {
   copa: 'Torneo de La Liga',
-		date: null, // '2024-12-21T00:00',
+		date: '2024-12-21T00:00',
 		fecha: 'unica',
 		footballTeam: {
 			footballStadium: 'Estadio Unico Madres de Ciudades',
