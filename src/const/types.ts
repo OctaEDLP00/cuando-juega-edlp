@@ -17,7 +17,8 @@ const COPA_TYPE = {
 	SUDAMERICANA: 'Copa Sudamericana',
 	COPA_ARGENTINA: 'Copa Argentina',
 	NOCHE_DEL_LEON: 'Noche del León',
-	SUPERCOPA_ARGENTINA: 'Supercopa Argentina'
+	SUPERCOPA_ARGENTINA: 'Supercopa Argentina',
+ TROFEO_CAMPEONES: 'Trofeo de Campeones'
 } as const
 
 const COPA_TYPE_WITHOUT_SPACES = {
@@ -27,7 +28,8 @@ const COPA_TYPE_WITHOUT_SPACES = {
 	SUDAMERICANA: 'copa-sudamericana',
 	COPA_ARGENTINA: 'copa-argentina',
 	NOCHE_DEL_LEON: 'noche-del-león',
-	SUPERCOPA_ARGENTINA: 'supercopa-argentina'
+	SUPERCOPA_ARGENTINA: 'supercopa-argentina',
+ TROFEO_CAMPEONES: 'trofeo-de-campeones'
 } as const
 
 export const REL_TYPE = {
