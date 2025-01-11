@@ -101,8 +101,8 @@ export const partidos = [
 				alt: 'Escudo del Equipo ',
 				src: 'assets/shields/Aldosivi.webp',
 			},
-			rawVs: '',
-			vs: ''
+			rawVs: 'aldosivi',
+			vs: 'Aldosivi'
 		},
 		isVisitor: true
 	},
@@ -130,8 +130,8 @@ export const partidos = [
 				alt: 'Escudo del Equipo ',
 				src: 'assets/shields/CentralCba.webp',
 			},
-			rawVs: '',
-			vs: ''
+			rawVs: 'centralcba',
+			vs: 'Central Cba'
 		},
 		isVisitor: false
 	},
@@ -160,8 +160,8 @@ export const partidos = [
 				alt: 'Escudo del Equipo ',
 				src: 'assets/shields/DyJ.webp',
 			},
-			rawVs: '',
-			vs: ''
+			rawVs: 'defensayjusticia',
+			vs: 'DyJ'
 		},
 		isVisitor: true
 	},
