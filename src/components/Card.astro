@@ -1,8 +1,8 @@
 ---
 import Badge from '@components/Badge.astro'
 import Fecha from '@components/Fecha.astro'
-import Temporizador from '@components/Temporizador.tsx'
-import type { IPartidos } from '@const/types'
+import Temporizador from '@components/Temporizador'
+import type { IPartidos } from '@const/types.d'
 interface Props extends IPartidos {}
 const {
 	copa,
@@ -32,9 +32,13 @@ const {
 		copa === 'Noche del León' &&
 			'bg-[#6366F1] dark:bg-[#3730A3] shadow-[#3730A3] dark:shadow-[#6366F1]',
 		copa === 'Supercopa Argentina' &&
-			'bg-[#B93CA5] dark:bg-[#8b1578] shadow-[#8b1578] dark:shadow-[#B93CA5]'
-   copa === 'Trofeo de Campeones' &&
-			'bg-[#c4c4c4] dark:bg-[#575757] shadow-[#575757] dark:shadow-[#c4c4c4]'
+			'bg-[#B93CA5] dark:bg-[#8b1578] shadow-[#8b1578] dark:shadow-[#B93CA5]',
+		copa === 'Trofeo de Campeones' &&
+			'bg-[#c4c4c4] dark:bg-[#575757] shadow-[#575757] dark:shadow-[#c4c4c4]',
+		copa === 'Torneo Apertura' &&
+			'bg-[#00ffa2] dark:bg-[#019e64] shadow-[#019e64] dark:shadow-[#00ffa2]',
+		copa === 'Torneo Clausura' &&
+			'bg-[#ff005d] dark:bg-[#970138] shadow-[#970138] dark:shadow-[#ff005d]'
 	]}
 	class='relative flex flex-col items-center justify-center w-40 h-56 gap-4 rounded-lg shadow-lg'
 >

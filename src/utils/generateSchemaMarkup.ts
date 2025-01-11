@@ -1,5 +1,5 @@
-import type { WithContext, SportsEvent } from 'schema-dts'
-import type { IPartidos } from '@const/types'
+import type { IPartidos } from '@const/types.d'
+import type { SportsEvent, WithContext } from 'schema-dts'
 
 export function generateSchemaMarkup(
 	{ isVisitor, date, isSuspended, copa, footballTeam }: IPartidos

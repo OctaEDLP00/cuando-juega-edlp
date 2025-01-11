@@ -1,6 +1,6 @@
-import { getRemainingTime } from './getRemainingTime.ts'
+import type { DateType, INotification, INotificationWithoutDate } from '@const/types.d'
 import Toastify from 'toastify-js'
-import type { DateType, INotification, INotificationWithoutDate } from '@const/types'
+import { getRemainingTime } from './getRemainingTime'
 
 function checkMatchNotification(date: DateType): boolean {
 	const targetDate = new Date(date)
@@ -28,7 +28,7 @@ export default function requestNotification(
 		if (permission === 'denied') {
 			Toastify({
 				selector: document.querySelector('#App'),
-				text: 'Activa el perimiso de notificaciones para poder enterarte cuando empieza el proximmo partido',
+				text: 'Activa el perimiso de notificaciones para avisarte cuando empiece el partido',
 				duration: 5000,
 				gravity: 'bottom',
 				style: { background: 'linear-gradient(to right, #0e03c7, #058eaa)' }

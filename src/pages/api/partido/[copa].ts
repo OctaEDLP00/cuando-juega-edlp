@@ -1,5 +1,5 @@
 import { partidos } from '@const/partidos'
-import { type CopaWithoutSpaces as Copa } from '@const/types'
+import { type CopaWithoutSpaces as Copa } from '@const/types.d'
 import { type APIContext } from 'astro'
 
 export async function GET({ params }: APIContext) {

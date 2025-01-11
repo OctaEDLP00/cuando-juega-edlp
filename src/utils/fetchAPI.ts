@@ -1,5 +1,5 @@
+import type { IPartidos } from '@const/types.d'
 import { error } from './console'
-import type { IPartidos } from '@const/types'
 
 export async function fetchAPI(url: string): Promise<Array<IPartidos>> {
   try {

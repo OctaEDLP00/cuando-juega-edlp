@@ -3,7 +3,7 @@ import GithubIcon from '@components/icons/Github.astro'
 import InstagramIcon from '@components/icons/Instagram.astro'
 import Threadsicon from '@components/icons/Threads.astro'
 import TwitterIcon from '@components/icons/Twitter.astro'
-import type { INetworkSocial } from './types'
+import type { INetworkSocial } from './types.d'
 
 export const SOCIAL_NETWORKS: Array<INetworkSocial> = [
   {

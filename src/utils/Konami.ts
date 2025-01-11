@@ -1,4 +1,4 @@
-import type { KonamiProps, KonamiState } from '@const/types'
+import type { KonamiProps, KonamiState } from '@const/types.d'
 
 /** @const {KonamiState} konamiState */
 const konamiState: KonamiState = {}

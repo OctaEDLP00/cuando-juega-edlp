@@ -1,10 +1,8 @@
 # CUANDO JUEGA EDLP
 
----
-
+<!--
 ## Previzualizacion
 
-<!--
 <div align=center>
   <img width=300 height=200 src="./Desktop - DarkMode.jpg"
     alt="Previsualizacion del Dark Mode de la pagina"
@@ -28,7 +26,6 @@ Coming soon!!!
 
 </div>
 
----
 
 <fieldset style="border: none;">
   <legend>📝 Tabla de contenidos</legend>
@@ -56,7 +53,7 @@ Coming soon!!!
       <legend>Extra</legend>
       <ol style="text-decoration: none;" type=1>
         <li>
-          <a href='!#'></a>
+          <a href='#acknowledgement'>Agradecimientos</a>
         </li>
         <li>
           <a href='./CONTRIBUITING.md'>Contribuciones</a>
@@ -162,58 +159,91 @@ ESTUDIOOOO ESTUDIOOOO!!!
 
 - **GET** `/api/partido/[EQUIPO]`. Obtener info de solo un equipo
   * `[EQUIPO]` nombre del equipo a buscar. Los valore posibles salen en `/api/partidos`
-	* Ejemplo1 `api/partido/defensayjusticia`
-	* Ejemplo2 `api/partido/tigre`
+  	* Ejemplo 1 `api/partido/defensayjusticia`
+    * Ejemplo 2 `api/partido/tigre`
 
 ```json
-	[
-		{
-			"copa": "Copa de La Liga",
-			"date": "2024-05-12T00:00:00",
-			"fecha": 1,
+[
+	{
+		"copa": "Noche del León",
+		"date": "2025-01-18T20:15",
+		"fecha": "unica",
+		"footballTeam": {
+			"footballStadium": null,
 			"img": {
-				"src": "/assets/Tigre.webp",
-				"alt": "Escudo del Equipo Tigre"
+				"alt": "Escudo del Equipo Racing Club de Montevideo",
+				"src": "assets/shields/RacingMtvd.webp"
 			},
-			"isVisitor": true,
-			"vs": "Tigre"
+			"rawVs": "racingmontevideo",
+			"vs": "Racing (Mtvd)"
 		},
-		{
-			"copa": "Copa de La Liga",
-			"date": "2024-09-29T00:00:00",
-			"fecha": 16,
+		"isVisitor": false
+	},
+	{
+		"copa": "Torneo Apertura",
+		"date": "2025-01-25T19:15",
+		"fecha": 1,
+		"footballTeam": {
+			"footballStadium": null,
 			"img": {
-				"src": "/assets/DyJ.webp",
-				"alt": "Escudo del Equipo Defensa y Justicia"
+				"alt": "Escudo del Equipo Union",
+				"src": "assets/shields/Union.webp",
 			},
-			"isVisitor": false,
-			"vs": "Defensa y Justicia"
-		}
-	]
+			"rawVs": "union",
+			"vs": "Union"
+		},
+		"isVisitor": false
+	},
+	{
+		"copa": "Torneo Apertura",
+		"date": "2025-01-29T19:15",
+		"fecha": 2,
+		"footballTeam": {
+			"footballStadium": "",
+			"img": {
+				"alt": "Escudo del Equipo Huracan",
+				"src": "assets/shields/Huracan.webp",
+			},
+			"rawVs": "huracan",
+			"vs": "Huracan"
+		},
+		"isVisitor": true
+	}
+]
 ```
 
 - **GET** `/api/partido/[VISITANTE]`. Obtener info de solo los partidos que se juegan de local o visitante
   * `[VISITANTE]` unicos valores posibles:
 
-	* `visitante` ó `local`
+  	* `visitante`
+  	* `local`
 
 - **GET** `/api/partido/[COPA]`. Obtener info de solo los partidos que se juegan en cierta copa
   * `[COPA]` unicos valores posibles:
 
-	* `copa-de-la-liga`
-	* `copa-libertadores`
-	* `copa-sudamericana`
-	* `copa-argentina`
-	* `noche-del-león`
-	* `supercopa-argentina`
+  	* `Copa de La Liga`
+  	* `Torneo de La Liga`
+  	* `Copa Libertadores`
+  	* `Copa Sudamericana`
+  	* `Copa Argentina`
+  	* `Noche del León`
+  	* `Supercopa Argentina`
+  	* `Trofeo de Campeones`
+  	* `Torneo Apertura`
+  	* `Torneo Clausura`
 
 # Rutas <a id="routes"></a>
 
-- [HOME](https://cuando-juega-edlp.netlify.app) => `/`
-- [API]((https://cuando-juega-edlp.netlify.app/api/partidos)) => `/api/2023/partidos`
-- [INFO EQUIPO](https://cuando-juega-edlp.netlify.app/api/partido/[EQUIPO]) => `/api/partido/[EQUIPO]`
-- [INFO VISITANTE](https://cuando-juega-edlp.netlify.app/api/partido/[VISITANTE]) => `/api/partido/[VISITANTE]`
-- [INFO COPA](https://cuando-juega-edlp.netlify.app/api/partido/[COPA]) => `/api/partido/[VISITANTE]`
+- [HOME](https://cuando-juega-edlp.netlify.app) -> `/`
+
+- [API]((https://cuando-juega-edlp.netlify.app/api/partidos)) -> `/api/partidos`
+
+- [INFO EQUIPO](https://cuando-juega-edlp.netlify.app/api/partido/[EQUIPO]) -> `/api/partido/[EQUIPO]`
+
+- [INFO VISITANTE](https://cuando-juega-edlp.netlify.app/api/partido/[VISITANTE]) -> `/api/partido/[VISITANTE]`
+
+- [INFO COPA](https://cuando-juega-edlp.netlify.app/api/partido/[COPA]) -> `/api/partido/[VISITANTE]`
+
 
 # ⛏️ Built Using <a id="built_using"></a>
 
