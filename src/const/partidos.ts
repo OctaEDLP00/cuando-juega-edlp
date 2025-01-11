@@ -108,7 +108,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Copa Argentina',
-		date: '2025-02-21T19:15',
+		date: '2025-02-19T11:00',
 		fecha: '32avos',
 		footballTeam: {
 			footballStadium: null,
