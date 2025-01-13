@@ -24,7 +24,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Union',
-				src: 'assets/shields/Union.webp',
+				src: 'assets/shields/Union.webp'
 			},
 			rawVs: 'union',
 			vs: 'Union'
@@ -39,7 +39,7 @@ export const partidos = [
 			footballStadium: 'Estadio Tomás Adolfo Ducó (huracan)',
 			img: {
 				alt: 'Escudo del Equipo Huracan',
-				src: 'assets/shields/Huracan.webp',
+				src: 'assets/shields/Huracan.webp'
 			},
 			rawVs: 'huracan',
 			vs: 'Huracan'
@@ -54,7 +54,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Racing Club',
-				src: 'assets/shields/Racing.webp',
+				src: 'assets/shields/Racing.webp'
 			},
 			rawVs: 'racing',
 			vs: 'Racing'
@@ -69,7 +69,7 @@ export const partidos = [
 			footballStadium: 'Estadio Bautista Gargantini (independiente mdz)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Independiente(Mdz).webp',
+				src: 'assets/shields/Independiente(Mdz).webp'
 			},
 			rawVs: 'independientemdz',
 			vs: 'Independiente (Mdz)'
@@ -84,7 +84,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Banfield',
-				src: 'assets/shields/Banfield.webp',
+				src: 'assets/shields/Banfield.webp'
 			},
 			rawVs: 'banfield',
 			vs: 'Banfield'
@@ -99,7 +99,7 @@ export const partidos = [
 			footballStadium: 'Estadio José María Minella (aldosivi)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Aldosivi.webp',
+				src: 'assets/shields/Aldosivi.webp'
 			},
 			rawVs: 'aldosivi',
 			vs: 'Aldosivi'
@@ -114,7 +114,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/SarmientoDeLaBanda.webp',
+				src: 'assets/shields/SarmientoDeLaBanda.webp'
 			},
 			rawVs: 'sarmientodelabanda',
 			vs: 'Sarmiento (Banda)'
@@ -128,7 +128,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/CentralCba.webp',
+				src: 'assets/shields/CentralCba.webp'
 			},
 			rawVs: 'centralcba',
 			vs: 'Central Cba'
@@ -143,7 +143,7 @@ export const partidos = [
 			footballStadium: 'Estadio Mâs Monumental Antonio Vespucio Liberti (river)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/River.webp',
+				src: 'assets/shields/River.webp'
 			},
 			rawVs: 'riverplate',
 			vs: 'River Plate'
@@ -158,7 +158,7 @@ export const partidos = [
 			footballStadium: 'Estadio Norberto Tito Tomaghello (dyj)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/DyJ.webp',
+				src: 'assets/shields/DyJ.webp'
 			},
 			rawVs: 'defensayjusticia',
 			vs: 'DyJ'
@@ -173,7 +173,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Newells.webp',
+				src: 'assets/shields/Newells.webp'
 			},
 			rawVs: 'newells',
 			vs: "Newell's"
@@ -188,7 +188,7 @@ export const partidos = [
 			footballStadium: 'Estadio Cludio Fabián Tapia (barracas)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Barracas.webp',
+				src: 'assets/shields/Barracas.webp'
 			},
 			rawVs: 'barracas',
 			vs: 'Barracas'
@@ -203,7 +203,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: '/assets/shields/Belgrano.webp',
+				src: '/assets/shields/Belgrano.webp'
 			},
 			rawVs: 'belgrano',
 			vs: 'Belgrano'
@@ -218,7 +218,7 @@ export const partidos = [
 			footballStadium: 'Estadio Juan Carmello Zerillo (gimnasia)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: '/assets/shields/Gimnasia.webp',
+				src: '/assets/shields/Gimnasia.webp'
 			},
 			rawVs: 'gimnasia',
 			vs: 'Gimnasia'
@@ -233,7 +233,7 @@ export const partidos = [
 			footballStadium: 'Estadio Alberto José Armando (boca jrs)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/BocaJrs.webp',
+				src: 'assets/shields/BocaJrs.webp'
 			},
 			rawVs: 'bocajrs',
 			vs: 'Boca Jrs'
@@ -248,7 +248,7 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Tigre.webp',
+				src: 'assets/shields/Tigre.webp'
 			},
 			rawVs: 'tigre',
 			vs: 'Tigre'
@@ -263,7 +263,7 @@ export const partidos = [
 			footballStadium: 'Estadio Diego Armando Maradona (arg jrs)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/ArgentinosJrs.webp',
+				src: 'assets/shields/ArgentinosJrs.webp'
 			},
 			rawVs: 'argentinosjrs',
 			vs: 'Argentinos Jrs'
