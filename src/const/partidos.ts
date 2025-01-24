@@ -2,21 +2,6 @@ import type { IPartidos } from './types.d'
 
 export const partidos = [
 	{
-		copa: 'Noche del León',
-		date: '2025-01-18T20:15',
-		fecha: 'unica',
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Racing Club de Montevideo',
-				src: 'assets/shields/RacingMtvd.webp'
-			},
-			rawVs: 'racingmontevideo',
-			vs: 'Racing (Mtvd)'
-		},
-		isVisitor: false
-	},
-	{
 		copa: 'Torneo Apertura',
 		date: '2025-01-25T19:15',
 		fecha: 1,
@@ -24,7 +9,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Union',
-				src: 'assets/shields/Union.webp'
+				src: 'assets/shields/Union.webp',
+				width: 160,
+				height: 160
 			},
 			rawVs: 'union',
 			vs: 'Union'
@@ -39,7 +26,9 @@ export const partidos = [
 			footballStadium: 'Estadio Tomás Adolfo Ducó (huracan)',
 			img: {
 				alt: 'Escudo del Equipo Huracan',
-				src: 'assets/shields/Huracan.webp'
+				src: 'assets/shields/Huracan.webp',
+				width: 200,
+				height: 200
 			},
 			rawVs: 'huracan',
 			vs: 'Huracan'
@@ -54,7 +43,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Racing Club',
-				src: 'assets/shields/Racing.webp'
+				src: 'assets/shields/Racing.webp',
+				width: 132,
+				height: 160
 			},
 			rawVs: 'racing',
 			vs: 'Racing'
@@ -69,10 +60,12 @@ export const partidos = [
 			footballStadium: 'Estadio Bautista Gargantini (independiente mdz)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Independiente(Mdz).webp'
+				src: 'assets/shields/Independiente(Mdz).webp',
+				width: 399,
+				height: 399
 			},
 			rawVs: 'independientemdz',
-			vs: 'Independiente (Mdz)'
+			vs: 'Indep (Mdz)'
 		},
 		isVisitor: true
 	},
@@ -84,7 +77,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo Banfield',
-				src: 'assets/shields/Banfield.webp'
+				src: 'assets/shields/Banfield.webp',
+				width: 500,
+				height: 500
 			},
 			rawVs: 'banfield',
 			vs: 'Banfield'
@@ -99,7 +94,9 @@ export const partidos = [
 			footballStadium: 'Estadio José María Minella (aldosivi)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Aldosivi.webp'
+				src: 'assets/shields/Aldosivi.webp',
+				width: 65,
+				height: 65
 			},
 			rawVs: 'aldosivi',
 			vs: 'Aldosivi'
@@ -114,7 +111,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/SarmientoDeLaBanda.webp'
+				src: 'assets/shields/SarmientoDeLaBanda.webp',
+				width: 320,
+				height: 320
 			},
 			rawVs: 'sarmientodelabanda',
 			vs: 'Sarmiento (Banda)'
@@ -128,7 +127,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/CentralCba.webp'
+				src: 'assets/shields/CentralCba.webp',
+				width: 200,
+				height: 200
 			},
 			rawVs: 'centralcba',
 			vs: 'Central Cba'
@@ -143,7 +144,9 @@ export const partidos = [
 			footballStadium: 'Estadio Mâs Monumental Antonio Vespucio Liberti (river)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/River.webp'
+				src: 'assets/shields/River.webp',
+				width: 100,
+				height: 120
 			},
 			rawVs: 'riverplate',
 			vs: 'River Plate'
@@ -158,7 +161,9 @@ export const partidos = [
 			footballStadium: 'Estadio Norberto Tito Tomaghello (dyj)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/DyJ.webp'
+				src: 'assets/shields/DyJ.webp',
+				width: 619,
+				height: 729
 			},
 			rawVs: 'defensayjusticia',
 			vs: 'DyJ'
@@ -173,7 +178,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Newells.webp'
+				src: 'assets/shields/Newells.webp',
+				width: 130,
+				height: 160
 			},
 			rawVs: 'newells',
 			vs: "Newell's"
@@ -188,7 +195,9 @@ export const partidos = [
 			footballStadium: 'Estadio Cludio Fabián Tapia (barracas)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Barracas.webp'
+				src: 'assets/shields/Barracas.webp',
+				width: 124,
+				height: 160
 			},
 			rawVs: 'barracas',
 			vs: 'Barracas'
@@ -203,7 +212,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: '/assets/shields/Belgrano.webp'
+				src: '/assets/shields/Belgrano.webp',
+				width: 129,
+				height: 129
 			},
 			rawVs: 'belgrano',
 			vs: 'Belgrano'
@@ -218,7 +229,9 @@ export const partidos = [
 			footballStadium: 'Estadio Juan Carmello Zerillo (gimnasia)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: '/assets/shields/Gimnasia.webp'
+				src: '/assets/shields/Gimnasia.webp',
+				width: 160,
+				height: 160
 			},
 			rawVs: 'gimnasia',
 			vs: 'Gimnasia'
@@ -233,7 +246,9 @@ export const partidos = [
 			footballStadium: 'Estadio Alberto José Armando (boca jrs)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/BocaJrs.webp'
+				src: 'assets/shields/BocaJrs.webp',
+				width: 138,
+				height: 160
 			},
 			rawVs: 'bocajrs',
 			vs: 'Boca Jrs'
@@ -248,7 +263,9 @@ export const partidos = [
 			footballStadium: null,
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/Tigre.webp'
+				src: 'assets/shields/Tigre.webp',
+				width: 254,
+				height: 400
 			},
 			rawVs: 'tigre',
 			vs: 'Tigre'
@@ -263,7 +280,9 @@ export const partidos = [
 			footballStadium: 'Estadio Diego Armando Maradona (arg jrs)',
 			img: {
 				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/ArgentinosJrs.webp'
+				src: 'assets/shields/ArgentinosJrs.webp',
+				width: 471,
+				height: 566
 			},
 			rawVs: 'argentinosjrs',
 			vs: 'Argentinos Jrs'
