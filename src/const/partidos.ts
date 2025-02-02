@@ -3,40 +3,6 @@ import type { IPartidos } from './types.d'
 export const partidos = [
 	{
 		copa: 'Torneo Apertura',
-		date: '2025-01-25T19:15',
-		fecha: 1,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Union',
-				src: 'assets/shields/Union.webp',
-				width: 160,
-				height: 160
-			},
-			rawVs: 'union',
-			vs: 'Union'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo Apertura',
-		date: '2025-01-29T19:15',
-		fecha: 2,
-		footballTeam: {
-			footballStadium: 'Estadio Tomás Adolfo Ducó (huracan)',
-			img: {
-				alt: 'Escudo del Equipo Huracan',
-				src: 'assets/shields/Huracan.webp',
-				width: 200,
-				height: 200
-			},
-			rawVs: 'huracan',
-			vs: 'Huracan'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo Apertura',
 		date: '2025-02-03T19:15',
 		fecha: 3,
 		footballTeam: {
@@ -71,7 +37,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo Apertura',
-		date: '2025-02-11T21:30',
+		date: '2025-02-11T19:15',
 		fecha: 5,
 		footballTeam: {
 			footballStadium: null,
