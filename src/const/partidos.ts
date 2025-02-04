@@ -3,24 +3,7 @@ import type { IPartidos } from './types.d'
 export const partidos = [
 	{
 		copa: 'Torneo Apertura',
-		date: '2025-02-03T19:15',
-		fecha: 3,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Racing Club',
-				src: 'assets/shields/Racing.webp',
-				width: 132,
-				height: 160
-			},
-			rawVs: 'racing',
-			vs: 'Racing'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo Apertura',
-		date: '2025-02-07T21:30',
+		date: '2025-02-07T22:15',
 		fecha: 4,
 		footballTeam: {
 			footballStadium: 'Estadio Bautista Gargantini (independiente mdz)',
@@ -37,7 +20,7 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo Apertura',
-		date: '2025-02-11T19:15',
+		date: '2025-02-11T20:00',
 		fecha: 5,
 		footballTeam: {
 			footballStadium: null,
