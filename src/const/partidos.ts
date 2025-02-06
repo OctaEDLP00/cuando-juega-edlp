@@ -8,7 +8,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: 'Estadio Bautista Gargantini (independiente mdz)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Indep de mendoza',
 				src: 'assets/shields/Independiente(Mdz).webp',
 				width: 399,
 				height: 399
@@ -42,7 +42,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: 'Estadio José María Minella (aldosivi)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Aldosivi',
 				src: 'assets/shields/Aldosivi.webp',
 				width: 65,
 				height: 65
@@ -53,13 +53,30 @@ export const partidos = [
 		isVisitor: true
 	},
 	{
+		copa: 'Torneo Apertura',
+		date: '2025-02-21T19:15',
+		fecha: 7,
+		footballTeam: {
+			footballStadium: null,
+			img: {
+				alt: 'Escudo del Equipo Central Cba',
+				src: 'assets/shields/CentralCba.webp',
+				width: 200,
+				height: 200
+			},
+			rawVs: 'centralcba',
+			vs: 'Central Cba'
+		},
+		isVisitor: false
+	},
+ {
 		copa: 'Copa Argentina',
-		date: '2025-02-19T11:00',
+		date: '2025-02-25T19:00',
 		fecha: '32avos',
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Sarmiento (Banda)',
 				src: 'assets/shields/SarmientoDeLaBanda.webp',
 				width: 320,
 				height: 320
@@ -70,29 +87,12 @@ export const partidos = [
 	},
 	{
 		copa: 'Torneo Apertura',
-		date: '2025-02-21T19:15',
-		fecha: 7,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo ',
-				src: 'assets/shields/CentralCba.webp',
-				width: 200,
-				height: 200
-			},
-			rawVs: 'centralcba',
-			vs: 'Central Cba'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo Apertura',
 		date: '2025-03-01T19:15',
 		fecha: 8,
 		footballTeam: {
 			footballStadium: 'Estadio Mâs Monumental Antonio Vespucio Liberti (river)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo River',
 				src: 'assets/shields/River.webp',
 				width: 100,
 				height: 120
@@ -109,7 +109,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: 'Estadio Norberto Tito Tomaghello (dyj)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo DyJ',
 				src: 'assets/shields/DyJ.webp',
 				width: 619,
 				height: 729
@@ -126,7 +126,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Newells',
 				src: 'assets/shields/Newells.webp',
 				width: 130,
 				height: 160
@@ -143,7 +143,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: 'Estadio Cludio Fabián Tapia (barracas)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Barracas',
 				src: 'assets/shields/Barracas.webp',
 				width: 124,
 				height: 160
@@ -160,7 +160,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Belgrano',
 				src: '/assets/shields/Belgrano.webp',
 				width: 129,
 				height: 129
@@ -177,7 +177,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: 'Estadio Juan Carmello Zerillo (gimnasia)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Gimnasia',
 				src: '/assets/shields/Gimnasia.webp',
 				width: 160,
 				height: 160
@@ -194,7 +194,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: 'Estadio Alberto José Armando (boca jrs)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Boca',
 				src: 'assets/shields/BocaJrs.webp',
 				width: 138,
 				height: 160
@@ -211,7 +211,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Tigre',
 				src: 'assets/shields/Tigre.webp',
 				width: 254,
 				height: 400
@@ -228,7 +228,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: 'Estadio Diego Armando Maradona (arg jrs)',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Arg Jrs',
 				src: 'assets/shields/ArgentinosJrs.webp',
 				width: 471,
 				height: 566
