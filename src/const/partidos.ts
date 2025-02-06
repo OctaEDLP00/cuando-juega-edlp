@@ -69,7 +69,7 @@ export const partidos = [
 		},
 		isVisitor: false
 	},
- {
+	{
 		copa: 'Copa Argentina',
 		date: '2025-02-25T19:00',
 		fecha: '32avos',
