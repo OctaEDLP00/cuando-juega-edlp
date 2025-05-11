@@ -1,4 +1,4 @@
-import { partidos } from '@const/partidos'
+import { partidos } from '~/const/partidos'
 import { type APIContext } from 'astro'
 
 export async function GET({ url }: APIContext) {
