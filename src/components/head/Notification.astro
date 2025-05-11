@@ -1,9 +1,9 @@
 <script>
-	import requestNotification from '@utils/Notification.ts'
-	import { partidos } from '@const/partidos'
+	import requestNotification from '~/utils/Notification.ts'
+	import { partidos } from '~/const/partidos'
 
 	if ('Notification' in window) {
-		for (let { date, img, vs, isSuspended } of partidos) {
+		for (let { date, isSuspended, footballTeam: { img, vs } } of partidos) {
 			const { src } = img
 			if (!isSuspended) requestNotification({
 				icon: src,

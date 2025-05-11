@@ -49,7 +49,7 @@ const TARGET_TYPE = {
 	TOP: '_top'
 } as const
 
-const FOOTBALL_STADIUM = {
+const FOOTBALL_STADIUM_LOCAL = {
 	ALDOSIVI: 'Estadio José María Minella (aldosivi)',
 	ARGENTINOS_JRS: 'Estadio Diego Armando Maradona (arg jrs)',
 	ATLE_TUCUMAN: 'Estadio Monumental Presidente Jose Fierro (atle tucuman)',
@@ -81,9 +81,15 @@ const FOOTBALL_STADIUM = {
 	VELEZ: 'Estadio José Amalfiitani (velez)'
 } as const
 
+const FOOTBALL_STADIUM_INTERNAZIONAL = {
+	BOTAFOGO: 'Estadio Olímpico Nilton Santos (Botafogo)',
+	U_DE_CHILE: 'Estadio Nacional Julio Martinez Prádanos (U. de Chile)',
+	CARABOBO: 'Estadio Polideportivo Misael Delgado (Carabobo)',
+} as const
+
 export {
 	COPA_TYPE,
 	COPA_TYPE_WITHOUT_SPACES,
-	FECHA_TYPE, FOOTBALL_STADIUM, REL_TYPE, TARGET_TYPE
+	FECHA_TYPE, FOOTBALL_STADIUM_LOCAL, FOOTBALL_STADIUM_INTERNAZIONAL, REL_TYPE, TARGET_TYPE
 }
 

@@ -1,0 +1,54 @@
+@import "tailwindcss"
+
+@theme {
+	/* Skew */
+	--skew-45: 45deg;
+	--skew-60: 90deg;
+	--skew-135: 135deg;
+	--skew-180: 180deg;
+	--skew-225: 225deg;
+	--skew-270: 270deg;
+	--skew-x-45: 45deg;
+	--skew-x-60: 90deg;
+	--skew-x-135: 135deg;
+	--skew-x-180: 180deg;
+	--skew-x-225: 225deg;
+	--skew-x-270: 270deg;
+	--skew-y-45: 45deg;
+	--skew-y-60: 90deg;
+	--skew-y-135: 135deg;
+	--skew-y-180: 180deg;
+	--skew-y-225: 225deg;
+	--skew-y-270: 270deg;
+
+	/* Font */
+	--font-CCPL: 'Cascadia Code PL', monospace;
+
+	--animate-shake: shake .5 ease-out;
+
+	@keyframes shake {
+		0% {
+			transform: translateX(0px)
+		}
+
+		20% {
+			transform: translateX(-5px)
+		}
+
+		40% {
+			transform: translateX(5px)
+		}
+
+		60% {
+			transform: translateX(-5px)
+		}
+
+		80% {
+			transform: translateX(5px)
+		}
+
+		100% {
+			transform: translateX(0px)
+		}
+	}
+}

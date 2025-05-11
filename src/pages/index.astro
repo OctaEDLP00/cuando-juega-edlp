@@ -1,40 +1,16 @@
 ---
-import Card from '@components/Card.astro'
-import Footer from '@components/Footer.astro'
-import Navbar from '@components/Navbar.astro'
-import { partidos } from '@const/partidos.ts'
-import Layout from '@layouts/Layout.astro'
+import Cards from '~/components/Cards.astro'
+import Footer from '~/components/Footer.astro'
+import Navbar from '~/components/Navbar.astro'
+import { partidos } from '~/const/partidos.ts'
+import Layout from '~/layouts/Layout.astro'
 ---
 
 <Layout title='Cuando juega EDLP'>
 	<Navbar />
 	<main class='flex justify-center p-4 mx-auto'>
-		{
-			partidos && (
-				<div class='grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
-					{partidos.map(({
-						copa, date, fecha, footballTeam,
-						isSuspended, isVisitor
-					}) => (
-						<Card
-							copa={copa}
-							date={date}
-							fecha={fecha}
-							footballTeam={footballTeam}
-							isVisitor={isVisitor}
-							isSuspended={isSuspended}
-						/>
-					))}
-				</div>
-			)
-		}
-		{
-			partidos.length === 0 && (
-				<div>
-					<span>Vuelve el proximo torneo/temporada</span>
-				</div>
-			)
-		}
+		<Cards partidos={partidos} />
+		{partidos.length === 0 && (<div><span>Vuelve el proximo torneo/temporada</span></div>)}
 	</main>
 	<Footer />
 </Layout>

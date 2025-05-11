@@ -1,5 +1,5 @@
-import { fillZeros } from '@utils/fillZeros'
-import { getRemainingTime } from '@utils/getRemainingTime'
+import { fillZeros } from '~/utils/fillZeros'
+import { getRemainingTime } from '~/utils/getRemainingTime'
 import { useEffect, useState } from 'react'
 
 export const useRemainingTime = (targetDate: Date | null) => {
@@ -16,8 +16,12 @@ export const useRemainingTime = (targetDate: Date | null) => {
         setRemainingDate(getRemainingTime(targetDate!))
       }, 1000)
 
-    if (continueCountdown) clearInterval(timer)
+		if (continueCountdown) {
+			// @ts-ignore
+			clearInterval(timer)
+		}
 
+		// @ts-ignore
     return () => clearInterval(timer)
   }, [continueCountdown, targetDate])
 

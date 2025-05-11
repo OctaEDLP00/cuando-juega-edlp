@@ -1,126 +1,61 @@
 import type { IPartidos } from './types.d'
 
-export const partidos = [
+export const partidos: Array<IPartidos> = [
 	{
-		copa: 'Torneo Apertura',
-		date: '2025-03-15T18:30',
-		fecha: 10,
+		copa: 'Copa Libertadores',
+		date: '2025-05-14T21:30',
+		fecha: 'fase de grupos',
+		footballTeam: {
+			footballStadium: 'Estadio Olímpico Nilton Santos (Botafogo)',
+			img: {
+				alt: 'Escudo del Equipo Botafogo',
+				src: '/assets/shields/Botafogo.webp',
+				width: '',
+				height: ''
+			},
+			rawVs: 'botafogo',
+			vs: 'Botafogo'
+		},
+		isVisitor: true
+	},
+	{
+		copa: 'Copa Libertadores',
+		date: '2025-05-27T21:30',
+		fecha: 'fase de grupos',
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo Newells',
-				src: 'assets/shields/Newells.webp',
-				width: 130,
-				height: 160
+				alt: 'Escudo del Equipo Carabobo',
+				src: '/assets/shields/Carabobo.webp',
+				width: '',
+				height: ''
 			},
-			rawVs: 'newells',
-			vs: "Newell's"
+			rawVs: 'carabobo',
+			vs: 'Carabobo'
 		},
 		isVisitor: false
 	},
 	{
-		copa: 'Torneo Apertura',
+		copa: 'Copa Argentina',
 		date: null, // '',
-		fecha: 11,
-		footballTeam: {
-			footballStadium: 'Estadio Cludio Fabián Tapia (barracas)',
-			img: {
-				alt: 'Escudo del Equipo Barracas',
-				src: 'assets/shields/Barracas.webp',
-				width: 124,
-				height: 160
-			},
-			rawVs: 'barracas',
-			vs: 'Barracas'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo Apertura',
-		date: null, // '',
-		fecha: 12,
+		fecha: '32avos',
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo Belgrano',
-				src: '/assets/shields/Belgrano.webp',
-				width: 129,
-				height: 129
+				alt: 'Escudo del Equipo Aldosivi',
+				src: '/assets/shields/Aldosivi.webp',
+				width: '',
+				height: ''
 			},
-			rawVs: 'belgrano',
-			vs: 'Belgrano'
+			rawVs: 'aldosivi',
+			vs: 'Aldosivi'
 		},
 		isVisitor: false
 	},
-	{
-		copa: 'Torneo Apertura',
-		date: null, // '',
-		fecha: 13,
-		footballTeam: {
-			footballStadium: 'Estadio Juan Carmello Zerillo (gimnasia)',
-			img: {
-				alt: 'Escudo del Equipo Gimnasia',
-				src: '/assets/shields/Gimnasia.webp',
-				width: 160,
-				height: 160
-			},
-			rawVs: 'gimnasia',
-			vs: 'Gimnasia'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo Apertura',
-		date: null, // '',
-		fecha: 14,
-		footballTeam: {
-			footballStadium: 'Estadio Alberto José Armando (boca jrs)',
-			img: {
-				alt: 'Escudo del Equipo Boca',
-				src: 'assets/shields/BocaJrs.webp',
-				width: 138,
-				height: 160
-			},
-			rawVs: 'bocajrs',
-			vs: 'Boca Jrs'
-		},
-		isVisitor: true
-	},
-	{
-		copa: 'Torneo Apertura',
-		date: null, // '',
-		fecha: 15,
-		footballTeam: {
-			footballStadium: null,
-			img: {
-				alt: 'Escudo del Equipo Tigre',
-				src: 'assets/shields/Tigre.webp',
-				width: 254,
-				height: 400
-			},
-			rawVs: 'tigre',
-			vs: 'Tigre'
-		},
-		isVisitor: false
-	},
-	{
-		copa: 'Torneo Apertura',
-		date: null, // '',
-		fecha: 16,
-		footballTeam: {
-			footballStadium: 'Estadio Diego Armando Maradona (arg jrs)',
-			img: {
-				alt: 'Escudo del Equipo Arg Jrs',
-				src: 'assets/shields/ArgentinosJrs.webp',
-				width: 471,
-				height: 566
-			},
-			rawVs: 'argentinosjrs',
-			vs: 'Argentinos Jrs'
-		},
-		isVisitor: true
-	}
-	/*
+] satisfies Array<IPartidos>
+
+/*
+const TorneoClausura = [
 	{
 		copa: 'Torneo Clausura',
 		date: '2025-01-25T19:15',
@@ -203,11 +138,11 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: '',
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Aldosivi',
 				src: 'assets/shields/Aldosivi.webp',
 			},
-			rawVs: '',
-			vs: ''
+			rawVs: 'aldosivi',
+			vs: 'Aldosivi'
 		},
 		isVisitor: true
 	},
@@ -232,11 +167,11 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Central Cba',
 				src: 'assets/shields/CentralCba.webp',
 			},
-			rawVs: '',
-			vs: ''
+			rawVs: 'centralcba',
+			vs: 'Central Cba'
 		},
 		isVisitor: false
 	},
@@ -247,7 +182,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo River',
 				src: 'assets/shields/River.webp',
 			},
 			rawVs: 'riverplate',
@@ -262,11 +197,11 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Defensa y Justicia',
 				src: 'assets/shields/DyJ.webp',
 			},
-			rawVs: '',
-			vs: ''
+			rawVs: 'defensayjusticia',
+			vs: 'DyJ'
 		},
 		isVisitor: true
 	},
@@ -277,7 +212,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Newells',
 				src: 'assets/shields/Newells.webp',
 			},
 			rawVs: 'newells',
@@ -292,7 +227,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Barracas',
 				src: 'assets/shields/Barracas.webp',
 			},
 			rawVs: 'barracas',
@@ -307,7 +242,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Belgrano',
 				src: '/assets/shields/Belgrano.webp',
 			},
 			rawVs: 'belgrano',
@@ -322,7 +257,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Gimnasia',
 				src: '/assets/shields/Gimnasia.webp',
 			},
 			rawVs: 'gimnasia',
@@ -337,7 +272,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo BocaJrs',
 				src: 'assets/shields/BocaJrs.webp',
 			},
 			rawVs: 'bocajrs',
@@ -352,7 +287,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo Tigre',
 				src: 'assets/shields/Tigre.webp',
 			},
 			rawVs: 'tigre',
@@ -367,7 +302,7 @@ export const partidos = [
 		footballTeam: {
 			footballStadium: null,
 			img: {
-				alt: 'Escudo del Equipo ',
+				alt: 'Escudo del Equipo ArgentinosJrs',
 				src: 'assets/shields/ArgentinosJrs.webp',
 			},
 			rawVs: 'argentinosjrs',
@@ -375,7 +310,5 @@ export const partidos = [
 		},
 		isVisitor: true
 	}
-	*/
 ] satisfies Array<IPartidos>
-
-/* const proximaFase = [ ] satisfies Array<IPartidos> */
+*/

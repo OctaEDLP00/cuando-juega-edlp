@@ -1,3 +1,5 @@
+import type { JSX } from 'react'
+
 type TRemainingTime<T> = {
 	days: T
 	hours: T
@@ -5,20 +7,17 @@ type TRemainingTime<T> = {
 	seconds: T
 }
 
-export function RenderTimeRemaining({ days, hours, minutes, seconds }: TRemainingTime<string>) {
+export function RenderTimeRemaining({ days, hours, minutes, seconds }: TRemainingTime<string>): JSX.Element | null {
 	const daysNumber = Number(days)
 	const hoursNumber = Number(hours)
 	const minutesNumber = Number(minutes)
 	const secondsNumber = Number(seconds)
 
-	if (
-		daysNumber === 0
-		&& hoursNumber === 0
-		&& minutesNumber === 0
-		&& secondsNumber === 0
-	) return (
-		<span className='text-center'>Ya empezó!</span>
-	)
+	if (daysNumber === 0 && hoursNumber === 0 && minutesNumber === 0 && secondsNumber === 0) {
+		return (
+			<span className='text-center'>Ya empezó!</span>
+		)
+	}
 
 	if (daysNumber !== 0) {
 		return (
@@ -37,4 +36,6 @@ export function RenderTimeRemaining({ days, hours, minutes, seconds }: TRemainin
 			{hours}:{minutes}:{seconds}
 		</span>
 	}
+
+	return null
 }

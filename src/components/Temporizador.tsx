@@ -1,19 +1,16 @@
-import { useRemainingTime } from '@hooks/useRemainingTime'
-import { cn } from '@utils/cn'
-import type { IPartidos } from '../const/types.d'
+import { useRemainingTime } from '~/hooks/useRemainingTime'
+import { cn } from '~/utils/cn'
+import type { DateType, Copa } from '../const/types.d'
 import { RenderTimeRemaining } from './RenderTimeRemaining'
 
-type Partidos = Omit<
-	IPartidos,
-	'vs'
-	| 'img'
-	| 'isVisitor'
-	| 'fecha'
-	| 'footballTeam'
->
+interface Partidos {
+	date: DateType |  null
+	copa: Copa,
+	isSuspended: boolean | null | undefined
+}
 
-export default function Card({ date, copa, isSuspended }: Partidos) {
-  const { days, hours, minutes, seconds } = useRemainingTime(new Date(date))
+export default function Temporizador({ date, copa, isSuspended }: Partidos) {
+	const { ...formatedDate } = useRemainingTime(new Date(date ?? Date.now()))
 
 	if (date === null) {
 		return (
@@ -78,7 +75,7 @@ export default function Card({ date, copa, isSuspended }: Partidos) {
 				copa === 'Torneo Clausura' && 'bg-[#970138] dark:bg-[#ff005d]'
 			)} rounded-b-md py-2 px-4 flex flex-col justify-center w-full h-auto
 			`
-		}>{RenderTimeRemaining({ days, hours, minutes, seconds })}</div>
+		}>{RenderTimeRemaining(formatedDate)}</div>
   )
 }
 

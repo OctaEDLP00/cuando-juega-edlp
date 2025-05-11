@@ -2,7 +2,8 @@ import {
 	COPA_TYPE,
 	COPA_TYPE_WITHOUT_SPACES,
 	FECHA_TYPE,
-	FOOTBALL_STADIUM,
+	FOOTBALL_STADIUM_LOCAL,
+	FOOTBALL_STADIUM_INTERNAZIONAL,
 	REL_TYPE,
 	TARGET_TYPE
 } from './variables'
@@ -56,7 +57,8 @@ interface KonamiState {
 	[key: string]: number
 }
 
-type FootballStadium = (typeof FOOTBALL_STADIUM)[keyof typeof FOOTBALL_STADIUM]
+export type LocalFootballStadium = (typeof FOOTBALL_STADIUM_LOCAL)[keyof typeof FOOTBALL_STADIUM_LOCAL]
+export type InternazionalFootbalStadium = (typeof FOOTBALL_STADIUM_INTERNAZIONAL)[keyof typeof FOOTBALL_STADIUM_INTERNAZIONAL]
 
 interface FootballTeam {
 	img: ImgProps
@@ -66,7 +68,7 @@ interface FootballTeam {
 	 * @example vs: Defensa y Justicia -> rawVs: defensayjusticia
 	 */
 	rawVs: string
-	footballStadium: FootballStadium | null
+	footballStadium: LocalFootballStadium | InternazionalFootbalStadium | null
 	vs: string
 }
 

@@ -1,9 +1,9 @@
 <script>
 	// import confetti from 'canvas-confetti'
-	import { konamiCodes } from '@const/konami-codes'
-import { error } from '@utils/console'
-import { $query } from '@utils/Dom'
-import { Konami } from '@utils/Konami'
+	import { konamiCodes } from '~/const/konami-codes'
+	import { error } from '~/utils/console'
+	import { $query } from '~/utils/Dom'
+	import { Konami } from '~/utils/Konami'
 
 	const { edlp, edlpCursor, lali, laliCursor, himnoEdlp } = konamiCodes
 	let konamiCodeInProgress = false
@@ -50,7 +50,7 @@ import { Konami } from '@utils/Konami'
 			code: edlp,
 			keyPressed: key,
 			onFinishTime: 1500,
-			onSucces: () => {
+			onSucces: (): void | boolean => {
 				if (konamiCodeInProgress) return (konamiCodeInProgress = true)
 				const audio = audioManager.getAudioInstance(
 					'/assets/music/el-cielo-nos-queda-muy-chico-Ivan-Sadovsky.mp3'
@@ -74,7 +74,7 @@ import { Konami } from '@utils/Konami'
 			code: himnoEdlp,
 			keyPressed: key,
 			onFinishTime: 1500,
-			onSucces: () => {
+			onSucces: (): void | boolean => {
 				if (konamiCodeInProgress) return (konamiCodeInProgress = true)
 				const audio = audioManager.getAudioInstance(
 					'/assets/music/himno-del-club-estudiantes-de-la-plata.mp3'
@@ -97,7 +97,7 @@ import { Konami } from '@utils/Konami'
 			code: lali,
 			keyPressed: key,
 			onFinishTime: 1500,
-			onSucces: () => {
+			onSucces: (): void | boolean => {
 				if (konamiCodeInProgress) return (konamiCodeInProgress = true)
 				const audio = audioManager.getAudioInstance(
 					'/assets/music/la-cancion-de-la-alegria-libertadores.mp3'

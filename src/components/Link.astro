@@ -1,5 +1,5 @@
 ---
-import type { Rel, Target } from '@const/types.d'
+import type { Rel, Target } from '~/const/types.d'
 interface Props {
 	href: string
 	target?: Target | undefined
@@ -13,7 +13,7 @@ const { href, target, rel, className } = Astro.props
 	href={href}
 	target={target}
 	rel={rel}
-	class={`${className} flex justify-center w-8 h-8 sm:w-10 sm:h-10`}
+	class={`${className} flex justify-center w-8 h-8 sm:size-10 `}
 >
 	<slot />
 </a>

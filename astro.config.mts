@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config'
 // Integrations
 import react from '@astrojs/react'
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 // Adapter
 import netlify from '@astrojs/netlify'
 
@@ -9,7 +9,10 @@ import netlify from '@astrojs/netlify'
 export default defineConfig({
 	site: 'https://cuando-juega-edlp.netlify.app',
 	devToolbar: { enabled: false },
-  integrations: [react(), tailwind()],
+  integrations: [react()],
+	vite: {
+    plugins: [tailwindcss()]
+  },
   output: 'server',
 	adapter: netlify()
 })

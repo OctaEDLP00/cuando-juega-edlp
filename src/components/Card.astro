@@ -1,20 +1,37 @@
 ---
-import Badge from '@components/Badge.astro'
-import Fecha from '@components/Fecha.astro'
-import Temporizador from '@components/Temporizador'
-import type { IPartidos } from '@const/types.d'
-interface Props extends IPartidos {}
+import Badge from '~/components/Badge.astro'
+import Fecha from '~/components/Fecha.astro'
+import Temporizador from '~/components/Temporizador.tsx'
+import type {
+	Copa,
+	Fecha as F,
+	DateType,
+	ImgProps,
+	LocalFootballStadium,
+	InternazionalFootbalStadium
+} from '~/const/types.d'
+
+interface FootballTeam {
+	img: ImgProps
+	rawVs: string
+	footballStadium: LocalFootballStadium | InternazionalFootbalStadium | null
+	vs: string
+}
+
+interface Props {
+	copa: Copa
+	date: DateType | null
+	fecha: F | number
+	footballTeam: FootballTeam
+	isSuspended?: boolean
+	isVisitor?: boolean | null
+}
+
 const {
-	copa,
-	date,
-	fecha,
-	footballTeam: {
-		img: { alt, src },
-		vs
-	},
-	isSuspended,
-	isVisitor
+	copa, date, fecha, footballTeam, isSuspended,	isVisitor
 } = Astro.props
+const { img, vs } = footballTeam
+const { alt, src, height, width } = img
 ---
 
 <section
@@ -43,7 +60,7 @@ const {
 	class='relative flex flex-col items-center justify-center w-40 h-56 gap-4 rounded-lg shadow-lg'
 >
 	<header class='relative'>
-		<img loading='lazy' class='w-16 h-16' alt={alt} src={src} />
+		<img height={height} width={width} class='size-16' alt={alt} src={src} />
 		<Badge isVisitor={isVisitor} />
 	</header>
 	<main class='flex flex-col items-center gap-1.5'>
@@ -52,6 +69,11 @@ const {
 		<Fecha fecha={fecha} />
 	</main>
 	<footer class='w-full h-6'>
-		<Temporizador client:only='react' isSuspended={isSuspended} copa={copa} date={date} />
+		<Temporizador
+			client:only='react'
+			isSuspended={isSuspended}
+			copa={copa}
+			date={date}
+		/>
 	</footer>
 </section>
