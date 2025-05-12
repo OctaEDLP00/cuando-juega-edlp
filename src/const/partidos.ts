@@ -10,8 +10,8 @@ export const partidos: Array<IPartidos> = [
 			img: {
 				alt: 'Escudo del Equipo Botafogo',
 				src: '/assets/shields/Botafogo.webp',
-				width: '',
-				height: ''
+				width: '64',
+				height: '73'
 			},
 			rawVs: 'botafogo',
 			vs: 'Botafogo'
@@ -27,8 +27,8 @@ export const partidos: Array<IPartidos> = [
 			img: {
 				alt: 'Escudo del Equipo Carabobo',
 				src: '/assets/shields/Carabobo.webp',
-				width: '',
-				height: ''
+				width: '250',
+				height: '250'
 			},
 			rawVs: 'carabobo',
 			vs: 'Carabobo'
