@@ -1,0 +1,10 @@
+---
+interface Props {
+  text: string
+  cls: string
+}
+
+const { text, cls } = Astro.props
+---
+
+<span class:list={[cls, 'font-mono text-xl']}>{text}</span>

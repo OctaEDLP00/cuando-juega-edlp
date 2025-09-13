@@ -1,55 +1,38 @@
 {
-	"deno.enablePaths": [
-		"supabase/functions"
-	],
   "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "deno.lint": true,
-	"deno.unstable": [
-		"--unstable-*"
-	],
-	"css.customData": [
-		".vscode/tailwindcss.json"
-	],
-	"prettier.documentSelectors": [
-		"**/*.astro"
-	],
-	"[astro]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll": "explicit",
-	},
-	"files.associations": {
-		"*.mdx": "mdx",
-		"*.css": "tailwindcss"
-	},
-	"editor.quickSuggestions": {
-		"strings": "on"
-	},
-	"eslint.enable": true,
-	"eslint.run": "onType",
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"astro"
-	],
-	"prettier.enable": true,
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"editor.detectIndentation": false,
-	"editor.insertSpaces": false,
+  "css.customData": [".vscode/tailwindcss.json"],
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "files.associations": {
+    "*.mdx": "mdx",
+    "*.css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "astro"],
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-	"explorer.fileNesting.patterns": {
-		"README.md": "CHANGELOG.md, CONTRIBUTING.md, *.md, Desktop - DarkMode.jpg, Desktop - LightMode.jpg"
-	}
+  "explorer.fileNesting.patterns": {
+    "README.md": "CHANGELOG.md, CONTRIBUTING.md, *.md, Desktop - DarkMode.jpg, Desktop - LightMode.jpg"
+  }
 }

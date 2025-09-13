@@ -82,9 +82,10 @@ const FOOTBALL_STADIUM_LOCAL = {
 } as const
 
 const FOOTBALL_STADIUM_INTERNAZIONAL = {
-	BOTAFOGO: 'Estadio Olímpico Nilton Santos (Botafogo)',
-	U_DE_CHILE: 'Estadio Nacional Julio Martinez Prádanos (U. de Chile)',
-	CARABOBO: 'Estadio Polideportivo Misael Delgado (Carabobo)',
+  BOTAFOGO: 'Estadio Olímpico Nilton Santos (Botafogo)',
+  U_DE_CHILE: 'Estadio Nacional Julio Martinez Prádanos (U. de Chile)',
+  CARABOBO: 'Estadio Polideportivo Misael Delgado (Carabobo)',
+  FLAMENGO: 'Estadio Maracaná (Flamengo)',
 } as const
 
 export {

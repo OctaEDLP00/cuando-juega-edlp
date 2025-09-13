@@ -2,13 +2,13 @@
 	// import confetti from 'canvas-confetti'
 	import { konamiCodes } from '~/const/konami-codes'
 	import { error } from '~/utils/console'
-	import { $query } from '~/utils/Dom'
+	import { $ } from '~/utils/Dom'
 	import { Konami } from '~/utils/Konami'
 
 	const { edlp, edlpCursor, lali, laliCursor, himnoEdlp } = konamiCodes
 	let konamiCodeInProgress = false
-	const $container = $query('#App') as HTMLDivElement
-	const $body = $query('body') as HTMLBodyElement
+	const $container = $('#App') as HTMLDivElement
+	const $body = $('body') as HTMLBodyElement
 
 	interface Manager {
 		audioInstance: HTMLAudioElement | null

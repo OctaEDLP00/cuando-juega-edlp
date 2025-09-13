@@ -1,7 +1,7 @@
 ---
-import Cards from '~/components/Cards.astro'
 import Footer from '~/components/Footer.astro'
 import Navbar from '~/components/Navbar.astro'
+import TeamCard from '~/components/TeamCard.astro'
 import { partidos } from '~/const/partidos.ts'
 import Layout from '~/layouts/Layout.astro'
 ---
@@ -9,8 +9,19 @@ import Layout from '~/layouts/Layout.astro'
 <Layout title='Cuando juega EDLP'>
 	<Navbar />
 	<main class='flex justify-center p-4 mx-auto'>
-		<Cards partidos={partidos} />
-		{partidos.length === 0 && (<div><span>Vuelve el proximo torneo/temporada</span></div>)}
+		<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full'>
+			{partidos.map(({ copa, date, fecha, footballTeam, isSuspended, isVisitor, theme }) => (
+				<TeamCard
+					copa={copa}
+					date={date}
+					fecha={fecha}
+					footballTeam={footballTeam}
+					isSuspended={isSuspended}
+					isVisitor={isVisitor}
+					theme={theme}
+				/>
+			))}
+		</div>
 	</main>
 	<Footer />
 </Layout>

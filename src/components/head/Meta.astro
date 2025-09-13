@@ -2,15 +2,16 @@
 interface Props {
 	title: string
 	ogImage?: string
+	description?: string
 }
 
-const { title, ogImage } = Astro.props
+const { title, ogImage, description } = Astro.props
 ---
 
 <meta charset='UTF-8' />
 <meta
 	name='description'
-	content='Pagina para saber cuanto falta para el proximo partido del Club Estudiantes de La Plata'
+	content={description ?? 'Pagina para saber cuanto falta para el proximo partido del Club Estudiantes de La Plata'}
 />
 <meta
 	name='keywords'

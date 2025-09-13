@@ -1,6 +1,49 @@
 @import 'tailwindcss';
 
 @theme {
+	/* Colores personalizados para los temas de copas */
+	--color-torneo-liga-light: #4394ff;
+  --color-torneo-liga-dark: #1c4b88;
+  --color-copa-liga-light: #0BBAD9;
+  --color-copa-liga-dark: #09798C;
+  --color-copa-libertadores-light: #4AA02C;
+  --color-copa-libertadores-dark: #007848;
+  --color-copa-sudamericana-light: #FF1010;
+  --color-copa-sudamericana-dark: #A10102;
+  --color-copa-argentina-light: #dd794b;
+  --color-copa-argentina-dark: #FF5722;
+  --color-noche-leon-light: #6366F1;
+  --color-noche-leon-dark: #3730A3;
+  --color-supercopa-argentina-light: #B93CA5;
+  --color-supercopa-argentina-dark: #8b1578;
+  --color-trofeo-campeones-light: #c4c4c4;
+  --color-trofeo-campeones-dark: #575757;
+  --color-torneo-apertura-light: #00ffa2;
+  --color-torneo-apertura-dark: #019e64;
+  --color-torneo-clausura-light: #ff005d;
+  --color-torneo-clausura-dark: #970138;
+
+  /* Sombras personalizadas */
+  --shadow-torneo-liga: 0 20px 40px color-mix(in srgb, #1c4b88 30%, transparent);
+  --shadow-torneo-liga-dark: 0 20px 40px color-mix(in srgb, #4394ff 30%, transparent);
+  --shadow-copa-liga: 0 20px 40px color-mix(in srgb, #09798C 30%, transparent);
+  --shadow-copa-liga-dark: 0 20px 40px color-mix(in srgb, #0BBAD9 30%, transparent);
+  --shadow-copa-libertadores: 0 20px 40px color-mix(in srgb, #007848 30%, transparent);
+  --shadow-copa-libertadores-dark: 0 20px 40px color-mix(in srgb, #4AA02C 30%, transparent);
+  --shadow-copa-sudamericana: 0 20px 40px color-mix(in srgb, #A10102 30%, transparent);
+  --shadow-copa-sudamericana-dark: 0 20px 40px color-mix(in srgb, #FF1010 30%, transparent);
+  --shadow-copa-argentina: 0 20px 40px color-mix(in srgb, #FF5722 30%, transparent);
+  --shadow-copa-argentina-dark: 0 20px 40px color-mix(in srgb, #dd794b 30%, transparent);
+  --shadow-noche-leon: 0 20px 40px color-mix(in srgb, #3730A3 30%, transparent);
+  --shadow-noche-leon-dark: 0 20px 40px color-mix(in srgb, #6366F1 30%, transparent);
+  --shadow-supercopa-argentina: 0 20px 40px color-mix(in srgb, #8b1578 30%, transparent);
+  --shadow-supercopa-argentina-dark: 0 20px 40px color-mix(in srgb, #B93CA5 30%, transparent);
+  --shadow-trofeo-campeones: 0 20px 40px color-mix(in srgb, #575757 30%, transparent);
+  --shadow-trofeo-campeones-dark: 0 20px 40px color-mix(in srgb, #c4c4c4 30%, transparent);
+  --shadow-torneo-apertura: 0 20px 40px color-mix(in srgb, #019e64 30%, transparent);
+  --shadow-torneo-apertura-dark: 0 20px 40px color-mix(in srgb, #00ffa2 30%, transparent);
+  --shadow-torneo-clausura: 0 20px 40px color-mix(in srgb, #970138 30%, transparent);
+  --shadow-torneo-clausura-dark: 0 20px 40px color-mix(in srgb, #ff005d 30%, transparent);
   /* Skew */
   --skew-45: 45deg;
   --skew-60: 90deg;

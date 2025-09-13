@@ -1,0 +1,68 @@
+---
+import Badge from './Badge.astro'
+import Countdown from './Countdown.astro'
+import Fecha from './Fecha.astro'
+
+import type { CopaWithoutSpaces, IPartidos } from '~/const/types'
+
+interface Props extends IPartidos {}
+
+const themeClasses = {
+  'torneo-de-la-liga': 'bg-gradient-to-b from-torneo-liga-light to-torneo-liga-dark',
+  'copa-de-la-liga': 'bg-gradient-to-b from-copa-liga-light to-copa-liga-dark',
+  'copa-libertadores': 'bg-gradient-to-b from-copa-libertadores-light to-copa-libertadores-dark',
+  'copa-sudamericana': 'bg-gradient-to-b from-copa-sudamericana-light to-copa-sudamericana-dark',
+  'copa-argentina': 'bg-gradient-to-b from-copa-argentina-light to-copa-argentina-dark',
+  'noche-del-león': 'bg-gradient-to-b from-noche-leon-light to-noche-leon-dark',
+  'supercopa-argentina':
+    'bg-gradient-to-b from-supercopa-argentina-light to-supercopa-argentina-dark',
+  'trofeo-de-campeones': 'bg-gradient-to-b from-trofeo-campeones-light to-trofeo-campeones-dark',
+  'torneo-apertura': 'bg-gradient-to-b from-torneo-apertura-light to-torneo-apertura-dark',
+  'torneo-clausura': 'bg-gradient-to-b from-torneo-clausura-light to-torneo-clausura-dark',
+} satisfies Record<CopaWithoutSpaces, string>
+
+const {
+  theme = 'torneo-de-la-liga',
+  copa,
+  date,
+  fecha,
+  footballTeam,
+  isSuspended,
+  isVisitor,
+} = Astro.props
+const { img, vs, rawVs } = footballTeam
+const { alt, src, height, width } = img
+---
+
+<section
+  class:list={[
+    themeClasses[theme],
+    'relative flex h-64 w-44 flex-col items-center justify-center gap-4 rounded-lg shadow-lg',
+  ]}
+>
+  <header class='relative'>
+    <img
+      height={height}
+      width={width}
+      class='size-16'
+      alt={alt}
+      src={src}
+    />
+    <Badge isVisitor={isVisitor} />
+  </header>
+  <main class='flex flex-col items-center gap-1.5'>
+    <h1 class='text-base uppercase'>{vs}</h1>
+    <h2 class='text-sm'>{copa}</h2>
+    <Fecha fecha={fecha} />
+  </main>
+  <footer class='h-4 w-full'>
+    <Countdown
+      server:defer
+      isVisitor={isVisitor}
+      rawVs={rawVs}
+      date={date}
+      theme={theme}
+      isSuspended={isSuspended}
+    />
+  </footer>
+</section>

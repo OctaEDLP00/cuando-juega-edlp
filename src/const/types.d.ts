@@ -73,23 +73,24 @@ interface FootballTeam {
 }
 
 interface IPartidos {
-	copa: Copa
-	date: DateType | null
-	fecha: Fecha | number
-	footballTeam: FootballTeam
-	/**
-	 * If it is boolean this will be treated as follows,
-	 * If the match is *`local`* the property will have a *`false`* value, otherwise it will be *`true`*
-	 */
-	isSuspended?: boolean
-	isVisitor?: boolean | null
+  theme: CopaWithoutSpaces
+  copa: Copa
+  date: DateType | null
+  fecha: Fecha | number
+  footballTeam: FootballTeam
+  /**
+   * If it is boolean this will be treated as follows,
+   * If the match is *`local`* the property will have a *`false`* value, otherwise it will be *`true`*
+   */
+  isSuspended?: boolean | undefined
+  isVisitor?: boolean | null | undefined
 }
 
 interface INotification {
-	body?: string
-	date: DateType
-	icon?: string
-	notificationMsg?: string
+  body?: string | undefined
+  date: DateType
+  icon?: string | undefined
+  notificationMsg?: string | undefined
 }
 
 type INotificationWithoutDate = Omit<INotification, 'date'>

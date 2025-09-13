@@ -1,4 +1,4 @@
-export const mapValues = (object: { [key: string]: unknown }, iterator: (key: unknown) => void) => {
+export const mapValues = (object, iterator) => {
   return Object.keys(object).reduce((acc, key) => {
     acc[key] = iterator(object[key])
     return acc

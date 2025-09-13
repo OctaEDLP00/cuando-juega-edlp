@@ -1,0 +1,150 @@
+---
+import type { IPartidos, CopaWithoutSpaces } from '~/const/types'
+import Time from './Time.astro'
+
+type PromoteNested<T, K extends keyof T, P extends keyof T[K]> = Omit<T, K> & Pick<T[K], P>
+
+type Partidos = Pick<IPartidos, 'date' | 'isSuspended' | 'isVisitor' | 'theme'> &
+  PromoteNested<IPartidos, 'footballTeam', 'rawVs'>
+
+const themeClasses = {
+  'torneo-de-la-liga':
+    'bg-torneo-liga-light dark:bg-torneo-liga-dark shadow-torneo-liga dark:shadow-torneo-liga-dark',
+  'copa-de-la-liga':
+    'bg-copa-liga-light dark:bg-copa-liga-dark shadow-copa-liga dark:shadow-copa-liga-dark',
+  'copa-libertadores':
+    'bg-copa-libertadores-light dark:bg-copa-libertadores-dark shadow-copa-libertadores dark:shadow-copa-libertadores-dark',
+  'copa-sudamericana':
+    'bg-copa-sudamericana-light dark:bg-copa-sudamericana-dark shadow-copa-sudamericana dark:shadow-copa-sudamericana-dark',
+  'copa-argentina':
+    'bg-copa-argentina-light dark:bg-copa-argentina-dark shadow-copa-argentina dark:shadow-copa-argentina-dark',
+  'noche-del-león':
+    'bg-noche-leon-light dark:bg-noche-leon-dark shadow-noche-leon dark:shadow-noche-leon-dark',
+  'supercopa-argentina':
+    'bg-supercopa-argentina-light dark:bg-supercopa-argentina-dark shadow-supercopa-argentina dark:shadow-supercopa-argentina-dark',
+  'trofeo-de-campeones':
+    'bg-trofeo-campeones-light dark:bg-trofeo-campeones-dark shadow-trofeo-campeones dark:shadow-trofeo-campeones-dark',
+  'torneo-apertura':
+    'bg-torneo-apertura-light dark:bg-torneo-apertura-dark shadow-torneo-apertura dark:shadow-torneo-apertura-dark',
+  'torneo-clausura':
+    'bg-torneo-clausura-light dark:bg-torneo-clausura-dark shadow-torneo-clausura dark:shadow-torneo-clausura-dark',
+} satisfies Record<CopaWithoutSpaces, string>
+
+const { date, theme = 'torneo-de-la-liga', isSuspended, rawVs, isVisitor } = Astro.props as Partidos
+const sanitizedRawVs = isVisitor ? `${rawVs}-visitante` : `${rawVs}-local`
+---
+
+<div
+  id={sanitizedRawVs}
+  class:list={[
+    themeClasses[theme],
+    'flex flex-col items-center justify-center gap-4 rounded-b-lg p-4',
+  ]}
+>
+  <div class='flex'>
+    <Time
+      cls='days'
+      text='00'
+    />:
+    <Time
+      cls='hours'
+      text='00'
+    />:
+    <Time
+      cls='minutes'
+      text='00'
+    />:
+    <Time
+      cls='seconds'
+      text='00'
+    />
+  </div>
+  <p class='message hidden text-sm text-gray-500'></p>
+</div>
+
+<script is:inline define:vars={{ date, isSuspended, sanitizedRawVs }}>
+  const $ = selector => document.querySelector(selector)
+
+  const { floor, max } = Math
+
+  const alwaysPositive = value => max(0, value)
+
+  /**
+   * @param {Date} targetDate
+   */
+  const getRemainingTime = targetDate => {
+    const currentDate = new Date()
+    const diff = targetDate.getTime() - currentDate.getTime()
+
+    if (diff <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        expired: true,
+      }
+    }
+
+    const days = alwaysPositive(floor(diff / (1000 * 60 * 60 * 24)))
+    const hours = alwaysPositive(floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
+    const minutes = alwaysPositive(floor((diff % (1000 * 60 * 60)) / (1000 * 60)))
+    const seconds = alwaysPositive(floor((diff % (1000 * 60)) / 1000))
+
+    return {
+      days,
+      hours,
+      minutes,
+      seconds,
+      expired: false,
+    }
+  }
+
+  const mapValues = (object, iterator) => {
+    const keys = Object.keys(object)
+    const result = {}
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i]
+      result[key] = iterator(object[key])
+    }
+    return result
+  }
+
+  const fillZeros = remainingDate => {
+    const filled = mapValues(remainingDate, value => `${value}`.padStart(2, '0'))
+    return filled
+  }
+
+  function updateCountdown() {
+    if (date == null) return
+    const timeRemaining = getRemainingTime(new Date(date))
+
+    const daysEl = $(`#${sanitizedRawVs} .days`)
+    const hoursEl = $(`#${sanitizedRawVs} .hours`)
+    const minutesEl = $(`#${sanitizedRawVs} .minutes`)
+    const secondsEl = $(`#${sanitizedRawVs} .seconds`)
+    const messageEl = $(`#${sanitizedRawVs} .message`)
+
+    if (timeRemaining.expired) {
+      daysEl.textContent = '00'
+      hoursEl.textContent = '00'
+      minutesEl.textContent = '00'
+      secondsEl.textContent = '00'
+      messageEl.textContent = !isSuspended ? '¡El tiempo ha llegado!' : 'Partido suspendido.'
+      messageEl.classList.remove('hidden')
+      return
+    }
+
+    const { days: d, hours: h, minutes: m, seconds: s } = fillZeros(timeRemaining)
+
+    daysEl.textContent = d
+    hoursEl.textContent = h
+    minutesEl.textContent = m
+    secondsEl.textContent = s
+    messageEl.classList.add('hidden')
+  }
+
+  updateCountdown()
+
+  setInterval(updateCountdown, 1000)
+</script>

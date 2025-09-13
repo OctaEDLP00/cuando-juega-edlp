@@ -2,15 +2,3 @@
   command = "npm run build"
   node_bundler = "esbuild"
   publish = "dist/"
-
-[dev]
-  functionsPort = 1234
-
-[functions]
-  directory = "src/functions"
-
-[functions.createOgImage]
-  external_node_modules = ["@sparticuz/chromium", "playwright-core"]
-
-# [functions.imageFromStorage]
-#   external_node_modules = ["@sparticuz/chromium", "playwright-core"]
