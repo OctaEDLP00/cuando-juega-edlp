@@ -38,36 +38,46 @@ const sanitizedRawVs = isVisitor ? `${rawVs}-visitante` : `${rawVs}-local`
   id={sanitizedRawVs}
   class:list={[
     themeClasses[theme],
-    'flex flex-col items-center justify-center gap-4 rounded-b-lg p-4',
+    'flex flex-col items-center justify-center gap-4 rounded-b-lg h-13',
   ]}
 >
-  <div class='flex'>
-    <Time
-      cls='days'
-      text='00'
-    />:
-    <Time
-      cls='hours'
-      text='00'
-    />:
-    <Time
-      cls='minutes'
-      text='00'
-    />:
-    <Time
-      cls='seconds'
-      text='00'
-    />
-  </div>
-  <p class='message hidden text-sm text-gray-500'></p>
+	{
+		date !== null ? (
+			<div id='countdownTimer' class='flex items-center justify-center'>
+				<Time
+					class='days'
+					text='00'
+				/>
+				<span class='font-mono'>:</span>
+				<Time
+					class='hours'
+					text='00'
+				/>
+				<span class='font-mono'>:</span>
+				<Time
+					class='minutes'
+					text='00'
+				/>
+				<span class='font-mono'>:</span>
+				<Time
+					class='seconds'
+					text='00'
+				/>
+			</div>
+		) : (
+			<div class='flex flex-1 justify-center items-center'>
+				<p>Fecha no disponible</p>
+			</div>
+		)
+	}
+  <p class='message hidden text-sm text-white'></p>
 </div>
 
 <script is:inline define:vars={{ date, isSuspended, sanitizedRawVs }}>
   const $ = selector => document.querySelector(selector)
 
-  const { floor, max } = Math
-
-  const alwaysPositive = value => max(0, value)
+	/** @param {number} value */
+  const alwaysPositive = value => Math.max(0, value)
 
   /**
    * @param {Date} targetDate
@@ -86,10 +96,10 @@ const sanitizedRawVs = isVisitor ? `${rawVs}-visitante` : `${rawVs}-local`
       }
     }
 
-    const days = alwaysPositive(floor(diff / (1000 * 60 * 60 * 24)))
-    const hours = alwaysPositive(floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
-    const minutes = alwaysPositive(floor((diff % (1000 * 60 * 60)) / (1000 * 60)))
-    const seconds = alwaysPositive(floor((diff % (1000 * 60)) / 1000))
+    const days = alwaysPositive(Math.floor(diff / (1000 * 60 * 60 * 24)))
+    const hours = alwaysPositive(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
+    const minutes = alwaysPositive(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)))
+    const seconds = alwaysPositive(Math.floor((diff % (1000 * 60)) / 1000))
 
     return {
       days,
@@ -100,6 +110,33 @@ const sanitizedRawVs = isVisitor ? `${rawVs}-visitante` : `${rawVs}-local`
     }
   }
 
+	/**
+	 * Applies a transformation function to all values of a countdown-like object,
+	 * returning a new object with the same keys but transformed values.
+	 *
+	 * @template R The type of the values in the resulting object.
+	 *
+	 * @param {{
+	 *   days: number,
+	 *   hours: number,
+	 *   minutes: number,
+	 *   seconds: number,
+	 *   expired: boolean
+	 * }} object - The countdown object to transform.
+	 * @param {(value: number | boolean) => R} iterator - A function that transforms each value.
+	 * @returns {{
+	 *   days: R,
+	 *   hours: R,
+	 *   minutes: R,
+	 *   seconds: R,
+	 *   expired: R
+	 * }} A new object with the same keys but transformed values.
+	 *
+	 * @example
+	 * const countdown = { days: 1, hours: 2, minutes: 30, seconds: 15, expired: false };
+	 * const asStrings = mapValues(countdown, v => String(v));
+	 * // asStrings = { days: "1", hours: "2", minutes: "30", seconds: "15", expired: "false" }
+	 */
   const mapValues = (object, iterator) => {
     const keys = Object.keys(object)
     const result = {}
@@ -110,38 +147,39 @@ const sanitizedRawVs = isVisitor ? `${rawVs}-visitante` : `${rawVs}-local`
     return result
   }
 
+	/**
+	 * @param {{ days: number, hours: number, minutes: number, seconds: number, expired: boolean }} remainingDate
+	 * @returns {{ days: string, hours: string, minutes: string, seconds: string, expired: boolean }}
+	 */
   const fillZeros = remainingDate => {
     const filled = mapValues(remainingDate, value => `${value}`.padStart(2, '0'))
     return filled
   }
 
   function updateCountdown() {
-    if (date == null) return
-    const timeRemaining = getRemainingTime(new Date(date))
+		const daysEl = $(`#${sanitizedRawVs} .days`)
+		const hoursEl = $(`#${sanitizedRawVs} .hours`)
+		const minutesEl = $(`#${sanitizedRawVs} .minutes`)
+		const secondsEl = $(`#${sanitizedRawVs} .seconds`)
+		const messageEl = $(`#${sanitizedRawVs} .message`)
+		const countdownTimer = $('#countdownTimer')
+    if (date != null) {
+    	const timeRemaining = getRemainingTime(new Date(date))
+			if (timeRemaining.expired) {
+				messageEl.textContent = !isSuspended ? '¡El tiempo ha llegado!' : 'Partido suspendido.'
+				messageEl.classList.remove('hidden')
+				countdownTimer.classList.add('hidden')
+				return
+			}
 
-    const daysEl = $(`#${sanitizedRawVs} .days`)
-    const hoursEl = $(`#${sanitizedRawVs} .hours`)
-    const minutesEl = $(`#${sanitizedRawVs} .minutes`)
-    const secondsEl = $(`#${sanitizedRawVs} .seconds`)
-    const messageEl = $(`#${sanitizedRawVs} .message`)
+			const { days: d, hours: h, minutes: m, seconds: s } = fillZeros(timeRemaining)
 
-    if (timeRemaining.expired) {
-      daysEl.textContent = '00'
-      hoursEl.textContent = '00'
-      minutesEl.textContent = '00'
-      secondsEl.textContent = '00'
-      messageEl.textContent = !isSuspended ? '¡El tiempo ha llegado!' : 'Partido suspendido.'
-      messageEl.classList.remove('hidden')
-      return
-    }
-
-    const { days: d, hours: h, minutes: m, seconds: s } = fillZeros(timeRemaining)
-
-    daysEl.textContent = d
-    hoursEl.textContent = h
-    minutesEl.textContent = m
-    secondsEl.textContent = s
-    messageEl.classList.add('hidden')
+			daysEl.textContent = d
+			hoursEl.textContent = h
+			minutesEl.textContent = m
+			secondsEl.textContent = s
+			messageEl.classList.add('hidden')
+		}
   }
 
   updateCountdown()

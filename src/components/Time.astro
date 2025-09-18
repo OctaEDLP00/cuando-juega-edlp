@@ -1,10 +1,10 @@
 ---
 interface Props {
   text: string
-  cls: string
+  class: string
 }
 
-const { text, cls } = Astro.props
+const { text } = Astro.props
 ---
 
-<span class:list={[cls, 'font-mono text-xl']}>{text}</span>
+<span class:list={[Astro.props.class, 'font-mono text-base']}>{text}</span>

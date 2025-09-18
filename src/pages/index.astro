@@ -9,7 +9,7 @@ import Layout from '~/layouts/Layout.astro'
 <Layout title='Cuando juega EDLP'>
 	<Navbar />
 	<main class='flex justify-center p-4 mx-auto'>
-		<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full'>
+		<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full'>
 			{partidos.map(({ copa, date, fecha, footballTeam, isSuspended, isVisitor, theme }) => (
 				<TeamCard
 					copa={copa}
