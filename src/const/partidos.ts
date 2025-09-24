@@ -4,38 +4,6 @@ export const partidos: Array<IPartidos> = [
   {
     theme: 'copa-libertadores',
     copa: 'Copa Libertadores',
-    date: '2025-09-18T21:30:00',
-    fecha: '4tos',
-    footballTeam: {
-      footballStadium: 'Estadio Maracaná (Flamengo)',
-      img: {
-        alt: 'Escudo del Equipo Flamengo',
-        src: 'assets/shields/Flamengo.webp',
-      },
-      vs: 'Flamengo',
-      rawVs: 'flamengo',
-    },
-    isVisitor: true,
-  },
-  {
-    theme: 'torneo-clausura',
-    copa: 'Torneo Clausura',
-    date: '2025-09-22T19:00:00',
-    fecha: 9,
-    footballTeam: {
-      footballStadium: null,
-      img: {
-        alt: 'Escudo del Equipo Defensa y Justicia',
-        src: 'assets/shields/DyJ.webp',
-      },
-      rawVs: 'defensayjusticia',
-      vs: 'DyJ',
-    },
-    isVisitor: false,
-  },
-  {
-    theme: 'copa-libertadores',
-    copa: 'Copa Libertadores',
     date: '2025-09-25T21:30:00',
     fecha: '4tos',
     footballTeam: {
