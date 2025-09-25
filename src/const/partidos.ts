@@ -36,7 +36,7 @@ export const partidos: Array<IPartidos> = [
   {
     theme: 'torneo-clausura',
     copa: 'Torneo Clausura',
-    date: null, // '',
+    date: '2025-10-05T16:30:00',
     fecha: 11,
     footballTeam: {
       footballStadium: null,
@@ -52,7 +52,7 @@ export const partidos: Array<IPartidos> = [
   {
     theme: 'torneo-clausura',
     copa: 'Torneo Clausura',
-    date: null, // '',
+    date: '2025-10-11T21:15:00',
     fecha: 12,
     footballTeam: {
       footballStadium: 'Estadio Julio César Villagra (belgrano)',
