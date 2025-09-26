@@ -2,22 +2,6 @@ import type { IPartidos } from './types.d'
 
 export const partidos: Array<IPartidos> = [
   {
-    theme: 'copa-libertadores',
-    copa: 'Copa Libertadores',
-    date: '2025-09-25T21:30:00',
-    fecha: '4tos',
-    footballTeam: {
-      footballStadium: null,
-      img: {
-        alt: 'Escudo del Equipo Flamengo',
-        src: 'assets/shields/Flamengo.webp',
-      },
-      vs: 'Flamengo',
-      rawVs: 'flamengo',
-    },
-    isVisitor: false,
-  },
-  {
     theme: 'torneo-clausura',
     copa: 'Torneo Clausura',
     date: '2025-09-30T19:00:00',
