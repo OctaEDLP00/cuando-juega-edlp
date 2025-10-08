@@ -4,38 +4,6 @@ export const partidos: Array<IPartidos> = [
   {
     theme: 'torneo-clausura',
     copa: 'Torneo Clausura',
-    date: '2025-09-30T19:00:00',
-    fecha: 10,
-    footballTeam: {
-      footballStadium: 'Estadio Marcelo Alberto Bielsa (newells)',
-      img: {
-        alt: 'Escudo del Equipo Newells',
-        src: 'assets/shields/Newells.webp',
-      },
-      rawVs: 'newells',
-      vs: "Newell's",
-    },
-    isVisitor: true,
-  },
-  {
-    theme: 'torneo-clausura',
-    copa: 'Torneo Clausura',
-    date: '2025-10-05T16:30:00',
-    fecha: 11,
-    footballTeam: {
-      footballStadium: null,
-      img: {
-        alt: 'Escudo del Equipo Barracas',
-        src: 'assets/shields/Barracas.webp',
-      },
-      rawVs: 'barracas',
-      vs: 'Barracas',
-    },
-    isVisitor: false,
-  },
-  {
-    theme: 'torneo-clausura',
-    copa: 'Torneo Clausura',
     date: '2025-10-11T21:15:00',
     fecha: 12,
     footballTeam: {
@@ -52,7 +20,7 @@ export const partidos: Array<IPartidos> = [
   {
     theme: 'torneo-clausura',
     copa: 'Torneo Clausura',
-    date: null, // '',
+    date: '2025-10-19T15:10:00',
     fecha: 13,
     footballTeam: {
       footballStadium: null,
