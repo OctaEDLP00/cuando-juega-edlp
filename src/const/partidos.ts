@@ -4,55 +4,7 @@ export const partidos: Array<IPartidos> = [
   {
     theme: 'torneo-clausura',
     copa: 'Torneo Clausura',
-    date: '2025-10-11T21:15:00',
-    fecha: 12,
-    footballTeam: {
-      footballStadium: 'Estadio Julio César Villagra (belgrano)',
-      img: {
-        alt: 'Escudo del Equipo Belgrano',
-        src: '/assets/shields/Belgrano.webp',
-      },
-      rawVs: 'belgrano',
-      vs: 'Belgrano',
-    },
-    isVisitor: true,
-  },
-  {
-    theme: 'torneo-clausura',
-    copa: 'Torneo Clausura',
-    date: '2025-10-19T15:10:00',
-    fecha: 13,
-    footballTeam: {
-      footballStadium: null,
-      img: {
-        alt: 'Escudo del Equipo Gimnasia',
-        src: '/assets/shields/Gimnasia.webp',
-      },
-      rawVs: 'gimnasia',
-      vs: 'Gimnasia',
-    },
-    isVisitor: false,
-  },
-  {
-    theme: 'torneo-clausura',
-    copa: 'Torneo Clausura',
-    date: null, // '',
-    fecha: 14,
-    footballTeam: {
-      footballStadium: null,
-      img: {
-        alt: 'Escudo del Equipo BocaJrs',
-        src: 'assets/shields/BocaJrs.webp',
-      },
-      rawVs: 'bocajrs',
-      vs: 'Boca Jrs',
-    },
-    isVisitor: false,
-  },
-  {
-    theme: 'torneo-clausura',
-    copa: 'Torneo Clausura',
-    date: null, // '',
+    date: '2025-11-09T21:30:00',
     fecha: 15,
     footballTeam: {
       footballStadium: 'Estadio Jose Dellagiovanna (tigre)',
